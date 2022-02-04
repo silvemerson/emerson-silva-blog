@@ -40,3 +40,4 @@ RUN rm -fr * .??*
 # is copied into the public fold of nginx
 COPY --from=build /site/public /usr/share/nginx/html
 
+EXPOSE 8080

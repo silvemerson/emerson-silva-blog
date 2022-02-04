@@ -5,6 +5,12 @@ variables:
   DOCKER_HUB_USER: $DOCKER_HUB_USER
   DOCKER_HOST: tcp://docker:2375
 
+stages:
+  - build
+#  - test
+#  - deploy
+
+
 kaniko:
   stage: build
   image:
@@ -19,3 +25,4 @@ kaniko:
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${DOCKER_HUB_IMAGE}:${CI_COMMIT_TAG}"
+
