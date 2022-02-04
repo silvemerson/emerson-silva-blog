@@ -6,8 +6,6 @@ variables:
 
 build:
   stage: build
-  services:
-    - docker-dind  
   image:
     name: docker:19.03.0
   script:
