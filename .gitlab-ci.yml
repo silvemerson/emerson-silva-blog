@@ -9,6 +9,6 @@ build:
   image:
     name: docker:19.03.0
   script:
-    - docker login -u $CI_REGISTRY_USER --password-stdin $CI_REGISTRY_PASSWORD
-    - docker build -t CI_REGISTRY_IMAGE:$CI_PIPELINE_ID .
+    - docker login --username $CI_REGISTRY_USER --password-stdin $CI_REGISTRY_PASSWORD
+    - docker build --tag CI_REGISTRY_IMAGE:$CI_PIPELINE_ID .
     - docker push CI_REGISTRY_IMAGE:$CI_PIPELINE_ID
