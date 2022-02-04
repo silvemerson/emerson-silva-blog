@@ -24,7 +24,7 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Emerson Silva"
       # subtitle shown in home page
-      subtitle = "Salve galera, vamos falar sobre DevOps"
+      subtitle = "Aqui o assunto é sobre Devops e um pouco mais!"
       typeit = true
       # whether to show social links
       social = true
