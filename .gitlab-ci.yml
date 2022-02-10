@@ -7,8 +7,7 @@ variables:
 
 stages:
   - build
-#  - test
-#  - deploy
+  - deploy
 
 
 kaniko:
@@ -26,3 +25,9 @@ kaniko:
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${DOCKER_HUB_IMAGE}:${CI_COMMIT_TAG}"
 
+#ansible-playbook:
+#  stage: deploy
+#  image:
+#    name: "python:3.8-buster"
+#  variables:
+#    ANSIBLE_HOST_KEY_CHECKING: 'false'   
