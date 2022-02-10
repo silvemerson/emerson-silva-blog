@@ -15,7 +15,7 @@ RUN /hugo version
 RUN apk add --no-cache git
 
 # The source files are copied to /site
-COPY blogOps/* /site
+COPY ./blogOps/* /site
 WORKDIR /site
 
 # And then we just run Hugo
