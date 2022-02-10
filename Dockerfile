@@ -15,9 +15,8 @@ RUN /hugo version
 RUN apk add --no-cache git
 
 # The source files are copied to /site
-WORKDIR blogOps
 
-COPY . /site
+COPY ./blogOps /site
 
 WORKDIR /site
 
