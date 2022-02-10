@@ -7,7 +7,6 @@ variables:
 
 stages:
   - build
-  - test
   - deploy
 
 
@@ -27,14 +26,6 @@ kaniko:
       --destination "${DOCKER_HUB_IMAGE}:${CI_COMMIT_TAG}"
 
 
-molecule:
-  stage: test
-  image:
-    name: "geerlingguy/docker-debian10-ansible:testing"
-  script: 
-    - cd ansible/
-    - molecule test
-
 ansible-playbook:
   stage: deploy
   image:
@@ -47,3 +38,4 @@ ansible-playbook:
     - ansible-playbook playbook.yml -i digitalocean
   before_script:
     - pip install ansible 
+
