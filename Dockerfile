@@ -16,7 +16,7 @@ RUN apk add --no-cache git
 
 # The source files are copied to /site
 
-COPY ./blogOps /site
+COPY . /site
 
 WORKDIR /site
 
