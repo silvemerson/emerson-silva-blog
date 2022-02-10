@@ -3,4 +3,4 @@
   ansible.builtin.shell: docker login -u silvemerson -p '#18K4Sr%eX5'
 
 - name: Deploy Docker
-  ansible.builtin.shell: docker run -it -d --name blog -p 80:80 silvemerson/emerson-blog-it:0.0.1
+  ansible.builtin.shell: docker service update --name emerson-blog --publish published=80,target=80 silvemerson/emerson-blog-it:latest
