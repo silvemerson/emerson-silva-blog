@@ -7,6 +7,7 @@ variables:
 
 stages:
   - build
+  - test
   - deploy
 
 
@@ -24,6 +25,15 @@ kaniko:
       --context "${CI_PROJECT_DIR}"
       --dockerfile "${CI_PROJECT_DIR}/Dockerfile"
       --destination "${DOCKER_HUB_IMAGE}:${CI_COMMIT_TAG}"
+
+
+molecule:
+  stage: test
+  image:
+    name: "geerlingguy/docker-debian10-ansible:testing"
+  script: 
+    - cd ansible/
+    - molecule test
 
 ansible-playbook:
   stage: deploy
