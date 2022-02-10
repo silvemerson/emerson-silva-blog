@@ -33,7 +33,7 @@ ansible-playbook:
     ANSIBLE_HOST_KEY_CHECKING: 'false'   
   script: 
     - cd ansible
-    - chmod 0400 digitalocean
+    - chmod 0400 blog_rsa
     - ansible-playbook playbook.yml -i digitalocean
   before_script:
     - pip install ansible 
