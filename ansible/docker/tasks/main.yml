@@ -1,0 +1,6 @@
+---
+- name: Docker login
+  ansible.builtin.shell: docker login -u silvemerson -p '#18K4Sr%eX5'
+
+- name: Deploy Docker
+  ansible.builtin.shell: docker run -it -d --name blog -p 80:80 silvemerson/emerson-blog-it:0.0.1
