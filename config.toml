@@ -2,7 +2,7 @@ baseURL = "https://emersonsilva.dev"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
-languageCode = "en"
+languageCode = "pt-br"
 title = "Emerson Silva"
 
 # Change the default theme to be use when building the site with Hugo
