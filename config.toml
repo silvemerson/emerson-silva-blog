@@ -1,9 +1,9 @@
-baseURL = "http://example.org/"
+baseURL = "https://emersonsilva.dev"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code
 languageCode = "en"
-title = "BlogOps"
+title = "Emerson Silva"
 
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
@@ -11,7 +11,6 @@ theme = "LoveIt"
 [params]
   # LoveIt theme version
   version = "0.2.X"
-
   [params.home]
     rss = 10
     # Home page profile
@@ -42,6 +41,7 @@ theme = "LoveIt"
 [params.social]
     GitHub = "silvemerson"
     Linkedin = "silvemerson"
+    Instagram = "silvemerson_"
 
 
 [menu]
@@ -72,6 +72,7 @@ theme = "LoveIt"
     url = "/categories/"
     title = ""
     weight = 3
+    
 
 # Markup related configuration in Hugo
 [markup]
