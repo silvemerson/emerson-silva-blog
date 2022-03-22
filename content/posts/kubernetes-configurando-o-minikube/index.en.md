@@ -11,7 +11,7 @@ resources:
   src: "featured-image.png"
 
 tags: ["infra","minikube","kubernetes"]
-categories: ["DevOps"]
+categories: ["Infra"]
 
 lightgallery: true
 ---
