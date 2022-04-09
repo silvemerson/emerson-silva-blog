@@ -1,8 +1,6 @@
 ---
-weight: 4
 title: "Sobre o Blog"
-date: 2022-03-22T12:01:50-03:00
-lastmod: 2022-03-22T12:01:50-03:00
+date: 2022-03-22T17:55:26-03:00
 draft: false
 author: "Emerson Silva"
 description: "Uma breve apresentação"

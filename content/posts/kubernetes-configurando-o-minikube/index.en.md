@@ -1,11 +1,8 @@
 ---
-weight: 4
-title: "Kubernetes - Configurando o Minikube"
-date: 2022-03-22T12:01:50-03:00
-lastmod: 2022-03-22T12:01:50-03:00
+title: "Kubernetes Configurando O Minikube"
+date: 2022-03-22T17:56:52-03:00
 draft: false
 author: "Emerson Silva"
-description: "Uma breve apresentação"
 resources:
 - name: "featured-image"
   src: "featured-image.png"
@@ -105,4 +102,4 @@ Por hoje é só pessoal, o Minikube é uma ótima ferramenta para testar o Kuber
 
 https://kubernetes.io/pt-br/docs/tutorials/hello-minikube/
 
-https://minikube.sigs.k8s.io/docs/
+https://minikube.sigs.k8s.io/doc
