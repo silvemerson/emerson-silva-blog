@@ -1,7 +1,7 @@
 ---
-title: "Docker - Primeiros passos"
-date: 2022-03-22T17:57:54-03:00
-draft: false
+title: "Docker Primeiros Passos"
+date: 2022-04-12T13:33:01-03:00
+draft: true
 author: "Emerson Silva"
 resources:
 - name: "docker"
@@ -151,3 +151,5 @@ https://docs.docker.com/engine/reference/commandline/images/
 https://hub.docker.com/_/nginx/
 
 https://docs.docker.com/engine/docker-overview/
+---
+
