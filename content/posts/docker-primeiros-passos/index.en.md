@@ -12,6 +12,7 @@ categories: ["Infra"]
 
 lightgallery: true
 ---
+
 Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!
 
 ## O que é Docker
@@ -151,5 +152,5 @@ https://docs.docker.com/engine/reference/commandline/images/
 https://hub.docker.com/_/nginx/
 
 https://docs.docker.com/engine/docker-overview/
----
+
 
