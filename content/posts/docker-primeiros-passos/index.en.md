@@ -12,7 +12,7 @@ categories: ["Infra"]
 
 lightgallery: true
 ---
-Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!!!
+Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!
 
 ## O que é Docker
 
