@@ -1,5 +1,5 @@
 ---
-title: "Kubernetes Configurando O Minikube"
+title: "Kubernetes - Configurando O Minikube"
 date: 2022-03-22T17:56:52-03:00
 draft: false
 author: "Emerson Silva"
