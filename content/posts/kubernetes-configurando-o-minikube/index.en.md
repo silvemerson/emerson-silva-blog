@@ -20,9 +20,12 @@ Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a
 
 Primeiro, vamos entender o que é exatamente o Minikube.
 
+## O que é?
 
 O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a [documentação](https://minikube.sigs.k8s.io/docs/).
- 
+
+## Instalação
+
 Sem mais delongas, vamos configurar nosso cluster. Let’s go!!
 Antes de instalar o Minikube, precisamos realizar a instalação do kubectl:
 
@@ -50,6 +53,8 @@ Posteriormente:
 
 ``` $ sudo cp minikube /usr/local/bin && rm minikube```
 
+## Inicializando Cluster
+
 Agora vamos iniciar nosso cluster com o comando minikube start:
 
 ![Alt text for broken image link](minikube-start.png)
@@ -58,7 +63,13 @@ Feito, nosso cluster está instalado e em execução localmente. Vamos consultar
 
 ![Alt text for broken image link](minikube-nodes.png)
 
-Por default ele criou um node para que possamos fazer nossos testes. Que tal criarmos nosso primeiro deployment? Execute o comando abaixo em seu terminal:
+Por default ele criou um node para que possamos fazer nossos testes. 
+
+
+## Primeiro Deploy
+
+
+Que tal criarmos nosso primeiro deployment? Execute o comando abaixo em seu terminal:
 
 ``` $ kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4 ```
 
@@ -70,6 +81,7 @@ Nosso primeiro deployment foi criado. Vamos consultar os recursos que foram cria
 
 Feito! Nosso cluster está em execução e com uma aplicação provisionada.
 
+## Minikube Dashboard
 
 Outro recurso interessante que o Minikube oferece é um painel web com a saúde e recursos do cluster. Para visualiza-lo execute:
 
@@ -85,6 +97,9 @@ Ele vai gerar um link do painel do cluster, acesse em seu navegador:
 
 Veja, nosso deployment está sendo exibido no painel!!
 
+
+## Comandos 
+
 Mais alguns comandos para vocês testarem:
 
 
@@ -99,6 +114,7 @@ Mais alguns comandos para vocês testarem:
 
 Por hoje é só pessoal, o Minikube é uma ótima ferramenta para testar o Kubernetes e brincar com orquestração de containers.
 
+## Referências
 
 https://kubernetes.io/pt-br/docs/tutorials/hello-minikube/
 
