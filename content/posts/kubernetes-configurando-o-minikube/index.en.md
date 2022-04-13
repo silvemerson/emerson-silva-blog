@@ -7,8 +7,8 @@ resources:
 - name: "featured-image"
   src: "featured-image.png"
 
-tags: ["infra","minikube","kubernetes"]
-categories: ["Infra"]
+tags: ["minikube","kubernetes"]
+categories: ["Containers"]
 
 lightgallery: true
 ---

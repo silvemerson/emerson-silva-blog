@@ -1,14 +1,14 @@
 ---
 title: "Docker Primeiros Passos"
 date: 2022-04-12T13:33:01-03:00
-draft: true
+draft: false
 author: "Emerson Silva"
 resources:
 - name: "docker"
   src: "docker.png"
 
-tags: ["infra","docker"]
-categories: ["Infra"]
+tags: ["containers","docker"]
+categories: ["Containers"]
 
 lightgallery: true
 ---
