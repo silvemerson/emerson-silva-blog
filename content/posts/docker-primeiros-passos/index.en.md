@@ -4,8 +4,8 @@ date: 2022-04-12T13:33:01-03:00
 draft: false
 author: "Emerson Silva"
 resources:
-- name: "docker"
-  src: "docker.png"
+- name: "featured-image"
+  src: "featured-image.png"
 
 tags: ["containers","docker"]
 categories: ["Containers"]
