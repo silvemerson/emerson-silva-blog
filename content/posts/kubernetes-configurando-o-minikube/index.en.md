@@ -91,7 +91,7 @@ Mais alguns comandos para vocês testarem:
 **minikube ip**: exibe o IP do Cluster
 
 
-**minikube ssh**: acessa o cluester por SSH
+**minikube ssh**: acessa o cluster por SSH
 
 
 **minikube logs**: visualiza os logs do cluster
