@@ -13,10 +13,7 @@ categories: ["IaC"]
 lightgallery: true
 ---
 
-Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração e principalmente, acabar com ás dúvidas que existem. 
-
-
-
+Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
 ## O que é
 
 Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tanta outras,é um formato de codificação de dados legíveis por humanos.Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significa em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é. 
