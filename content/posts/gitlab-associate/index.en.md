@@ -19,7 +19,7 @@ No post de hoje do blog, vou comentar um pouco como foi a minha preparação par
 
 ## Criar conta e link do Treinamento
 
-Para criar uma conta, acesse o link https://gitlab.edcast.com/log_in
+Para criar uma conta, acesse o link: https://gitlab.edcast.com/log_in
 
 O link para o treinamento: https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&limit=5&tab=content
 
