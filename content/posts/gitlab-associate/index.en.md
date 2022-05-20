@@ -47,4 +47,4 @@ Na prova prática não é abordado CI/CD ou as outras ferramentas que existem de
 
 ## Conclusão
 
-É uma prova legal de se fazer, é de nível associate, então o nível de dificuldade é relativo, além do conhecimento teórico, é necessário ter um domínio sobre git e o repositório do GitLab para pdoer fazer, por isso quanto mais práticar, melhor. 
+É uma prova legal de se fazer, é de nível associate, então o nível de dificuldade é relativo, além do conhecimento teórico, é necessário ter um domínio sobre git e o repositório do GitLab para poder fazer, por isso quanto mais práticar, melhor. É um ótimo desafio para quem gosta de GitLab.
