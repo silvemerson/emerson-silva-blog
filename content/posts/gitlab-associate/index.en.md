@@ -38,6 +38,8 @@ Outro material de apoio que irá ajudar muito, são as aulas ao vivo feitas pela
 {{< youtube SMzaAP09BD4 >}}
 
 
+Somente com as aulas ao vivo é possível passar na prova, o conteúdo é top demais e de muita qualidade. 
+
 ## Impressões sobre a prova
 
 A prova teórica aborda comandos do git e mescla entre os recursos Free e Premium do GitLab, com os recursos Premium que até então eu não usava tanto, tive que estudar um pouco mais. 
