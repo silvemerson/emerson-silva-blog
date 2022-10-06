@@ -142,6 +142,7 @@ Agora que já temos um containers em execução irei compartilhar um guia de com
 - **docker rm -f ID_container**: Apaga, de forma forçada, o container. Independente se o mesmo esteja em execução ou não.
 - **docker images**: Lista todas as imagens baixadas.
 - **docker rmi image_name**: Apaga imagem baixada.
+## VIDEO
 
 {{< youtube J-nPX_fsgR4 >}}
 
