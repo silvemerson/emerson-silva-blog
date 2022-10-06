@@ -143,6 +143,9 @@ Agora que já temos um containers em execução irei compartilhar um guia de com
 - **docker images**: Lista todas as imagens baixadas.
 - **docker rmi image_name**: Apaga imagem baixada.
 
+{{< youtube J-nPX_fsgR4 >}}
+
+
 ## Referências
 
 https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script
