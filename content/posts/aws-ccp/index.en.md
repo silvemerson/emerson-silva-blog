@@ -86,11 +86,11 @@ As instruções de cada exame, e disponibilizado pelo Centro escolhido.
 
 Agora é possível você escolher fazer a prova em Portugês e utilizar o Inglês de apoio para caso surgir dúvidas sobre algum termo que você possa ter estudado em inglês.
 
-## Beneficios 
+## Beneficio
 
 Eu mencionei no começo do post tem um ponto interessante em começar pela prova da CCP que é o DESCONTO DE 50% NA PROXIMA PROVA. 
 
-Isso é baum demais. Então, mesmo que você já tenha expirência na AWS, como eu, é interessante começar pela CCP por conta dessa vantagem na proxma prova, além de você entender como é dinâmica da certificação da AWS. 
+Isso é baum demais. Então, mesmo que você já tenha experiência na AWS, como eu, é interessante começar pela CCP por conta dessa vantagem na proxma prova, além de você entender como é dinâmica da certificação da AWS. 
 
 ## Conclusão
 
