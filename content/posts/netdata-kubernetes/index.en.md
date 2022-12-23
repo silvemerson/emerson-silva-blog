@@ -1,14 +1,14 @@
 ---
 title: "Netdata - Monitorando o Kubernetes"
 date: 2022-08-01T22:55:52-03:00
-draft: true
+draft: false
 author: "Emerson Silva"
 resources:
 - name: "featured-image"
   src: "featured-image.png"
 
 tags: ["monitoramento","kubernetes"]
-categories: ["Monitoramento"]
+categories: ["Monitoring and Observability"]
 
 lightgallery: true
 ---
