@@ -1,7 +1,7 @@
 ---
 title: "Resenha - Manual de DevOps"
 date: 2022-12-07T12:16:55-03:00
-draft: false
+draft: true
 author: "Emerson Silva"
 resources:
 - name: "featured-image"
