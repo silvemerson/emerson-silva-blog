@@ -18,11 +18,11 @@ Olá pessoal!
 
 No post de hoje do blog, vou comentar um pouco como foi a minha experiência na Live da 4Linux falando sobre Docker. 
 
-É primeiro post sobre algo que não seja um passo a passo téncnio, então a idéia que seja mais uma resenha com alguns detalhes e curiosidades. 
+É primeiro post sobre algo que não seja um passo a passo técnico, então a idéia que seja mais uma resenha com alguns detalhes e curiosidades. 
 
 ## Sobre o que foi a palestra? 
 
-A palestra foi realizada pela 4Linux, com o objetivo de compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Containers. 
+A palestra foi realizada pela 4Linux, com o objetivo de compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Contêineres. 
 
 O objetivo era falar de Docker até o deploy no Swarm, então detalhei um passo a passo, montei um cronograma com o comandos para quem fosse acompanhar. A Live foi no Youtube e ficou gravado, vou deixar o link ao final desse post rápido. 
 
@@ -30,13 +30,14 @@ O que foi passado de conhecimento foi da criação de uma conta na GCP, Introdu�
 
 ## Como foi a preparação e experiência?
 
-A preparação foi bem tranquila, usei um roterio voltado a Cloud, então todo o ambiente foi construído na GCP, elaborei um repositório no Github com todos os comandos por etapas. Tentei fazer a dinamica que tenho nas aulas que ministro, para quem não sabe, sou instrutor também, e ministro treinametos voltado a Kubernetes, Docker e CICD. Enão seguinto o que já faço, fiz uma palestra onde tudo estaria no terminal e mão na massa. Algo leve para quem nunca tinha mexido com Docker até alguém com experiência. 
+A preparação foi bem tranquila, usei um roteiro voltado a Cloud, então todo o ambiente foi construído na GCP, elaborei um repositório no Github com todos os comandos por etapas. Tentei fazer a dinâmica que tenho nas aulas que ministro, para quem não sabe, sou instrutor também, e ministro treinamentos voltado a Kubernetes, Docker e CICD. Então seguindo o que já faço, fiz uma palestra onde tudo estaria no terminal e mão na massa. Algo leve para quem nunca tinha mexido com Docker até alguém com experiência. 
 
 Sobre a experiência, foi algo marcante, porque de fato foi a minha primeira Live aberta ao público, apesar estar sempre em sala de aula, bateu um nervosismo sim haha
 
-Mas contei com apoio de colegas de time, minha familia, amigos e namorada e tudo fluiu.
+Mas contei com apoio de colegas de time, minha família, amigos e namorada e tudo fluiu.
 
-A expectiva e participar de mais eventos assim, não só pela empresa, mas pelas comunidades voltada a DevOps e passar o conhecimento e retribuir um pouco do tanto que que recebo com o conhecimento compartilhado. 
+A expectativa e participar de mais eventos assim, não só pela empresa, mas pelas comunidades voltada a DevOps e passar o conhecimento e retribuir um pouco do tanto que que recebo com o conhecimento compartilhado. 
+
 
 ## Live está gravada no Youtube 
 
