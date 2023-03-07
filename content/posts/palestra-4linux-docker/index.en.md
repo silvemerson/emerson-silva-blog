@@ -34,7 +34,7 @@ A preparação foi bem tranquila, usei um roteiro voltado a Cloud, então todo o
 
 Sobre a experiência, foi algo marcante, porque de fato foi a minha primeira Live aberta ao público, apesar estar sempre em sala de aula, bateu um nervosismo sim haha
 
-Mas contei com apoio de colegas de time, minha família, amigos e namorada e tudo fluiu.
+Mas contei com apoio de colegas de time, minha família, amigos e a minha namorada e tudo fluiu.
 
 A expectativa e participar de mais eventos assim, não só pela empresa, mas pelas comunidades voltada a DevOps e passar o conhecimento e retribuir um pouco do tanto que que recebo com o conhecimento compartilhado. 
 
