@@ -23,7 +23,7 @@ theme = "LoveIt"
       # LoveIt CHANGED | 0.2.7 title shown in home page (HTML format is supported)
       title = "Emerson Silva"
       # subtitle shown in home page
-      subtitle = "Aqui o assunto é sobre Devops e um pouco mais!"
+      subtitle = "Aqui o assunto é sobre DevOps e um pouco mais!"
       typeit = true
       # whether to show social links
       social = true
@@ -43,6 +43,7 @@ theme = "LoveIt"
     Linkedin = "silvemerson"
     Instagram = "silvemerson_"
     Youtubechannel = "UCvHjFEBsZF3iom8hHOQwpGA"
+    Telegram = "silvemerson"
 
 
 [menu]
@@ -73,7 +74,8 @@ theme = "LoveIt"
     url = "/categories/"
     title = ""
     weight = 3
-    
+
+
 
 # Markup related configuration in Hugo
 [markup]
