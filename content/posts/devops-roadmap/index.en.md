@@ -73,7 +73,7 @@ Para facilitar os estudos, a [roadmap.sh](https://roadmap.sh/roadmaps) criou um 
 
 ### Dica de quem trabalha na área 
 
-Não que seja regra pessoal, mas que de fato ajuda muito, para ingressar nessas áreas, antes de começar a lidar com as ferramentas tenha um conhecimento sólido em Redes e Sistemas operacionais. Entenda sobre o que é um S.O, sobre protocolos, rede TCP, endereçamentos IP, etc. Não precisa virar o [Andrew Tenenbaum](https://www.amazon.com.br/s?i=stripbooks&rh=p_27%3AAndrew+Tanenbaum&s=relevancerank&text=Andrew+Tanenbaum&ref=dp_byline_sr_book_1), mas ter um conhecimento sobre isso vai ajudar a lidar com as ferramentas e os problemas que possamo surgir, vocês vão ter mais caminhos para pensar por onde começar para resolver. 
+Não que seja regra pessoal, mas que de fato ajuda muito, para ingressar nessas áreas, antes de começar a lidar com as ferramentas tenha um conhecimento sólido em Redes e Sistemas operacionais. Entenda sobre o que é um S.O, sobre protocolos, rede TCP, endereçamentos IP, etc. Não precisa virar o [Andrew Tenenbaum](https://www.amazon.com.br/s?i=stripbooks&rh=p_27%3AAndrew+Tanenbaum&s=relevancerank&text=Andrew+Tanenbaum&ref=dp_byline_sr_book_1), mas ter um conhecimento sobre isso vai ajudar a lidar com as ferramentas e os problemas que possam surgir, vocês vão ter mais caminhos para pensar por onde começar para resolver.
 
 ### Roadmap
 
