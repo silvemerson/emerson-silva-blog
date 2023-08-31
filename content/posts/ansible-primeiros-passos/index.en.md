@@ -1,7 +1,7 @@
 ---
 title: "Ansible - Primeiro Passos"
 date: 2022-06-30T11:54:03-03:00
-draft: false
+draft: true
 author: "Emerson Silva"
 resources:
 - name: "featured-image"
