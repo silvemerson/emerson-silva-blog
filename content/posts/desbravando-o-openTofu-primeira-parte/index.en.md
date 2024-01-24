@@ -78,18 +78,18 @@ Até o momento da escrita desse post, ainda não existe binários para a instala
 
 **Via Script**
 
-curl -s https://packagecloud.io/install/repositories/opentofu/tofu/script.deb.sh?any=true -o /tmp/tofu-repository-setup.sh
+```curl -s https://packagecloud.io/install/repositories/opentofu/tofu/script.deb.sh?any=true -o /tmp/tofu-repository-setup.sh```
 
-sudo bash /tmp/tofu-repository-setup.sh
+```sudo bash /tmp/tofu-repository-setup.sh```
 
-rm /tmp/tofu-repository-setup.sh
+```rm /tmp/tofu-repository-setup.sh```
 
-sudo apt-get install tofu
+```sudo apt-get install tofu```
+
 
 Pronto, o OpenTofu está instalado. Aguardo vocês no próximo post para que possamos construir nossa Infra como Código. Por se tratar algo novo, bugs podem ser identificados, então galerinha, não deixem de contribuir criando Issues e soluções para possíves problemas. 
 
 Abraço. 
-
 
 
 ## Referências 
