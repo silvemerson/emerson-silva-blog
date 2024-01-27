@@ -15,8 +15,8 @@ lightgallery: true
 
 Salve salve pessoal!!!
 
-Tudo bem com vocês? Espero que sim! Antes de mais nada, um Feliz Ano Novo para vocês! 
-E esse o nosso primeiro post do ano e vamos iniciar uma série chamada **Glossario Tech** onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+Tudo bem com vocês? Espero que sim!  
+E bora pra mais um post do **Glossario Tech** onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
 
 
 ## O que é SRE
