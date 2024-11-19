@@ -21,7 +21,7 @@ Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta e
 Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o [OpenTofu](https://opentofu.org/), você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL. 
 
 Então leia [Desbravando o OpenTofu: Parte 01 – Introdução e Fundamentos
-](https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte/)
+](https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/)
 
 
 ## Instalação do OpenTofu
@@ -259,4 +259,4 @@ https://opentofu.org/docs/intro/
 
 https://www.linuxfoundation.org/press/announcing-opentofu
 
-https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte/
+https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/
