@@ -1,6 +1,0 @@
----
-- name: Docker login
-  ansible.builtin.shell: docker login -u silvemerson -p '#18K4Sr%eX5'
-
-- name: Create Service
-  ansible.builtin.shell: docker service create --name emerson-blog --publish published=80,target=80 silvemerson/emerson-blog-it:latest
