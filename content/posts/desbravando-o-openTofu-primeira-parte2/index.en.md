@@ -1,5 +1,5 @@
 ---
-title: "Desbravando o OpenTofu: Parte 01 - Introdução e Fundamentos"
+title: "Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"
 date: 2024-11-19T12:24:03-03:00
 draft: false
 author: "Emerson Silva"
@@ -13,7 +13,6 @@ categories: ["IaC"]
 lightgallery: true
 ---
 
-# Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP
 
 Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
 
