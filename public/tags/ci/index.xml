@@ -7,12 +7,13 @@
     <title>003 - Glossário Tech - o que é Continuous Integration</title>
     <link>http://localhost:1313/posts/glossario-ci/</link>
     <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/glossario-ci/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h1 id="o-que-é-ci">O que é CI</h1>
+<h2 id="o-que-é-ci">O que é CI</h2>
 <p>CI é a sigla para Continuous Integration (Integração Contínua), uma prática de desenvolvimento de software em que as mudanças no código são integradas regularmente em um repositório compartilhado e, em seguida, automaticamente testadas e validadas.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

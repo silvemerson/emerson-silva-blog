@@ -10,61 +10,70 @@
     <author>Author</author>
     <guid>http://localhost:1313/categories/iac/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Glossario-Tech</title>
     <link>http://localhost:1313/categories/glossario-tech/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/glossario-tech/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Livros</title>
     <link>http://localhost:1313/categories/livros/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/livros/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Containers</title>
     <link>http://localhost:1313/categories/containers/</link>
     <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/containers/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Palestras</title>
     <link>http://localhost:1313/categories/palestras/</link>
     <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/palestras/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Roadmap</title>
     <link>http://localhost:1313/categories/roadmap/</link>
     <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/roadmap/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Certificações</title>
     <link>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</link>
     <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>About</title>
     <link>http://localhost:1313/categories/about/</link>
     <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/about/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Documentation</title>
     <link>http://localhost:1313/categories/documentation/</link>
     <pubDate>Mon, 01 Jan 0001 00:00:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/categories/documentation/</guid>
     <description><![CDATA[]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

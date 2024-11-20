@@ -7,10 +7,11 @@
     <title>Creating Dynamic Kubernetes Resources with Crossplane</title>
     <link>http://localhost:1313/posts/opensource-summit-crossplane/</link>
     <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/opensource-summit-crossplane/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
+<p>Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer ">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
 <p>Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

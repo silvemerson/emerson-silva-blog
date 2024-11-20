@@ -7,21 +7,22 @@
     <title>Creating Dynamic Kubernetes Resources with Crossplane</title>
     <link>http://localhost:1313/posts/opensource-summit-crossplane/</link>
     <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/opensource-summit-crossplane/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
+<p>Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer ">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
 <p>Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab</title>
     <link>http://localhost:1313/posts/kubernetes-days-4linux/</link>
     <pubDate>Thu, 06 Jul 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/kubernetes-days-4linux/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da <a href="https://www.youtube.com/@4linux" target="_blank" rel="noopener noreffer">4Linux</a>. Quem não pode conferir ao vivo, confere lá:</p>
+<p>Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da <a href="https://www.youtube.com/@4linux" target="_blank" rel="noopener noreffer ">4Linux</a>. Quem não pode conferir ao vivo, confere lá:</p>
 <h2 id="repositório-do-gilab">Repositório do GiLab</h2>
-<p><a href="https://gitlab.com/silvemerson/4linux-palestra-kubernetes-days" target="_blank" rel="noopener noreffer">4linux-palestra-kubernetes-days</a></p>
+<p><a href="https://gitlab.com/silvemerson/4linux-palestra-kubernetes-days" target="_blank" rel="noopener noreffer ">4linux-palestra-kubernetes-days</a></p>
 <h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
 
 
@@ -33,16 +34,17 @@
 
 <h2 id="brinde-do-palestrante">Brinde do palestrante</h2>
 <p>Ganhei um Funko personalizado e uma caneca sensacional.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Quinta ás Quinze - Primeiros Passos com Ansible</title>
     <link>http://localhost:1313/posts/quinta-as-quinze-ansible/</link>
     <pubDate>Fri, 02 Jun 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/quinta-as-quinze-ansible/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
+<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer ">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
 <h2 id="repositório-do-github">Repositório do Github</h2>
-<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer">ansible-quinta-as-quinze</a></p>
+<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer ">ansible-quinta-as-quinze</a></p>
 <h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
 
 
@@ -51,11 +53,12 @@
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KGAWN9N4KPM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
       ></iframe>
     </div>]]></description>
-</item><item>
+</item>
+<item>
     <title>Do Manual ao Automatizado: O Poder da Infraestrutura Ágil em Clouds Privadas</title>
     <link>http://localhost:1313/posts/plalestra-4linux-manual-ao-automatizado/</link>
     <pubDate>Wed, 24 May 2023 12:18:47 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/plalestra-4linux-manual-ao-automatizado/</guid>
     <description><![CDATA[<p>Olá pessoal!</p>
 <p>No post de hoje do blog, vou comentar um pouco como foi a minha experiência palestrando pela 4Linux novamente, falando daquilo que gosto muito, que é sobre DevOps e Automação de infraestrutura. Então não espere muita formalidade enquanto eu escrevo, porque a idéia é como você leitor estivesse trocado ideia comigo. Então&hellip;</p>
@@ -66,11 +69,12 @@ Citando cada ferramenta e também mencionando que a 4Linux também realiza servi
 A cereja do bolo, ou cereja da Live, foi um case de um projeto recentente onde comento sobre a problemática que o cliente se encontrava e como 4Linux trouxe uma solução trabalhando com Ansible e Rundeck.
 Bom assiste a Live para ter mais detalhes, vale a pena hehe
 O link está no final do Post.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>DevOps Heroes - Deploy de uma Aplicação no GKE</title>
     <link>http://localhost:1313/posts/palestra-devopsheroes-gke/</link>
     <pubDate>Tue, 07 Feb 2023 12:18:47 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/palestra-devopsheroes-gke/</guid>
     <description><![CDATA[<p>Olá pessoal!</p>
 <p>No post de hoje do blog, vou comentar um pouco como foi a minha experiência palestrando no DevOps Experience</p>
@@ -78,16 +82,18 @@ O link está no final do Post.</p>]]></description>
 <h2 id="sobre-o-que-foi-a-palestra">Sobre o que foi a palestra?</h2>
 <p>Fui convidado pelo DevOps Heroes para palestrar para comunidade, no evento mensal chamado DevOps Experience. O tema era livre e com 50 minutos de apresentação além do Kahoot, que é um gameshow de perguntas sobre a palestra.
 A proposta do evento, é de várias palestras durante o dia todo, com temas variados sobre DevOps.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Live - Orquestrando aplicações com Docker Swarm</title>
     <link>http://localhost:1313/posts/palestra-4linux-docker/</link>
     <pubDate>Fri, 28 Oct 2022 12:18:30 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/palestra-4linux-docker/</guid>
     <description><![CDATA[<p>Olá pessoal!</p>
 <p>No post de hoje do blog, vou comentar um pouco como foi a minha experiência na Live da 4Linux falando sobre Docker.</p>
 <p>É primeiro post sobre algo que não seja um passo a passo técnico, então a idéia que seja mais uma resenha com alguns detalhes e curiosidades.</p>
 <h2 id="sobre-o-que-foi-a-palestra">Sobre o que foi a palestra?</h2>
 <p>A palestra foi realizada pela 4Linux, com o objetivo de compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Contêineres.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

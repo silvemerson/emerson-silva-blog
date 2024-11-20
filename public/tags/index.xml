@@ -10,68 +10,78 @@
     <author>Author</author>
     <guid>http://localhost:1313/tags/devops/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Iac</title>
     <link>http://localhost:1313/tags/iac/</link>
     <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/iac/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Cd</title>
     <link>http://localhost:1313/tags/cd/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/cd/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
+    <title>Glossario-Tech</title>
+    <link>http://localhost:1313/tags/glossario-tech/</link>
+    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/glossario-tech/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
     <title>Ci</title>
     <link>http://localhost:1313/tags/ci/</link>
     <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/ci/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>K8s</title>
     <link>http://localhost:1313/tags/k8s/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/k8s/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Kubernetes</title>
     <link>http://localhost:1313/tags/kubernetes/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/kubernetes/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Kind</title>
     <link>http://localhost:1313/tags/kind/</link>
     <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/kind/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Sre</title>
     <link>http://localhost:1313/tags/sre/</link>
     <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/sre/</guid>
     <description><![CDATA[]]></description>
-</item><item>
+</item>
+<item>
     <title>Crossplanne</title>
     <link>http://localhost:1313/tags/crossplanne/</link>
     <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
     <author>Author</author>
     <guid>http://localhost:1313/tags/crossplanne/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>Live</title>
-    <link>http://localhost:1313/tags/live/</link>
-    <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/tags/live/</guid>
-    <description><![CDATA[]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

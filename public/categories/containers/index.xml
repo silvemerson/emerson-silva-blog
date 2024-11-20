@@ -7,7 +7,7 @@
     <title>Kubernetes - Criando um cluster local com Kind</title>
     <link>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</link>
     <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</guid>
     <description><![CDATA[<p>Olá pessoal</p>
 <p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
@@ -21,26 +21,29 @@
 <li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
 <li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
 </ul>
-<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer">1.0 Roadmap</a></p>]]></description>
-</item><item>
+<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>]]></description>
+</item>
+<item>
     <title>Docker - Primeiros Passos</title>
     <link>http://localhost:1313/posts/docker-primeiros-passos/</link>
     <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/docker-primeiros-passos/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!</p>
 <h2 id="o-que-é-docker">O que é Docker</h2>
 <p>O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.</p>]]></description>
-</item><item>
+</item>
+<item>
     <title>Kubernetes - Configurando O Minikube</title>
     <link>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</link>
     <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</guid>
     <description><![CDATA[<p>Olá pessoal</p>
 <p>Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.</p>
 <p>Primeiro, vamos entender o que é exatamente o Minikube.</p>
 <h2 id="o-que-é">O que é?</h2>
-<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer">documentação</a>.</p>]]></description>
-</item></channel>
+<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer ">documentação</a>.</p>]]></description>
+</item>
+</channel>
 </rss>

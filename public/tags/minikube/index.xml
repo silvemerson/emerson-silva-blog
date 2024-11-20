@@ -7,12 +7,13 @@
     <title>Kubernetes - Configurando O Minikube</title>
     <link>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</link>
     <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</guid>
     <description><![CDATA[<p>Olá pessoal</p>
 <p>Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.</p>
 <p>Primeiro, vamos entender o que é exatamente o Minikube.</p>
 <h2 id="o-que-é">O que é?</h2>
-<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer">documentação</a>.</p>]]></description>
-</item></channel>
+<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer ">documentação</a>.</p>]]></description>
+</item>
+</channel>
 </rss>

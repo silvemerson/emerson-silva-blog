@@ -7,10 +7,11 @@
     <title>Docker - Primeiros Passos</title>
     <link>http://localhost:1313/posts/docker-primeiros-passos/</link>
     <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/docker-primeiros-passos/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!</p>
 <h2 id="o-que-é-docker">O que é Docker</h2>
 <p>O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

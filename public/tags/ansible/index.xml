@@ -7,12 +7,12 @@
     <title>Quinta ás Quinze - Primeiros Passos com Ansible</title>
     <link>http://localhost:1313/posts/quinta-as-quinze-ansible/</link>
     <pubDate>Fri, 02 Jun 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/quinta-as-quinze-ansible/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
+<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer ">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
 <h2 id="repositório-do-github">Repositório do Github</h2>
-<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer">ansible-quinta-as-quinze</a></p>
+<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer ">ansible-quinta-as-quinze</a></p>
 <h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
 
 
@@ -21,5 +21,6 @@
       <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KGAWN9N4KPM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
       ></iframe>
     </div>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

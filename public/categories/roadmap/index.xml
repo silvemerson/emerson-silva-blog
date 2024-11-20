@@ -7,7 +7,7 @@
     <title>DevOps e SRE Roadmap</title>
     <link>http://localhost:1313/posts/devops-roadmap/</link>
     <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/devops-roadmap/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
 <p>Espero que sim!</p>
@@ -16,5 +16,6 @@
 <h3 id="o-que-é-devops">O que é DevOps</h3>
 <p>Antes de tudo, entender a cultura DevOps!</p>
 <p>DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</p>]]></description>
-</item></channel>
+</item>
+</channel>
 </rss>

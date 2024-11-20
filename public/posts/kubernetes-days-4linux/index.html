@@ -4,8 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab - Emerson Silva</title><meta name="Description" content=""><meta property="og:url" content="http://localhost:1313/posts/kubernetes-days-4linux/">
+        <title>Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/kubernetes-days-4linux/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab">
   <meta property="og:description" content="Olá pessoal, tudo certo?
@@ -30,10 +29,12 @@ Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizad
 Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da 4Linux. Quem não pode conferir ao vivo, confere lá:
 Repositório do GiLab 4linux-palestra-kubernetes-days
 Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizado e uma caneca sensacional.">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/kubernetes-days-4linux/" /><link rel="prev" href="http://localhost:1313/posts/quinta-as-quinze-ansible/" /><link rel="next" href="http://localhost:1313/posts/packer-gcp-image/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/kubernetes-days-4linux/" /><link rel="prev" href="http://localhost:1313/posts/quinta-as-quinze-ansible/" /><link rel="next" href="http://localhost:1313/posts/packer-gcp-image/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -50,55 +51,47 @@ Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizad
                         }],"genre": "posts","keywords": "palestras, opensource, live, kubernetes","wordcount":  51 ,
         "url": "http:\/\/localhost:1313\/posts\/kubernetes-days-4linux\/","datePublished": "2023-07-06T22:54:03-03:00","dateModified": "2023-07-06T22:54:03-03:00","publisher": {
             "@type": "Organization",
-            "name": "Emerson Silva"},"author": {
+            "name": ""},"author": {
                 "@type": "Person",
                 "name": "Emerson Silva"
             },"description": ""
     }
     </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
+            <a href="/" title="Emerson Silva">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
         </div>
     </div>
 </header><header class="mobile" id="header-mobile">
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
+                <a href="/" title="Emerson Silva">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
         <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw"></i>
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
+</header><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/palestras/"><i class="far fa-folder fa-fw"></i>Palestras</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2023-07-06">2023-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;51 words&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;One minute&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/palestras/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Palestras</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-06">2023-07-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;51 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -106,10 +99,10 @@ Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizad
         data-srcset="/posts/kubernetes-days-4linux/featured-image.png, /posts/kubernetes-days-4linux/featured-image.png 1.5x, /posts/kubernetes-days-4linux/featured-image.png 2x"
         data-sizes="auto"
         alt="/posts/kubernetes-days-4linux/featured-image.png"
-        title="/posts/kubernetes-days-4linux/featured-image.png" /></div><div class="details toc" id="toc-static"  kept="">
+        title="/posts/kubernetes-days-4linux/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
@@ -119,9 +112,9 @@ Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizad
   </ul>
 </nav></div>
             </div><div class="content" id="content"><p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da <a href="https://www.youtube.com/@4linux" target="_blank" rel="noopener noreffer">4Linux</a>. Quem não pode conferir ao vivo, confere lá:</p>
+<p>Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da <a href="https://www.youtube.com/@4linux" target="_blank" rel="noopener noreffer ">4Linux</a>. Quem não pode conferir ao vivo, confere lá:</p>
 <h2 id="repositório-do-gilab">Repositório do GiLab</h2>
-<p><a href="https://gitlab.com/silvemerson/4linux-palestra-kubernetes-days" target="_blank" rel="noopener noreffer">4linux-palestra-kubernetes-days</a></p>
+<p><a href="https://gitlab.com/silvemerson/4linux-palestra-kubernetes-days" target="_blank" rel="noopener noreffer ">4linux-palestra-kubernetes-days</a></p>
 <h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
 
 
@@ -136,48 +129,46 @@ Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizad
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="brinde.jpg"
-        data-srcset="/posts/kubernetes-days-4linux/brinde.jpg, brinde.jpg 1.5x, /posts/kubernetes-days-4linux/brinde.jpg 2x"
+        data-src="/posts/kubernetes-days-4linux/brinde.jpg"
+        data-srcset="/posts/kubernetes-days-4linux/brinde.jpg, /posts/kubernetes-days-4linux/brinde.jpg 1.5x, /posts/kubernetes-days-4linux/brinde.jpg 2x"
         data-sizes="auto"
         alt="/posts/kubernetes-days-4linux/brinde.jpg"
-        title="teste" /></p>
+        title="teste" width="718" height="898" /></p>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2023-07-06</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
+            </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/kubernetes-days-4linux/" data-title="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab" data-hashtags="palestras,opensource,live,kubernetes"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/kubernetes-days-4linux/" data-hashtag="palestras"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/kubernetes-days-4linux/" data-title="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/kubernetes-days-4linux/" data-title="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/kubernetes-days-4linux/" data-title="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/palestras/">Palestras</a>,&nbsp;<a href="/tags/opensource/">Opensource</a>,&nbsp;<a href="/tags/live/">Live</a>,&nbsp;<a href="/tags/kubernetes/">Kubernetes</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/palestras/">Palestras</a>,&nbsp;<a href="/tags/opensource/">Opensource</a>,&nbsp;<a href="/tags/live/">Live</a>,&nbsp;<a href="/tags/kubernetes/">Kubernetes</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/quinta-as-quinze-ansible/" class="prev" rel="prev" title="Quinta ás Quinze - Primeiros Passos com Ansible"><i class="fas fa-angle-left fa-fw"></i>Quinta ás Quinze - Primeiros Passos com Ansible</a>
-            <a href="/posts/packer-gcp-image/" class="next" rel="next" title="Criando imagens com Packer na GCP">Criando imagens com Packer na GCP<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/posts/quinta-as-quinze-ansible/" class="prev" rel="prev" title="Quinta ás Quinze - Primeiros Passos com Ansible"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Quinta ás Quinze - Primeiros Passos com Ansible</a>
+            <a href="/posts/packer-gcp-image/" class="next" rel="next" title="Criando imagens com Packer na GCP">Criando imagens com Packer na GCP<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 
         <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw"></i>
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw"></i>
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

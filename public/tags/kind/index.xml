@@ -7,7 +7,7 @@
     <title>Kubernetes - Criando um cluster local com Kind</title>
     <link>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</link>
     <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-    <author>Author</author>
+    <author>Emerson Silva</author>
     <guid>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</guid>
     <description><![CDATA[<p>Olá pessoal</p>
 <p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
@@ -21,6 +21,7 @@
 <li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
 <li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
 </ul>
-<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer">1.0 Roadmap</a></p>]]></description>
-</item></channel>
+<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>]]></description>
+</item>
+</channel>
 </rss>
