@@ -7,7 +7,7 @@ resources:
 - name: "featured-image"
   src: "featured-image.png"
 
-tags: ["ci","devops"]
+tags: ["ci","devops", "glossario-tech"]
 categories: ["glossario-tech"]
 
 lightgallery: true
