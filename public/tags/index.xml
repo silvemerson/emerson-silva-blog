@@ -1,14 +1,77 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Emerson Blog</title>
-    <link>https://example.org/tags/</link>
-    <description>Recent content in Tags on Emerson Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    
-	<atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Emerson Silva</title>
+        <link>http://localhost:1313/tags/</link>
+        <description>Tags - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Devops</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/devops/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Iac</title>
+    <link>http://localhost:1313/tags/iac/</link>
+    <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/iac/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Cd</title>
+    <link>http://localhost:1313/tags/cd/</link>
+    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/cd/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Ci</title>
+    <link>http://localhost:1313/tags/ci/</link>
+    <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/ci/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>K8s</title>
+    <link>http://localhost:1313/tags/k8s/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/k8s/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Kubernetes</title>
+    <link>http://localhost:1313/tags/kubernetes/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/kubernetes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Kind</title>
+    <link>http://localhost:1313/tags/kind/</link>
+    <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/kind/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Sre</title>
+    <link>http://localhost:1313/tags/sre/</link>
+    <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/sre/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Crossplanne</title>
+    <link>http://localhost:1313/tags/crossplanne/</link>
+    <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/crossplanne/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Live</title>
+    <link>http://localhost:1313/tags/live/</link>
+    <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/tags/live/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

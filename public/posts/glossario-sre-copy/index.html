@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>002 - Glossário Tech - o que é SRE - Emerson Silva</title><meta name="Description" content=""><meta property="og:url" content="http://localhost:1313/posts/glossario-sre-copy/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="002 - Glossário Tech - o que é SRE">
+  <meta property="og:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é SRE SRE significa “Site Reliability Engineering” (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-01-27T01:30:26-03:00">
+    <meta property="article:modified_time" content="2024-01-27T01:30:26-03:00">
+    <meta property="article:tag" content="Sre">
+    <meta property="og:image" content="http://localhost:1313/posts/glossario-sre-copy/featured-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/posts/glossario-sre-copy/featured-image.png">
+  <meta name="twitter:title" content="002 - Glossário Tech - o que é SRE">
+  <meta name="twitter:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é SRE SRE significa “Site Reliability Engineering” (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.">
+<meta name="application-name" content="Emerson Silva">
+<meta name="apple-mobile-web-app-title" content="Emerson Silva"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/glossario-sre-copy/" /><link rel="prev" href="http://localhost:1313/posts/glossario-sre/" /><link rel="next" href="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "002 - Glossário Tech - o que é SRE",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/glossario-sre-copy\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/localhost:1313\/posts\/glossario-sre-copy\/featured-image.png",
+                            "width":  767 ,
+                            "height":  238 
+                        }],"genre": "posts","keywords": "sre","wordcount":  563 ,
+        "url": "http:\/\/localhost:1313\/posts\/glossario-sre-copy\/","datePublished": "2024-01-27T01:30:26-03:00","dateModified": "2024-01-27T01:30:26-03:00","publisher": {
+            "@type": "Organization",
+            "name": "Emerson Silva"},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Silva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Silva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">002 - Glossário Tech - o que é SRE</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/glossario-tech/"><i class="far fa-folder fa-fw"></i>Glossario-Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2024-01-27">2024-01-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;563 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/glossario-sre-copy/featured-image.png"
+        data-srcset="/posts/glossario-sre-copy/featured-image.png, /posts/glossario-sre-copy/featured-image.png 1.5x, /posts/glossario-sre-copy/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/posts/glossario-sre-copy/featured-image.png"
+        title="/posts/glossario-sre-copy/featured-image.png" /></div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é-sre">O que é SRE</a></li>
+    <li><a href="#princípios-chave-do-sre">Princípios-chave do SRE</a></li>
+    <li><a href="#cases-de-sre">Cases de SRE</a></li>
+    <li><a href="#indicação-de-livro">Indicação de livro</a></li>
+    <li><a href="#refrências">Refrências:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!<br>
+E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
+<h2 id="o-que-é-sre">O que é SRE</h2>
+<p>SRE significa &ldquo;Site Reliability Engineering&rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</p>
+<p>Os profissionais de SRE geralmente trabalham para garantir que os sistemas e serviços sejam altamente confiáveis, escaláveis e eficientes. Eles aplicam princípios de engenharia para automatizar processos, monitorar o desempenho do sistema, responder a incidentes e melhorar continuamente a infraestrutura para evitar falhas.</p>
+<p>A abordagem do SRE combina práticas de desenvolvimento de software com operações de infraestrutura, buscando criar sistemas que sejam mais fáceis de gerenciar, mais estáveis e que forneçam uma boa experiência aos usuários finais. A metodologia SRE foi desenvolvida pelo Google, onde essa abordagem foi crucial para manter a confiabilidade de serviços online de grande escala.</p>
+<p>O Framework, possuí diversos princípios-chaves que possuem artigos para cada um. Futuramente irei trazer detalhes sobre cada tópico.</p>
+<h2 id="princípios-chave-do-sre">Princípios-chave do SRE</h2>
+<p><strong>Metas de Serviço (SLOs, SLIs e SLAs)</strong>: Estabelecer metas claras de serviço é fundamental. SLIs (Indicadores de Nível de Serviço) são métricas quantificáveis do comportamento do sistema (por exemplo, tempo de resposta). SLOs (Objetivos de Nível de Serviço) são as metas desejadas para esses indicadores, e SLAs (Acordos de Nível de Serviço) são compromissos com os usuários quanto a esses objetivos.</p>
+<p><strong>Automação</strong>: SREs priorizam a automação para lidar com tarefas operacionais repetitivas e reduzir a possibilidade de erro humano. A automação ajuda a garantir consistência e eficiência nas operações.</p>
+<p><strong>Monitoramento e Alertas</strong>: Monitoramento constante é crucial para identificar e resolver problemas rapidamente. SREs configuram alertas que indicam desvios do comportamento normal do sistema, permitindo uma resposta imediata a eventos adversos.</p>
+<p><strong>Escalonamento Controlado</strong>: Mudanças no sistema são implementadas gradualmente e monitoradas de perto para detectar qualquer impacto negativo. Se um problema ocorrer, a mudança pode ser revertida rapidamente.</p>
+<p><strong>Engenharia de Confiabilidade Pós-Incidente (PIE - Post-Incident Engineering)</strong>: Após incidentes, a SRE realiza análises aprofundadas para entender as causas raiz, aprender com os problemas e implementar melhorias para evitar recorrências.</p>
+<h2 id="cases-de-sre">Cases de SRE</h2>
+<p>Abaixo apresento para vocês 3 cases que encontrei sobre a utilização das práticas SRE no mercado.</p>
+<p><strong>Google</strong>: O Google é uma referência para a implementação de práticas SRE. Eles usam SRE para garantir a confiabilidade de seus serviços em larga escala. Por exemplo, o Gmail, Google Search e Google Maps contam com equipes SRE para manter a estabilidade e eficiência.</p>
+<p><strong>Netflix</strong>: Embora não seja explicitamente chamada de SRE, a cultura de engenharia na Netflix compartilha muitos princípios com o SRE. A empresa investe em automação, monitoramento e práticas de engenharia para garantir a confiabilidade do serviço de streaming, que é crítico para seus usuários.</p>
+<p><strong>LinkedIn</strong>: O LinkedIn utiliza práticas SRE para garantir a confiabilidade de sua plataforma. Isso inclui a definição de metas de serviço, automação de processos operacionais e uma abordagem de engenharia para melhorar a confiabilidade do sistema.</p>
+<h2 id="indicação-de-livro">Indicação de livro</h2>
+<p>Um livro que aborda detalhadamente esses processos é o <a href="https://www.amazon.com.br/Site-Reliability-Engineering-Betsy-Beyer/dp/149192912X" target="_blank" rel="noopener noreffer">Site Reliability Engineering: How Google Runs Production Systems</a>. Ele trás diveros artigos sobre cada metodo SRE.</p>
+<p>E por hoje é só pessoal, nos veremos em breve com novos posts sobre o <strong>Glossario Tech</strong> aqui no blog.</p>
+<p>Abraço!</p>
+<h2 id="refrências">Refrências:</h2>
+<p><a href="https://aws.amazon.com/pt/what-is/sre/" target="_blank" rel="noopener noreffer">https://aws.amazon.com/pt/what-is/sre/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-01-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/sre/">Sre</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/glossario-sre/" class="prev" rel="prev" title="002 - Glossário Tech - o que é SRE"><i class="fas fa-angle-left fa-fw"></i>002 - Glossário Tech - o que é SRE</a>
+            <a href="/posts/construindo-um-cluster-k8s-kind/" class="next" rel="next" title="Kubernetes - Criando um cluster local com Kind">Kubernetes - Criando um cluster local com Kind<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/lightgallery.min.css"><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

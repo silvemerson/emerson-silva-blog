@@ -238,7 +238,7 @@ tofu apply
 ```
 Pronto pessoal, feito o deploy de uma VM na GCP usando o OpenTofu!!! 
 
-Caso queria delete a infra execute ```tofu destroy```
+Caso queria deletar a infra execute ```tofu destroy```
 
 Por hoje é só pessoal, em breve voltamos com mais. 
 Não esqueçam de compartilhar esse post em suas redes sociais
