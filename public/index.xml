@@ -2,7 +2,7 @@
     <channel>
         <title>Emerson Silva</title>
         <link>http://localhost:1313/</link>
-        <description>This is Emerson Silva Blog</description>
+        <description>This is Emerson Silva</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>

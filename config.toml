@@ -10,7 +10,7 @@ theme = "LoveIt"
 
 [params]
   # LoveIt theme version
-  version = "0.2.X"
+  version = "0.2.11"
   [params.home]
     rss = 10
     # Home page profile
