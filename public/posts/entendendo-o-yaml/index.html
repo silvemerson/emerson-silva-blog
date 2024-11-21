@@ -1,191 +1,33 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <title>YAML - Introdução rápida - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/entendendo-o-yaml/">
-  <meta property="og:site_name" content="Emerson Silva">
-  <meta property="og:title" content="YAML - Introdução rápida">
-  <meta property="og:description" content="Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
-O que é Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.">
-  <meta property="og:locale" content="pt_br">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2022-04-13T18:37:11-03:00">
-    <meta property="article:modified_time" content="2022-04-13T18:37:11-03:00">
-    <meta property="article:tag" content="Iac">
-    <meta property="article:tag" content="Automacao">
-    <meta property="article:tag" content="Yaml">
-    <meta property="og:image" content="http://localhost:1313/posts/entendendo-o-yaml/featured-image.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/entendendo-o-yaml/featured-image.png">
-  <meta name="twitter:title" content="YAML - Introdução rápida">
-  <meta name="twitter:description" content="Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
-O que é Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/entendendo-o-yaml/" /><link rel="prev" href="http://localhost:1313/posts/docker-primeiros-passos/" /><link rel="next" href="http://localhost:1313/posts/gitlab-associate/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "YAML - Introdução rápida",
-        "inLanguage": "pt-br",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/entendendo-o-yaml\/"
-        },"image": [{
-                            "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/posts\/entendendo-o-yaml\/featured-image.png",
-                            "width":  318 ,
-                            "height":  159 
-                        }],"genre": "posts","keywords": "iac, automacao, yaml","wordcount":  450 ,
-        "url": "http:\/\/localhost:1313\/posts\/entendendo-o-yaml\/","datePublished": "2022-04-13T18:37:11-03:00","dateModified": "2022-04-13T18:37:11-03:00","publisher": {
-            "@type": "Organization",
-            "name": ""},"author": {
-                "@type": "Person",
-                "name": "Emerson Silva"
-            },"description": ""
-    }
-    </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-                </a></div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
-                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
-            </a></div>
-    </div>
-</header><main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
-            <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">YAML - Introdução rápida</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/iac/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>IaC</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-04-13">2022-04-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;450 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
-        </div><div class="featured-image"><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="/posts/entendendo-o-yaml/featured-image.png"
-        data-srcset="/posts/entendendo-o-yaml/featured-image.png, /posts/entendendo-o-yaml/featured-image.png 1.5x, /posts/entendendo-o-yaml/featured-image.png 2x"
-        data-sizes="auto"
-        alt="/posts/entendendo-o-yaml/featured-image.png"
-        title="/posts/entendendo-o-yaml/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
-                <div class="details-summary toc-title">
-                    <span>Contents</span>
-                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#o-que-é">O que é</a></li>
-    <li><a href="#estrutura-do-yaml">Estrutura do YAML</a></li>
-    <li><a href="#sintaxe">Sintaxe</a></li>
-    <li><a href="#como-validar-o-yaml">Como validar o YAML?</a></li>
-    <li><a href="#conclusão">Conclusão</a></li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><p>Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.</p>
-<h2 id="o-que-é">O que é</h2>
-<p>Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.</p>
-<p>O YAML possui uma sintaxe minimalista em comparação ao XML e JSON, por exemplo</p>
-<h2 id="estrutura-do-yaml">Estrutura do YAML</h2>
-<p>Uma das suas principais caracteristicas é que possuí um formato com uma fácil legibilidade, o YAML utiliza um grupo de caracteres conhecidos como Unicode, ou seja UTF-8 ou UTF-16. A estrutura do documento é composto por indentação com espaços em branco,  se você usar TAB um erro ocorrerá, isso pode ser um pouco irritante no começo da aprendizagem.
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><title>YAML - Introdução rápida - Emerson Silva</title><meta name=Description content="This is Emerson Silva"><meta property="og:title" content="YAML - Introdução rápida"><meta property="og:description" content="Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
+O que é Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível."><meta property="og:type" content="article"><meta property="og:url" content="https://emerson-silva.blog.br/posts/entendendo-o-yaml/"><meta property="og:image" content="https://emerson-silva.blog.br/posts/entendendo-o-yaml/featured-image.png"><meta property="article:section" content="posts"><meta property="article:published_time" content="2022-04-13T18:37:11-03:00"><meta property="article:modified_time" content="2022-04-13T18:37:11-03:00"><meta property="og:site_name" content="Emerson Silva"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://emerson-silva.blog.br/posts/entendendo-o-yaml/featured-image.png"><meta name=twitter:title content="YAML - Introdução rápida"><meta name=twitter:description content="Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
+O que é Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível."><meta name=application-name content="Emerson Silva"><meta name=apple-mobile-web-app-title content="Emerson Silva"><meta name=theme-color content="#ffffff"><meta name=msapplication-TileColor content="#da532c"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=mask-icon href=/safari-pinned-tab.svg color=#5bbad5><link rel=manifest href=/site.webmanifest><link rel=canonical href=https://emerson-silva.blog.br/posts/entendendo-o-yaml/><link rel=prev href=https://emerson-silva.blog.br/posts/docker-primeiros-passos/><link rel=next href=https://emerson-silva.blog.br/posts/gitlab-associate/><link rel=stylesheet href=/css/style.min.css><link rel=preload href=/lib/fontawesome-free/all.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/fontawesome-free/all.min.css></noscript><link rel=preload href=/lib/animate/animate.min.css as=style onload='this.onload=null,this.rel="stylesheet"'><noscript><link rel=stylesheet href=/lib/animate/animate.min.css></noscript><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"YAML - Introdução rápida","inLanguage":"pt-br","mainEntityOfPage":{"@type":"WebPage","@id":"https:\/\/emerson-silva.blog.br\/posts\/entendendo-o-yaml\/"},"image":[{"@type":"ImageObject","url":"https:\/\/emerson-silva.blog.br\/posts\/entendendo-o-yaml\/featured-image.png","width":318,"height":159}],"genre":"posts","keywords":"iac, automacao, yaml","wordcount":450,"url":"https:\/\/emerson-silva.blog.br\/posts\/entendendo-o-yaml\/","datePublished":"2022-04-13T18:37:11-03:00","dateModified":"2022-04-13T18:37:11-03:00","publisher":{"@type":"Organization","name":""},"author":{"@type":"Person","name":"Emerson Silva"},"description":""}</script></head><body data-header-desktop=fixed data-header-mobile=auto><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"auto"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"auto"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Emerson Silva">Emerson Silva</a></div><div class=menu><div class=menu-inner><a class=menu-item href=/posts/>Posts </a><a class=menu-item href=/tags/>Tags </a><a class=menu-item href=/categories/>Categories </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Emerson Silva">Emerson Silva</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=/posts/ title>Posts</a><a class=menu-item href=/tags/ title>Tags</a><a class=menu-item href=/categories/ title>Categories</a><a href=javascript:void(0); class="menu-item theme-switch" title="Switch Theme">
+<i class="fas fa-adjust fa-fw" aria-hidden=true></i></a></div></div></header><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>Contents</h2><div class=toc-content id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">YAML - Introdução rápida</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw" aria-hidden=true></i>Emerson Silva</a></span>&nbsp;<span class=post-category>included in <a href=/categories/iac/><i class="far fa-folder fa-fw" aria-hidden=true></i>IaC</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw" aria-hidden=true></i>&nbsp;<time datetime=2022-04-13>2022-04-13</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden=true></i>&nbsp;450 words&nbsp;
+<i class="far fa-clock fa-fw" aria-hidden=true></i>&nbsp;3 minutes&nbsp;</div></div><div class=featured-image><img class=lazyload src=/svg/loading.min.svg data-src=/posts/entendendo-o-yaml/featured-image.png data-srcset="/posts/entendendo-o-yaml/featured-image.png, /posts/entendendo-o-yaml/featured-image.png 1.5x, /posts/entendendo-o-yaml/featured-image.png 2x" data-sizes=auto alt=/posts/entendendo-o-yaml/featured-image.png title=/posts/entendendo-o-yaml/featured-image.png></div><div class="details toc" id=toc-static data-kept><div class="details-summary toc-title"><span>Contents</span>
+<span><i class="details-icon fas fa-angle-right" aria-hidden=true></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><a href=#o-que-é>O que é</a></li><li><a href=#estrutura-do-yaml>Estrutura do YAML</a></li><li><a href=#sintaxe>Sintaxe</a></li><li><a href=#como-validar-o-yaml>Como validar o YAML?</a></li><li><a href=#conclusão>Conclusão</a></li></ul></nav></div></div><div class=content id=content><p>Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.</p><h2 id=o-que-é>O que é</h2><p>Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.</p><p>O YAML possui uma sintaxe minimalista em comparação ao XML e JSON, por exemplo</p><h2 id=estrutura-do-yaml>Estrutura do YAML</h2><p>Uma das suas principais caracteristicas é que possuí um formato com uma fácil legibilidade, o YAML utiliza um grupo de caracteres conhecidos como Unicode, ou seja UTF-8 ou UTF-16. A estrutura do documento é composto por indentação com espaços em branco, se você usar TAB um erro ocorrerá, isso pode ser um pouco irritante no começo da aprendizagem.
 Os membros das listas, são encabeçados por um traço (-) e nos títulos, cada membro fica em uma linha, ou entre colchetes([]).
-Para os vetores associativos, são representados usando dois pontos <code>(: )</code> seguido por um espaço. Na seguinte forma  <code>Chave: valor</code>, um por linha ou entre chaves <code>{} </code> e separados por vírgula seguido de espaço <code>(,)</code>.</p>
-<h2 id="sintaxe">Sintaxe</h2>
-<p>Agora que já entendemos um pouco de como é a estrutura, que tal irmos para os exemplos de sintaxe?</p>
-<p>Emerson, como fica para criarmos uma lista?</p>
-<p>Bem vejamos:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c">#Lista de frutas</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Maça</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Banana</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Manga</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="l">Morango</span><span class="w">
-</span></span></span></code></pre></div><p>E para um dicionário, usa-se  <code>chave: valor</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="c"># Informação de usuários</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span>- <span class="nt">nome</span><span class="p">:</span><span class="w"> </span><span class="l">Emerson Silva</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">nacionalidade</span><span class="p">:</span><span class="w"> </span><span class="l">brasileiro</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">job</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;DevOps Enginner&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">skills</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Ansible</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Linux System Administrator</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Docker</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">AWS</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Terraform</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Kubenertes</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">Gitlab CI</span><span class="w">
-</span></span></span></code></pre></div><p>Podemos também, exibir lista e dicionários de forma abreviada:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">Emerson</span><span class="p">:</span><span class="w"> </span>{<span class="nt">name: Emerson, job: DevOps Enginner, skill</span><span class="p">:</span><span class="w"> </span><span class="l">Ansible, Docker, AWS, Terraform, Kubenertes, Gitlab CI }</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">fruits</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s1">&#39;Maça&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Banana&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Morango&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Manga&#39;</span><span class="p">]</span><span class="w">
-</span></span></span></code></pre></div><h2 id="como-validar-o-yaml">Como validar o YAML?</h2>
-<p>Para quem está aprendendo sobre YAML e está se acostumando com os espaços, ou até mesmo que já usa a muito tempo que só validar algumas coisas, temos o <strong>YAML Lint</strong> que faz a validação do seu código YAML.</p>
-<p>O Link para acesso está aqui: <a href="http://www.yamllint.com/" target="_blank" rel="noopener noreffer ">http://www.yamllint.com/</a> e através dele, podemos validar nossas sintaxes.</p>
-<h2 id="conclusão">Conclusão</h2>
-<p>Então é isso pessoal, esse o nosso querido YAML!!</p>
-<p>A ideia de trazer uma explicação dele é bem objetiva, em breve teremos no blog posts sobre ferramentas que usam o YAML</p>
-<p>Até a próxima pessoal.</p>
-</div><div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>Updated on 2022-04-13</span>
-            </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/entendendo-o-yaml/" data-title="YAML - Introdução rápida" data-hashtags="iac,automacao,yaml"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/entendendo-o-yaml/" data-hashtag="iac"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/entendendo-o-yaml/" data-title="YAML - Introdução rápida"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/entendendo-o-yaml/" data-title="YAML - Introdução rápida"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/entendendo-o-yaml/" data-title="YAML - Introdução rápida"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/iac/">Iac</a>,&nbsp;<a href="/tags/automacao/">Automacao</a>,&nbsp;<a href="/tags/yaml/">Yaml</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/docker-primeiros-passos/" class="prev" rel="prev" title="Docker - Primeiros Passos"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Docker - Primeiros Passos</a>
-            <a href="/posts/gitlab-associate/" class="next" rel="next" title="GitLab Associate - Como se preparar">GitLab Associate - Como se preparar<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
-</div>
-</article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
-                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
-                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
-</html>
+Para os vetores associativos, são representados usando dois pontos <code>(: )</code> seguido por um espaço. Na seguinte forma <code>Chave: valor</code>, um por linha ou entre chaves <code>{}</code> e separados por vírgula seguido de espaço <code>(,)</code>.</p><h2 id=sintaxe>Sintaxe</h2><p>Agora que já entendemos um pouco de como é a estrutura, que tal irmos para os exemplos de sintaxe?</p><p>Emerson, como fica para criarmos uma lista?</p><p>Bem vejamos:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=c>#Lista de frutas</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=l>Maça</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=l>Banana</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=l>Manga</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=l>Morango</span><span class=w>
+</span></span></span></code></pre></div><p>E para um dicionário, usa-se <code>chave: valor</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=c># Informação de usuários</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span>- <span class=nt>nome</span><span class=p>:</span><span class=w> </span><span class=l>Emerson Silva</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>nacionalidade</span><span class=p>:</span><span class=w> </span><span class=l>brasileiro</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>job</span><span class=p>:</span><span class=w> </span><span class=s1>&#39;DevOps Enginner&#39;</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>  </span><span class=nt>skills</span><span class=p>:</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Ansible</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Linux System Administrator</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Docker</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>AWS</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Terraform</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Kubenertes</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w>    </span>- <span class=l>Gitlab CI</span><span class=w>
+</span></span></span></code></pre></div><p>Podemos também, exibir lista e dicionários de forma abreviada:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-yaml data-lang=yaml><span class=line><span class=cl><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>Emerson</span><span class=p>:</span><span class=w> </span>{<span class=nt>name: Emerson, job: DevOps Enginner, skill</span><span class=p>:</span><span class=w> </span><span class=l>Ansible, Docker, AWS, Terraform, Kubenertes, Gitlab CI }</span><span class=w>
+</span></span></span><span class=line><span class=cl><span class=w></span><span class=nt>fruits</span><span class=p>:</span><span class=w> </span><span class=p>[</span><span class=s1>&#39;Maça&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;Banana&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;Morango&#39;</span><span class=p>,</span><span class=w> </span><span class=s1>&#39;Manga&#39;</span><span class=p>]</span><span class=w>
+</span></span></span></code></pre></div><h2 id=como-validar-o-yaml>Como validar o YAML?</h2><p>Para quem está aprendendo sobre YAML e está se acostumando com os espaços, ou até mesmo que já usa a muito tempo que só validar algumas coisas, temos o <strong>YAML Lint</strong> que faz a validação do seu código YAML.</p><p>O Link para acesso está aqui: <a href=http://www.yamllint.com/ target=_blank rel="noopener noreffer">http://www.yamllint.com/</a> e através dele, podemos validar nossas sintaxes.</p><h2 id=conclusão>Conclusão</h2><p>Então é isso pessoal, esse o nosso querido YAML!!</p><p>A ideia de trazer uma explicação dele é bem objetiva, em breve teremos no blog posts sobre ferramentas que usam o YAML</p><p>Até a próxima pessoal.</p></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>Updated on 2022-04-13</span></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="Share on Twitter" data-sharer=twitter data-url=https://emerson-silva.blog.br/posts/entendendo-o-yaml/ data-title="YAML - Introdução rápida" data-hashtags=iac,automacao,yaml><i class="fab fa-twitter fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Facebook" data-sharer=facebook data-url=https://emerson-silva.blog.br/posts/entendendo-o-yaml/ data-hashtag=iac><i class="fab fa-facebook-square fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Hacker News" data-sharer=hackernews data-url=https://emerson-silva.blog.br/posts/entendendo-o-yaml/ data-title="YAML - Introdução rápida"><i class="fab fa-hacker-news fa-fw" aria-hidden=true></i></a><a href=javascript:void(0); title="Share on Line" data-sharer=line data-url=https://emerson-silva.blog.br/posts/entendendo-o-yaml/ data-title="YAML - Introdução rápida"><i data-svg-src=/lib/simple-icons/icons/line.min.svg aria-hidden=true></i></a><a href=javascript:void(0); title="Share on 微博" data-sharer=weibo data-url=https://emerson-silva.blog.br/posts/entendendo-o-yaml/ data-title="YAML - Introdução rápida"><i class="fab fa-weibo fa-fw" aria-hidden=true></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw" aria-hidden=true></i>&nbsp;<a href=/tags/iac/>iac</a>,&nbsp;<a href=/tags/automacao/>automacao</a>,&nbsp;<a href=/tags/yaml/>yaml</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>Back</a></span>&nbsp;|&nbsp;<span><a href=/>Home</a></span></section></div><div class=post-nav><a href=/posts/docker-primeiros-passos/ class=prev rel=prev title="Docker - Primeiros Passos"><i class="fas fa-angle-left fa-fw" aria-hidden=true></i>Docker - Primeiros Passos</a>
+<a href=/posts/gitlab-associate/ class=next rel=next title="GitLab Associate - Como se preparar">GitLab Associate - Como se preparar<i class="fas fa-angle-right fa-fw" aria-hidden=true></i></a></div></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>Powered by <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.111.3">Hugo</a> | Theme - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden=true></i> LoveIt</a></div><div class=footer-line itemscope itemtype=http://schema.org/CreativeWork><i class="far fa-copyright fa-fw" aria-hidden=true></i><span itemprop=copyrightYear>2022 - 2024</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank></a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title="Back to Top"><i class="fas fa-arrow-up fa-fw" aria-hidden=true></i>
+</a><a href=# id=view-comments class=fixed-button title="View Comments"><i class="fas fa-comment fa-fw" aria-hidden=true></i></a></div><link rel=stylesheet href=/lib/lightgallery/css/lightgallery-bundle.min.css><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/lightgallery/lightgallery.min.js></script><script type=text/javascript src=/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js></script><script type=text/javascript src=/lib/lightgallery/plugins/zoom/lg-zoom.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"Copy to clipboard",maxShownLines:50},comment:{},lightgallery:!0}</script><script type=text/javascript src=/js/theme.min.js></script></body></html>

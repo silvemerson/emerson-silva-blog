@@ -1,26 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Ansible - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/ansible/</link>
-        <description>Ansible - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Fri, 02 Jun 2023 22:54:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/ansible/" rel="self" type="application/rss+xml" /><item>
-    <title>Quinta ás Quinze - Primeiros Passos com Ansible</title>
-    <link>http://localhost:1313/posts/quinta-as-quinze-ansible/</link>
-    <pubDate>Fri, 02 Jun 2023 22:54:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/quinta-as-quinze-ansible/</guid>
-    <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer ">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
-<h2 id="repositório-do-github">Repositório do Github</h2>
-<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer ">ansible-quinta-as-quinze</a></p>
-<h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KGAWN9N4KPM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>ansible - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/ansible/</link><description>ansible - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Fri, 02 Jun 2023 22:54:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/ansible/" rel="self" type="application/rss+xml"/><item><title>Quinta ás Quinze - Primeiros Passos com Ansible</title><link>https://emerson-silva.blog.br/posts/quinta-as-quinze-ansible/</link><pubDate>Fri, 02 Jun 2023 22:54:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/quinta-as-quinze-ansible/</guid><description>Olá pessoal, tudo certo?
+Ontem estive ministrando uma palestra sobre Ansible no canal do DevOps Heroes. Quem não pode conferir ao vivo, confere lá:
+Repositório do Github ansible-quinta-as-quinze
+Live está gravada no Youtube</description></item></channel></rss>

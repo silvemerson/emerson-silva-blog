@@ -1,35 +1,8 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Gitlab - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/gitlab/</link>
-        <description>Gitlab - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/gitlab/" rel="self" type="application/rss+xml" /><item>
-    <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
-    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
-    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!</p>
-<p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
-<h2 id="o-que-é-o-kaniko">O que é o Kaniko</h2>
-<p>O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário.  Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>]]></description>
-</item>
-<item>
-    <title>GitLab Associate - Como se preparar</title>
-    <link>http://localhost:1313/posts/gitlab-associate/</link>
-    <pubDate>Wed, 18 May 2022 12:24:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/gitlab-associate/</guid>
-    <description><![CDATA[<p>Olá pessoal!</p>
-<p>No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a GitLab Certified Associate.</p>
-<h2 id="criar-conta-e-link-do-treinamento">Criar conta e link do Treinamento</h2>
-<p>Para criar uma conta, acesse o link: <a href="https://gitlab.edcast.com/log_in" target="_blank" rel="noopener noreffer ">https://gitlab.edcast.com/log_in</a></p>
-<p>O link para o treinamento: <a href="https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&amp;limit=5&amp;tab=content" target="_blank" rel="noopener noreffer ">https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&limit=5&tab=content</a></p>
-<h2 id="como-estudar">Como estudar</h2>
-<p>A prova e guia de estudos atualmente está versão v3.0, e após a compra do exame, a GitLab disponibilza um curso com video e textos para que seja feita uma prova teórica e posteriormente a prova prática.
-Para liberar a prova prática, é necessário alcançar o 100% de acertos. As questão são abordadas no Self-Study, isso facilita bastante.
-Além disso, dentro do Self-Study é disponilizado questões práticas que ajudam na segunda prova.</p>]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>gitlab - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/gitlab/</link><description>gitlab - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/gitlab/" rel="self" type="application/rss+xml"/><item><title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title><link>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</guid><description>Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI
+O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo.</description></item><item><title>GitLab Associate - Como se preparar</title><link>https://emerson-silva.blog.br/posts/gitlab-associate/</link><pubDate>Wed, 18 May 2022 12:24:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/gitlab-associate/</guid><description>Olá pessoal!
+No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a GitLab Certified Associate.
+Criar conta e link do Treinamento Para criar uma conta, acesse o link: https://gitlab.edcast.com/log_in
+O link para o treinamento: https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&amp;limit=5&amp;tab=content
+Como estudar A prova e guia de estudos atualmente está versão v3.0, e após a compra do exame, a GitLab disponibilza um curso com video e textos para que seja feita uma prova teórica e posteriormente a prova prática.</description></item></channel></rss>

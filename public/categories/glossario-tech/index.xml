@@ -1,55 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Glossario-Tech - Category - Emerson Silva</title>
-        <link>http://localhost:1313/categories/glossario-tech/</link>
-        <description>Glossario-Tech - Category - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Apr 2024 01:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/categories/glossario-tech/" rel="self" type="application/rss+xml" /><item>
-    <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>http://localhost:1313/posts/glossario-cd/</link>
-    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-cd/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-cd">O que é CD</h2>
-<p>CD é a sigla para Continuous Delivery (Entrega Contínua) ou Continuous Deployment (Implantação Contínua), duas práticas relacionadas à Integração Contínua (CI) que têm como objetivo automatizar as etapas que seguem a integração de código, garantindo que o software esteja sempre pronto para ser entregue ou implantado em produção.</p>]]></description>
-</item>
-<item>
-    <title>003 - Glossário Tech - o que é Continuous Integration</title>
-    <link>http://localhost:1313/posts/glossario-ci/</link>
-    <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-ci/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-ci">O que é CI</h2>
-<p>CI é a sigla para Continuous Integration (Integração Contínua), uma prática de desenvolvimento de software em que as mudanças no código são integradas regularmente em um repositório compartilhado e, em seguida, automaticamente testadas e validadas.</p>]]></description>
-</item>
-<item>
-    <title>002 - Glossário Tech - o que é SRE</title>
-    <link>http://localhost:1313/posts/glossario-sre/</link>
-    <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-sre/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-sre">O que é SRE</h2>
-<p>SRE significa &ldquo;Site Reliability Engineering&rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</p>]]></description>
-</item>
-<item>
-    <title>001 - Glossário Tech - o que é Devops</title>
-    <link>http://localhost:1313/posts/glossario-devops/</link>
-    <pubDate>Tue, 09 Jan 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-devops/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim! Antes de mais nada, um Feliz Ano Novo para vocês!
-E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-devops">O que é DevOps</h2>
-<p>DevOps é uma abordagem de desenvolvimento de software que visa integrar as equipes de desenvolvimento (Dev) e operações (Ops) para melhorar a colaboração e a eficiência ao longo do ciclo de vida do desenvolvimento de software. A palavra &ldquo;DevOps&rdquo; é uma combinação de &ldquo;Desenvolvimento&rdquo; e &ldquo;Operações&rdquo;.</p>]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>glossario-tech - Category - Emerson Silva</title><link>https://emerson-silva.blog.br/categories/glossario-tech/</link><description>glossario-tech - Category - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Apr 2024 01:30:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/glossario-tech/" rel="self" type="application/rss+xml"/><item><title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title><link>https://emerson-silva.blog.br/posts/glossario-cd/</link><pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid><description>Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é CD CD é a sigla para Continuous Delivery (Entrega Contínua) ou Continuous Deployment (Implantação Contínua), duas práticas relacionadas à Integração Contínua (CI) que têm como objetivo automatizar as etapas que seguem a integração de código, garantindo que o software esteja sempre pronto para ser entregue ou implantado em produção.</description></item><item><title>003 - Glossário Tech - o que é Continuous Integration</title><link>https://emerson-silva.blog.br/posts/glossario-ci/</link><pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/glossario-ci/</guid><description>Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é CI CI é a sigla para Continuous Integration (Integração Contínua), uma prática de desenvolvimento de software em que as mudanças no código são integradas regularmente em um repositório compartilhado e, em seguida, automaticamente testadas e validadas.</description></item><item><title>002 - Glossário Tech - o que é SRE</title><link>https://emerson-silva.blog.br/posts/glossario-sre/</link><pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid><description>Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é SRE SRE significa &amp;ldquo;Site Reliability Engineering&amp;rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</description></item><item><title>001 - Glossário Tech - o que é Devops</title><link>https://emerson-silva.blog.br/posts/glossario-devops/</link><pubDate>Tue, 09 Jan 2024 01:30:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/glossario-devops/</guid><description>Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim! Antes de mais nada, um Feliz Ano Novo para vocês! E esse o nosso primeiro post do ano e vamos iniciar uma série chamada Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+O que é DevOps DevOps é uma abordagem de desenvolvimento de software que visa integrar as equipes de desenvolvimento (Dev) e operações (Ops) para melhorar a colaboração e a eficiência ao longo do ciclo de vida do desenvolvimento de software.</description></item></channel></rss>

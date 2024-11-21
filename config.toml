@@ -1,4 +1,5 @@
 baseURL = "https://emerson-silva.blog.br"
+publishDir = "public"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
 # language code

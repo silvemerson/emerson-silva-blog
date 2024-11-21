@@ -1,19 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Ccp - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/ccp/</link>
-        <description>Ccp - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 03 Dec 2022 12:17:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/ccp/" rel="self" type="application/rss+xml" /><item>
-    <title>AWS CCP - Como se preparar</title>
-    <link>http://localhost:1313/posts/aws-ccp/</link>
-    <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/aws-ccp/</guid>
-    <description><![CDATA[<p>Olá pessoal!</p>
-<p>Faz muito tempo que não apareço por aqui.</p>
-<p>No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a Certificação AWS Certified Cloud Practitioner (CCP).</p>
-<h2 id="o-que-é-essa-certificiação-e-um-pouco-mais">O que é essa certificiação e um pouco mais</h2>
-<p>O exame AWS Certified Cloud Practitioner oferece uma compressensão básica dos serviços, conceitos sobre a nuvem da AWS. É um ótimo ponto de partida para individuos sem experiência em T.I ou nuvem.</p>]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>ccp - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/ccp/</link><description>ccp - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 03 Dec 2022 12:17:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/ccp/" rel="self" type="application/rss+xml"/><item><title>AWS CCP - Como se preparar</title><link>https://emerson-silva.blog.br/posts/aws-ccp/</link><pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/aws-ccp/</guid><description>Olá pessoal!
+Faz muito tempo que não apareço por aqui.
+No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a Certificação AWS Certified Cloud Practitioner (CCP).
+O que é essa certificiação e um pouco mais O exame AWS Certified Cloud Practitioner oferece uma compressensão básica dos serviços, conceitos sobre a nuvem da AWS. É um ótimo ponto de partida para individuos sem experiência em T.</description></item></channel></rss>

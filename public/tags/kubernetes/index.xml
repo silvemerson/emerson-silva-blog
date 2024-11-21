@@ -1,74 +1,16 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Kubernetes - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/kubernetes/</link>
-        <description>Kubernetes - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/kubernetes/" rel="self" type="application/rss+xml" /><item>
-    <title>Meu primeiro Livro lançado</title>
-    <link>http://localhost:1313/posts/meu-primeiro-livro/</link>
-    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/meu-primeiro-livro/</guid>
-    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
-<p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
-<p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
-<p>É algo bem significativo isso pra mim e muitos outros virão!</p>
-<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória.</p>
-<p>Quem tiver interesse em comprar, basta a: <a href="https://a.co/d/dmxgdnz" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a></p>]]></description>
-</item>
-<item>
-    <title>Kubernetes - Criando um cluster local com Kind</title>
-    <link>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</link>
-    <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/construindo-um-cluster-k8s-kind/</guid>
-    <description><![CDATA[<p>Olá pessoal</p>
-<p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
-<h2 id="o-que-é">O que é?</h2>
-<p>O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.</p>
-<h2 id="como-é-o-kind">Como é o Kind?</h2>
-<p>Ele consiste em:</p>
-<ul>
-<li>Pacotes Go que implementam criação de cluster, construção de imagem, etc.</li>
-<li>Uma interface de linha de comando (kind) construída sobre esses pacotes.</li>
-<li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
-<li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
-</ul>
-<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>]]></description>
-</item>
-<item>
-    <title>Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab</title>
-    <link>http://localhost:1313/posts/kubernetes-days-4linux/</link>
-    <pubDate>Thu, 06 Jul 2023 22:54:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/kubernetes-days-4linux/</guid>
-    <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
-<p>Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da <a href="https://www.youtube.com/@4linux" target="_blank" rel="noopener noreffer ">4Linux</a>. Quem não pode conferir ao vivo, confere lá:</p>
-<h2 id="repositório-do-gilab">Repositório do GiLab</h2>
-<p><a href="https://gitlab.com/silvemerson/4linux-palestra-kubernetes-days" target="_blank" rel="noopener noreffer ">4linux-palestra-kubernetes-days</a></p>
-<h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
-
-
-    
-    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/Ibpx0M8AQTQ?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
-      ></iframe>
-    </div>
-
-<h2 id="brinde-do-palestrante">Brinde do palestrante</h2>
-<p>Ganhei um Funko personalizado e uma caneca sensacional.</p>]]></description>
-</item>
-<item>
-    <title>Kubernetes - Configurando O Minikube</title>
-    <link>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</link>
-    <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</guid>
-    <description><![CDATA[<p>Olá pessoal</p>
-<p>Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.</p>
-<p>Primeiro, vamos entender o que é exatamente o Minikube.</p>
-<h2 id="o-que-é">O que é?</h2>
-<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer ">documentação</a>.</p>]]></description>
-</item>
-</channel>
-</rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>kubernetes - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/kubernetes/</link><description>kubernetes - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/kubernetes/" rel="self" type="application/rss+xml"/><item><title>Meu primeiro Livro lançado</title><link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link><pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid><description>Salve salve pessoal, tudo bem com vocês? Espero que sim.
+Venho comunicar vocês do lançamento do meu primeiro livro!!!
+Kubernetes para Iniciantes: Fundamentos e Práticas
+É algo bem significativo isso pra mim e muitos outros virão!
+Escrito no LeanPub e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória.
+Quem tiver interesse em comprar, basta a: Kubernetes para Iniciantes: Fundamentos e Práticas</description></item><item><title>Kubernetes - Criando um cluster local com Kind</title><link>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</link><pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</guid><description>Olá pessoal
+Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.
+O que é? O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.
+Como é o Kind? Ele consiste em:
+Pacotes Go que implementam criação de cluster, construção de imagem, etc.</description></item><item><title>Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab</title><link>https://emerson-silva.blog.br/posts/kubernetes-days-4linux/</link><pubDate>Thu, 06 Jul 2023 22:54:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/kubernetes-days-4linux/</guid><description>Olá pessoal, tudo certo?
+Ontem estive ministrando uma palestra sobre como realizar um deploy no Kuberntes usando o Gitlab-CI no canal da 4Linux. Quem não pode conferir ao vivo, confere lá:
+Repositório do GiLab 4linux-palestra-kubernetes-days
+Live está gravada no Youtube Brinde do palestrante Ganhei um Funko personalizado e uma caneca sensacional.</description></item><item><title>Kubernetes - Configurando O Minikube</title><link>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</link><pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</guid><description>Olá pessoal
+Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.
+Primeiro, vamos entender o que é exatamente o Minikube.
+O que é? O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s.</description></item></channel></rss>
