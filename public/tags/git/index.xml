@@ -3,7 +3,19 @@
         <title>Git - Tag - Emerson Silva</title>
         <link>http://localhost:1313/tags/git/</link>
         <description>Git - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 18 May 2022 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/git/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
+<h2 id="o-que-é-o-kaniko">O que é o Kaniko</h2>
+<p>O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário.  Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>]]></description>
+</item>
+<item>
     <title>GitLab Associate - Como se preparar</title>
     <link>http://localhost:1313/posts/gitlab-associate/</link>
     <pubDate>Wed, 18 May 2022 12:24:03 -0300</pubDate>

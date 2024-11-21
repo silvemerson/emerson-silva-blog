@@ -3,9 +3,21 @@
         <title>Emerson Silva</title>
         <link>http://localhost:1313/</link>
         <description>This is Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
+<h2 id="o-que-é-o-kaniko">O que é o Kaniko</h2>
+<p>O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário.  Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>]]></description>
+</item>
+<item>
     <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title>
     <link>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/</link>
     <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
@@ -115,20 +127,6 @@ E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>G
     <description><![CDATA[<p>Olá pessoal, tudo certo?</p>
 <p>Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer ">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
 <p>Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.</p>]]></description>
-</item>
-<item>
-    <title>DevOps e SRE Roadmap</title>
-    <link>http://localhost:1313/posts/devops-roadmap/</link>
-    <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/devops-roadmap/</guid>
-    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
-<p>Espero que sim!</p>
-<p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>
-<h2 id="por-onde-começar">Por onde começar?</h2>
-<h3 id="o-que-é-devops">O que é DevOps</h3>
-<p>Antes de tudo, entender a cultura DevOps!</p>
-<p>DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</p>]]></description>
 </item>
 </channel>
 </rss>

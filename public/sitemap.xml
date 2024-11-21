@@ -2,20 +2,25 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/cd/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/ci/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/git/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/gitlab/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/kaniko/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/categories/trilha-ci/cd/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/devops/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/iac/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/iac/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/glossario-cd/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/cd/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/glossario-tech/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/glossario-tech/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/glossario-ci/</loc><lastmod>2024-03-27T01:30:26-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/ci/</loc><lastmod>2024-03-27T01:30:26-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/k8s/</loc><lastmod>2024-02-27T00:56:52-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/kubernetes/</loc><lastmod>2024-02-27T00:56:52-03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/livros/</loc><lastmod>2024-02-27T00:56:52-03:00</lastmod></url><url>
@@ -49,8 +54,6 @@
             <loc>http://localhost:1313/tags/ccp/</loc><lastmod>2022-12-03T12:17:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</loc><lastmod>2022-12-03T12:17:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/palestra-4linux-docker/</loc><lastmod>2022-10-28T12:18:30-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/git/</loc><lastmod>2022-05-18T12:24:03-03:00</lastmod></url><url>
-            <loc>http://localhost:1313/tags/gitlab/</loc><lastmod>2022-05-18T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/posts/gitlab-associate/</loc><lastmod>2022-05-18T12:24:03-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/automacao/</loc><lastmod>2022-04-13T18:37:11-03:00</lastmod></url><url>
             <loc>http://localhost:1313/tags/yaml/</loc><lastmod>2022-04-13T18:37:11-03:00</lastmod></url><url>
