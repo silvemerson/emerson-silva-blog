@@ -1,1 +1,87 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Tags - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/</link><description>Tags - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/" rel="self" type="application/rss+xml"/><item><title>cd</title><link>https://emerson-silva.blog.br/tags/cd/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/cd/</guid><description></description></item><item><title>ci</title><link>https://emerson-silva.blog.br/tags/ci/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/ci/</guid><description></description></item><item><title>git</title><link>https://emerson-silva.blog.br/tags/git/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/git/</guid><description></description></item><item><title>gitlab</title><link>https://emerson-silva.blog.br/tags/gitlab/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/gitlab/</guid><description></description></item><item><title>kaniko</title><link>https://emerson-silva.blog.br/tags/kaniko/</link><pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/kaniko/</guid><description></description></item><item><title>devops</title><link>https://emerson-silva.blog.br/tags/devops/</link><pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/devops/</guid><description></description></item><item><title>iac</title><link>https://emerson-silva.blog.br/tags/iac/</link><pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/iac/</guid><description></description></item><item><title>glossario-tech</title><link>https://emerson-silva.blog.br/tags/glossario-tech/</link><pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/glossario-tech/</guid><description></description></item><item><title>k8s</title><link>https://emerson-silva.blog.br/tags/k8s/</link><pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/k8s/</guid><description></description></item><item><title>kubernetes</title><link>https://emerson-silva.blog.br/tags/kubernetes/</link><pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate><author>Author</author><guid>https://emerson-silva.blog.br/tags/kubernetes/</guid><description></description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/</link>
+        <description>Tags - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Cd</title>
+    <link>https://emerson-silva.blog.br/tags/cd/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/cd/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Ci</title>
+    <link>https://emerson-silva.blog.br/tags/ci/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/ci/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Git</title>
+    <link>https://emerson-silva.blog.br/tags/git/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Gitlab</title>
+    <link>https://emerson-silva.blog.br/tags/gitlab/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/gitlab/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Kaniko</title>
+    <link>https://emerson-silva.blog.br/tags/kaniko/</link>
+    <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/kaniko/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Devops</title>
+    <link>https://emerson-silva.blog.br/tags/devops/</link>
+    <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/devops/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Iac</title>
+    <link>https://emerson-silva.blog.br/tags/iac/</link>
+    <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/iac/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Glossario-Tech</title>
+    <link>https://emerson-silva.blog.br/tags/glossario-tech/</link>
+    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/glossario-tech/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>K8s</title>
+    <link>https://emerson-silva.blog.br/tags/k8s/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/k8s/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Kubernetes</title>
+    <link>https://emerson-silva.blog.br/tags/kubernetes/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Author</author>
+    <guid>https://emerson-silva.blog.br/tags/kubernetes/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
+</rss>

@@ -1,8 +1,33 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>SRE - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/sre/</link><description>SRE - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/sre/" rel="self" type="application/rss+xml"/><item><title>002 - Glossário Tech - o que é SRE</title><link>https://emerson-silva.blog.br/posts/glossario-sre/</link><pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid><description>Salve salve pessoal!!!
-Tudo bem com vocês? Espero que sim!
-E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
-O que é SRE SRE significa &amp;ldquo;Site Reliability Engineering&amp;rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</description></item><item><title>DevOps e SRE Roadmap</title><link>https://emerson-silva.blog.br/posts/devops-roadmap/</link><pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid><description>Olá pessoal, tudo bem?
-Espero que sim!
-No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.
-Por onde começar? O que é DevOps Antes de tudo, entender a cultura DevOps!
-DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sre - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/sre/</link>
+        <description>Sre - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/sre/" rel="self" type="application/rss+xml" /><item>
+    <title>002 - Glossário Tech - o que é SRE</title>
+    <link>https://emerson-silva.blog.br/posts/glossario-sre/</link>
+    <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!<br>
+E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
+<h2 id="o-que-é-sre">O que é SRE</h2>
+<p>SRE significa &ldquo;Site Reliability Engineering&rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</p>]]></description>
+</item>
+<item>
+    <title>DevOps e SRE Roadmap</title>
+    <link>https://emerson-silva.blog.br/posts/devops-roadmap/</link>
+    <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid>
+    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
+<p>Espero que sim!</p>
+<p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>
+<h2 id="por-onde-começar">Por onde começar?</h2>
+<h3 id="o-que-é-devops">O que é DevOps</h3>
+<p>Antes de tudo, entender a cultura DevOps!</p>
+<p>DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</p>]]></description>
+</item>
+</channel>
+</rss>

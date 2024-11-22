@@ -1,4 +1,18 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>hello - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/hello/</link><description>hello - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 22 Mar 2022 17:55:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/hello/" rel="self" type="application/rss+xml"/><item><title>Sobre o Blog</title><link>https://emerson-silva.blog.br/posts/bem-vindo/</link><pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/bem-vindo/</guid><description>Olá pessoal
-Nas últimas semanas decidi enfim criar um blog para compartilhar um pouco sobre a minha jornada como SysAdmin, Analista de Infraestrutura e Lider técnico de operações de monitoramento.
-Então aqui no blog, vocês vão ver post sobre a cultura DevOps, sobre ferramentas e seu uso no dia a dia, sobre certificações e muito mais.
-Compartilhar conhecimento por aqui é uma forma de contruibuir um pouco com o tanto que a comunidade me ajudou nessa caminhada.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hello - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/hello/</link>
+        <description>Hello - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 22 Mar 2022 17:55:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/hello/" rel="self" type="application/rss+xml" /><item>
+    <title>Sobre o Blog</title>
+    <link>https://emerson-silva.blog.br/posts/bem-vindo/</link>
+    <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/bem-vindo/</guid>
+    <description><![CDATA[<p>Olá pessoal</p>
+<p>Nas últimas semanas decidi enfim criar um blog para compartilhar um pouco sobre a minha jornada como SysAdmin, Analista de Infraestrutura e Lider técnico de operações de monitoramento.</p>
+<p>Então aqui no blog, vocês vão ver post sobre a cultura DevOps, sobre ferramentas e seu uso no dia a dia, sobre certificações e muito mais.</p>
+<p>Compartilhar conhecimento por aqui é uma forma de contruibuir um pouco com o tanto que a comunidade me ajudou nessa caminhada.</p>]]></description>
+</item>
+</channel>
+</rss>

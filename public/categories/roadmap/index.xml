@@ -1,5 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Roadmap - Category - Emerson Silva</title><link>https://emerson-silva.blog.br/categories/roadmap/</link><description>Roadmap - Category - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 28 Aug 2023 11:54:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/roadmap/" rel="self" type="application/rss+xml"/><item><title>DevOps e SRE Roadmap</title><link>https://emerson-silva.blog.br/posts/devops-roadmap/</link><pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid><description>Olá pessoal, tudo bem?
-Espero que sim!
-No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.
-Por onde começar? O que é DevOps Antes de tudo, entender a cultura DevOps!
-DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Roadmap - Category - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/categories/roadmap/</link>
+        <description>Roadmap - Category - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 28 Aug 2023 11:54:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/roadmap/" rel="self" type="application/rss+xml" /><item>
+    <title>DevOps e SRE Roadmap</title>
+    <link>https://emerson-silva.blog.br/posts/devops-roadmap/</link>
+    <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid>
+    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
+<p>Espero que sim!</p>
+<p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>
+<h2 id="por-onde-começar">Por onde começar?</h2>
+<h3 id="o-que-é-devops">O que é DevOps</h3>
+<p>Antes de tudo, entender a cultura DevOps!</p>
+<p>DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</p>]]></description>
+</item>
+</channel>
+</rss>

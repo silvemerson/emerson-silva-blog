@@ -1,7 +1,49 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>iac - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/iac/</link><description>iac - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/iac/" rel="self" type="application/rss+xml"/><item><title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title><link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</link><pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</guid><description>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
-Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</description></item><item><title>Desbravando o OpenTofu: Parte 01 - Introdução e Fundamentos</title><link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</link><pubDate>Fri, 01 Dec 2023 12:24:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</guid><description>Olá pessoal, hoje no blog, vamos falar de uma ferramenta em potencial de Infra as Code chamada OpenTofu. Bora lá
-Como surgiu o OpenTofu Em 10 de agosto de 2023, a HashiCorp anunciou que após cerca de 9 anos de Terraform sendo de código aberto sob a licença MPL v2, eles repentinamente o mudaram para uma licença BSL v1.1 de código não aberto. Essa mudança é algo venoso para o Terraform e também para toda a comunidade.</description></item><item><title>Criando imagens com Packer na GCP</title><link>https://emerson-silva.blog.br/posts/packer-gcp-image/</link><pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/packer-gcp-image/</guid><description>Olá pessoal, tudo bem?
-Espero que sim!
-No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.
-O que é o Packer O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.</description></item><item><title>YAML - Introdução rápida</title><link>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</link><pubDate>Wed, 13 Apr 2022 18:37:11 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</guid><description>Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.
-O que é Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível.</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Iac - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/iac/</link>
+        <description>Iac - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/iac/" rel="self" type="application/rss+xml" /><item>
+    <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title>
+    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</link>
+    <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</guid>
+    <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!</p>
+<h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
+<p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>]]></description>
+</item>
+<item>
+    <title>Desbravando o OpenTofu: Parte 01 - Introdução e Fundamentos</title>
+    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</link>
+    <pubDate>Fri, 01 Dec 2023 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</guid>
+    <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos falar de uma ferramenta em potencial de Infra as Code chamada OpenTofu. Bora lá</p>
+<h2 id="como-surgiu-o-opentofu">Como surgiu o OpenTofu</h2>
+<p>Em 10 de agosto de 2023, a HashiCorp anunciou que após cerca de 9 anos de Terraform sendo de código aberto sob a licença MPL v2, eles repentinamente o mudaram para uma licença BSL v1.1 de código não aberto. Essa mudança é algo venoso para o Terraform e também para toda a comunidade. Foi então que surge o anteriormente denominado OpenTF, OpenTofu que é um fork do Terraform de código aberto, dirigido pela comunidade e fou abraçado(gerenciado) pela Linux Foundation.</p>]]></description>
+</item>
+<item>
+    <title>Criando imagens com Packer na GCP</title>
+    <link>https://emerson-silva.blog.br/posts/packer-gcp-image/</link>
+    <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/packer-gcp-image/</guid>
+    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
+<p>Espero que sim!</p>
+<p>No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.</p>
+<h2 id="o-que-é-o-packer">O que é o Packer</h2>
+<p>O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.</p>]]></description>
+</item>
+<item>
+    <title>YAML - Introdução rápida</title>
+    <link>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</link>
+    <pubDate>Wed, 13 Apr 2022 18:37:11 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</guid>
+    <description><![CDATA[<p>Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.</p>
+<h2 id="o-que-é">O que é</h2>
+<p>Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.</p>]]></description>
+</item>
+</channel>
+</rss>

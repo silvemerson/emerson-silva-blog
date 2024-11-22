@@ -1,6 +1,20 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>k8s - Tag - Emerson Silva</title><link>https://emerson-silva.blog.br/tags/k8s/</link><description>k8s - Tag - Emerson Silva</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/k8s/" rel="self" type="application/rss+xml"/><item><title>Meu primeiro Livro lançado</title><link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link><pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate><author>Emerson Silva</author><guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid><description>Salve salve pessoal, tudo bem com vocês? Espero que sim.
-Venho comunicar vocês do lançamento do meu primeiro livro!!!
-Kubernetes para Iniciantes: Fundamentos e Práticas
-É algo bem significativo isso pra mim e muitos outros virão!
-Escrito no LeanPub e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória.
-Quem tiver interesse em comprar, basta a: Kubernetes para Iniciantes: Fundamentos e Práticas</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>K8s - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/k8s/</link>
+        <description>K8s - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/k8s/" rel="self" type="application/rss+xml" /><item>
+    <title>Meu primeiro Livro lançado</title>
+    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
+    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
+<p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
+<p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
+<p>É algo bem significativo isso pra mim e muitos outros virão!</p>
+<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória.</p>
+<p>Quem tiver interesse em comprar, basta a: <a href="https://a.co/d/dmxgdnz" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a></p>]]></description>
+</item>
+</channel>
+</rss>
