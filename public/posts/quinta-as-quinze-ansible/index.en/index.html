@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Quinta ás Quinze - Primeiros Passos com Ansible - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Quinta ás Quinze - Primeiros Passos com Ansible">
+  <meta property="og:description" content="Olá pessoal, tudo certo?
+Ontem estive ministrando uma palestra sobre Ansible no canal do DevOps Heroes. Quem não pode conferir ao vivo, confere lá:
+Repositório do Github ansible-quinta-as-quinze
+Live está gravada no Youtube">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-02T22:54:03-03:00">
+    <meta property="article:modified_time" content="2023-06-02T22:54:03-03:00">
+    <meta property="article:tag" content="Palestras">
+    <meta property="article:tag" content="Opensource">
+    <meta property="article:tag" content="Live">
+    <meta property="article:tag" content="Ansible">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Quinta ás Quinze - Primeiros Passos com Ansible">
+  <meta name="twitter:description" content="Olá pessoal, tudo certo?
+Ontem estive ministrando uma palestra sobre Ansible no canal do DevOps Heroes. Quem não pode conferir ao vivo, confere lá:
+Repositório do Github ansible-quinta-as-quinze
+Live está gravada no Youtube">
+<meta name="application-name" content="Emerson Silva">
+<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" /><link rel="prev" href="http://localhost:1313/posts/plalestra-4linux-manual-ao-automatizado/index.en/" /><link rel="next" href="http://localhost:1313/posts/kubernetes-days-4linux/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Quinta ás Quinze - Primeiros Passos com Ansible",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/quinta-as-quinze-ansible\/index.en\/"
+        },"genre": "posts","keywords": "palestras, opensource, live, ansible","wordcount":  33 ,
+        "url": "http:\/\/localhost:1313\/posts\/quinta-as-quinze-ansible\/index.en\/","datePublished": "2023-06-02T22:54:03-03:00","dateModified": "2023-06-02T22:54:03-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Silva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Silva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Quinta ás Quinze - Primeiros Passos com Ansible</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/palestras/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Palestras</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-06-02">2023-06-02</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;33 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;Um minuto&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#repositório-do-github">Repositório do Github</a></li>
+    <li><a href="#live-está-gravada-no-youtube">Live está gravada no Youtube</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal, tudo certo?</p>
+<p>Ontem estive ministrando uma palestra sobre Ansible no canal do <a href="https://www.youtube.com/@devopsheroes" target="_blank" rel="noopener noreffer ">DevOps Heroes</a>. Quem não pode conferir ao vivo, confere lá:</p>
+<h2 id="repositório-do-github">Repositório do Github</h2>
+<p><a href="https://github.com/silvemerson/ansible-quinta-as-quinze" target="_blank" rel="noopener noreffer ">ansible-quinta-as-quinze</a></p>
+<h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/KGAWN9N4KPM?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2023-06-02</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" data-title="Quinta ás Quinze - Primeiros Passos com Ansible" data-hashtags="palestras,opensource,live,ansible"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" data-hashtag="palestras"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" data-title="Quinta ás Quinze - Primeiros Passos com Ansible"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" data-title="Quinta ás Quinze - Primeiros Passos com Ansible"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/quinta-as-quinze-ansible/index.en/" data-title="Quinta ás Quinze - Primeiros Passos com Ansible"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/palestras/">Palestras</a>,&nbsp;<a href="/tags/opensource/">Opensource</a>,&nbsp;<a href="/tags/live/">Live</a>,&nbsp;<a href="/tags/ansible/">Ansible</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/plalestra-4linux-manual-ao-automatizado/index.en/" class="prev" rel="prev" title="Do Manual ao Automatizado: O Poder da Infraestrutura Ágil em Clouds Privadas"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Do Manual ao Automatizado: O Poder da Infraestrutura Ágil em Clouds Privadas</a>
+            <a href="/posts/kubernetes-days-4linux/index.en/" class="next" rel="next" title="Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab">Kubernetes Days 4Linux - Deploy no Kubernetes com GitLab<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

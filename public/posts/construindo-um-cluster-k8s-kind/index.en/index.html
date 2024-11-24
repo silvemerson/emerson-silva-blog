@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Kubernetes - Criando um cluster local com Kind - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Kubernetes - Criando um cluster local com Kind">
+  <meta property="og:description" content="Olá pessoal
+Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.
+O que é? O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.
+Como é o Kind? Ele consiste em:
+Pacotes Go que implementam criação de cluster, construção de imagem, etc. Uma interface de linha de comando (kind) construída sobre esses pacotes. Imagens Docker escritas para executar systemd, Kubernetes, etc. A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm. O Kind ainda é um trabalho em em construção. Para acompanhar, consulte 1.0 Roadmap">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-02-22T12:56:52-03:00">
+    <meta property="article:modified_time" content="2024-02-22T12:56:52-03:00">
+    <meta property="article:tag" content="Kind">
+    <meta property="article:tag" content="Kubernetes">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Kubernetes - Criando um cluster local com Kind">
+  <meta name="twitter:description" content="Olá pessoal
+Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.
+O que é? O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.
+Como é o Kind? Ele consiste em:
+Pacotes Go que implementam criação de cluster, construção de imagem, etc. Uma interface de linha de comando (kind) construída sobre esses pacotes. Imagens Docker escritas para executar systemd, Kubernetes, etc. A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm. O Kind ainda é um trabalho em em construção. Para acompanhar, consulte 1.0 Roadmap">
+<meta name="application-name" content="Emerson Silva">
+<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" /><link rel="prev" href="http://localhost:1313/posts/glossario-sre/index.en/" /><link rel="next" href="http://localhost:1313/posts/meu-primeiro-livro/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Kubernetes - Criando um cluster local com Kind",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/construindo-um-cluster-k8s-kind\/index.en\/"
+        },"genre": "posts","keywords": "kind, kubernetes","wordcount":  641 ,
+        "url": "http:\/\/localhost:1313\/posts\/construindo-um-cluster-k8s-kind\/index.en\/","datePublished": "2024-02-22T12:56:52-03:00","dateModified": "2024-02-22T12:56:52-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Silva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Silva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Kubernetes - Criando um cluster local com Kind</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-22">2024-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;641 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é">O que é?</a></li>
+    <li><a href="#como-é-o-kind">Como é o Kind?</a></li>
+    <li><a href="#instalação">Instalação</a>
+      <ul>
+        <li><a href="#criando-nosso-cluster-local">Criando nosso cluster local</a></li>
+        <li><a href="#listando-nodes-criados">Listando nodes criados</a></li>
+        <li><a href="#criando-nosso-primeiro-deploy">Criando nosso primeiro deploy</a></li>
+      </ul>
+    </li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal</p>
+<p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
+<h2 id="o-que-é">O que é?</h2>
+<p>O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.</p>
+<h2 id="como-é-o-kind">Como é o Kind?</h2>
+<p>Ele consiste em:</p>
+<ul>
+<li>Pacotes Go que implementam criação de cluster, construção de imagem, etc.</li>
+<li>Uma interface de linha de comando (kind) construída sobre esses pacotes.</li>
+<li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
+<li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
+</ul>
+<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>
+<h2 id="instalação">Instalação</h2>
+<p>Para seguir o passo a passo de instalação, utilize o <a href="https://kind.sigs.k8s.io/docs/user/quick-start#installation" target="_blank" rel="noopener noreffer ">manual de instação</a>. Para o nosso ambiente, vou demonstrar usando o modo via binários no Linux.</p>
+<p>Antes de escutar a criação do cluster, você precisa ter instalado o <a href="https://github.com/docker/docker-install" target="_blank" rel="noopener noreffer ">Docker</a> ou o <a href="https://podman.io/docs/installation" target="_blank" rel="noopener noreffer ">Podman</a> em sua máquina.</p>
+<p>Bora instalar o Kind.</p>
+<p><strong>Execute</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># para AMD64/x86_64</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> <span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span> <span style="color:#f92672">=</span> x86_64 <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.22.0/kind-linux-amd64
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Para ARM64</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span> <span style="color:#66d9ef">$(</span>uname -m<span style="color:#66d9ef">)</span> <span style="color:#f92672">=</span> aarch64 <span style="color:#f92672">]</span> <span style="color:#f92672">&amp;&amp;</span> curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.22.0/kind-linux-arm64
+</span></span><span style="display:flex;"><span>chmod +x ./kind
+</span></span><span style="display:flex;"><span>sudo mv ./kind /usr/local/bin/kind
+</span></span></code></pre></div><h3 id="criando-nosso-cluster-local">Criando nosso cluster local</h3>
+<p>Antes de criar o nosso cluster, vamos criar um arquivo <code>yaml</code> com as informações do nosso cluster.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">kind</span>: <span style="color:#ae81ff">Cluster</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">apiVersion</span>: <span style="color:#ae81ff">kind.x-k8s.io/v1alpha4</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">name</span>: <span style="color:#ae81ff">sparta</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">nodes</span>:
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">role</span>: <span style="color:#ae81ff">control-plane</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">role</span>: <span style="color:#ae81ff">worker</span>
+</span></span><span style="display:flex;"><span>  - <span style="color:#f92672">role</span>: <span style="color:#ae81ff">worker</span>
+</span></span></code></pre></div><p>Execute o comando de criar o cluster usando o arquivo de configuração que criamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ kind create cluster --config cluster.yaml
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Creating cluster <span style="color:#e6db74">&#34;sparta&#34;</span> ...
+</span></span><span style="display:flex;"><span> ✓ Ensuring node image <span style="color:#f92672">(</span>kindest/node:v1.29.2<span style="color:#f92672">)</span> 🖼
+</span></span><span style="display:flex;"><span> ✓ Preparing nodes 📦 📦 📦  
+</span></span><span style="display:flex;"><span> ✓ Writing configuration 📜 
+</span></span><span style="display:flex;"><span> ✓ Starting control-plane 🕹️ 
+</span></span><span style="display:flex;"><span> ✓ Installing CNI 🔌 
+</span></span><span style="display:flex;"><span> ✓ Installing StorageClass 💾 
+</span></span><span style="display:flex;"><span> ✓ Joining worker nodes 🚜 
+</span></span><span style="display:flex;"><span>Set kubectl context to <span style="color:#e6db74">&#34;kind-sparta&#34;</span>
+</span></span><span style="display:flex;"><span>You can now use your cluster with:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kubectl cluster-info --context kind-sparta
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Have a nice day! 
+</span></span></code></pre></div><p>Feito, agora visualize que o nosso cluster está em execução localmente com o <code>cluster-info</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ kubectl cluster-info --context kind-sparta
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Kubernetes control plane is running at https://127.0.0.1:39911
+</span></span><span style="display:flex;"><span>CoreDNS is running at https://127.0.0.1:39911/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>To further debug and diagnose cluster problems, use <span style="color:#e6db74">&#39;kubectl cluster-info dump&#39;</span>.
+</span></span></code></pre></div><h3 id="listando-nodes-criados">Listando nodes criados</h3>
+<p>Agora que passamos da etapa de criação do nosso cluster local, vamos listar os nós criados e visualizar suas informações.</p>
+<p><strong>Listando nós</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ kubectl get nodes
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NAME                   STATUS   ROLES           AGE     VERSION
+</span></span><span style="display:flex;"><span>sparta-control-plane   Ready    control-plane   3m51s   v1.29.2
+</span></span><span style="display:flex;"><span>sparta-worker          Ready    &lt;none&gt;          3m28s   v1.29.2
+</span></span><span style="display:flex;"><span>sparta-worker2         Ready    &lt;none&gt;          3m27s   v1.29.2
+</span></span></code></pre></div><p><strong>Visualizando informações de um dos nodes</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ kubectl describe node sparta-control-plane
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Name:               sparta-control-plane
+</span></span><span style="display:flex;"><span>Roles:              control-plane
+</span></span><span style="display:flex;"><span>Labels:             beta.kubernetes.io/arch<span style="color:#f92672">=</span>amd64
+</span></span><span style="display:flex;"><span>                    beta.kubernetes.io/os<span style="color:#f92672">=</span>linux
+</span></span><span style="display:flex;"><span>                    kubernetes.io/arch<span style="color:#f92672">=</span>amd64
+</span></span><span style="display:flex;"><span>                    kubernetes.io/hostname<span style="color:#f92672">=</span>sparta-control-plane
+</span></span><span style="display:flex;"><span>                    kubernetes.io/os<span style="color:#f92672">=</span>linux
+</span></span><span style="display:flex;"><span>                    node-role.kubernetes.io/control-plane<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>                    node.kubernetes.io/exclude-from-external-load-balancers<span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>Annotations:        kubeadm.alpha.kubernetes.io/cri-socket: unix:///run/containerd/containerd.sock
+</span></span><span style="display:flex;"><span>                    node.alpha.kubernetes.io/ttl: <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>                    volumes.kubernetes.io/controller-managed-attach-detach: true
+</span></span><span style="display:flex;"><span>CreationTimestamp:  Thu, <span style="color:#ae81ff">22</span> Feb <span style="color:#ae81ff">2024</span> 15:53:11 -0300
+</span></span><span style="display:flex;"><span>Taints:             node-role.kubernetes.io/control-plane:NoSchedule
+</span></span><span style="display:flex;"><span>Unschedulable:      false
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>...<span style="color:#f92672">)</span>
+</span></span></code></pre></div><h3 id="criando-nosso-primeiro-deploy">Criando nosso primeiro deploy</h3>
+<p>Agora que visualizamos as informações dos nodes, vamos realizar um deploy para teste.</p>
+<p><strong>Criando deploy</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ kubectl create deploy webserver --image nginx
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>deployment.apps/webserver created
+</span></span></code></pre></div><p><strong>Validando aplicação:</strong></p>
+<p>Crie um <code>port-forward</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ kubectl port-forward webserver-667ddc69b6-5qnp2 8081:80
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Forwarding from 127.0.0.1:8081 -&gt; <span style="color:#ae81ff">80</span>
+</span></span><span style="display:flex;"><span>Forwarding from <span style="color:#f92672">[</span>::1<span style="color:#f92672">]</span>:8081 -&gt; <span style="color:#ae81ff">80</span>
+</span></span></code></pre></div><p>Agora, execute um curl em outro terminal no endereço <code>http://127.0.0.1:8081</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl http://127.0.0.1:8081 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;!DOCTYPE html&gt;
+</span></span><span style="display:flex;"><span>&lt;html&gt;
+</span></span><span style="display:flex;"><span>&lt;head&gt;
+</span></span><span style="display:flex;"><span>&lt;title&gt;Welcome to nginx!&lt;/title&gt;
+</span></span><span style="display:flex;"><span>&lt;style&gt;
+</span></span><span style="display:flex;"><span>html <span style="color:#f92672">{</span> color-scheme: light dark; <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>body <span style="color:#f92672">{</span> width: 35em; margin: <span style="color:#ae81ff">0</span> auto;
+</span></span><span style="display:flex;"><span>font-family: Tahoma, Verdana, Arial, sans-serif; <span style="color:#f92672">}</span>
+</span></span><span style="display:flex;"><span>&lt;/style&gt;
+</span></span><span style="display:flex;"><span>&lt;/head&gt;
+</span></span><span style="display:flex;"><span>&lt;body&gt;
+</span></span><span style="display:flex;"><span>&lt;h1&gt;Welcome to nginx!&lt;/h1&gt;
+</span></span><span style="display:flex;"><span>&lt;p&gt;If you see this page, the nginx web server is successfully installed and
+</span></span><span style="display:flex;"><span>working. Further configuration is required.&lt;/p&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;p&gt;For online documentation and support please refer to
+</span></span><span style="display:flex;"><span>&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://nginx.org/&#34;</span>&gt;nginx.org&lt;/a&gt;.&lt;br/&gt;
+</span></span><span style="display:flex;"><span>Commercial support is available at
+</span></span><span style="display:flex;"><span>&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://nginx.com/&#34;</span>&gt;nginx.com&lt;/a&gt;.&lt;/p&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>&lt;p&gt;&lt;em&gt;Thank you <span style="color:#66d9ef">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;
+</span></span><span style="display:flex;"><span>&lt;/body&gt;
+</span></span><span style="display:flex;"><span>&lt;/html&gt;
+</span></span></code></pre></div><p>Feito, viram como foi tranquilo a criação de um cluster local com o Kind e ainda realizar um deploy? Rápido, leve e prático.</p>
+<p>Espero que vocês tenham gostado do post prático de hoje. Nos veremos em breve.</p>
+<p>Se púderem, compartilhem em suas redes sociais.</p>
+<p>Abraço.</p>
+<h2 id="referências">Referências</h2>
+<p><a href="https://kind.sigs.k8s.io/" target="_blank" rel="noopener noreffer ">https://kind.sigs.k8s.io/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2024-02-22</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" data-title="Kubernetes - Criando um cluster local com Kind" data-hashtags="kind,kubernetes"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" data-hashtag="kind"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" data-title="Kubernetes - Criando um cluster local com Kind"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/construindo-um-cluster-k8s-kind/index.en/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kind/">Kind</a>,&nbsp;<a href="/tags/kubernetes/">Kubernetes</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/glossario-sre/index.en/" class="prev" rel="prev" title="002 - Glossário Tech - o que é SRE"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>002 - Glossário Tech - o que é SRE</a>
+            <a href="/posts/meu-primeiro-livro/index.en/" class="next" rel="next" title="Meu primeiro Livro lançado">Meu primeiro Livro lançado<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Docker - Primeiros Passos - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/docker-primeiros-passos/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Docker - Primeiros Passos">
+  <meta property="og:description" content="Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!
+O que é Docker O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-04-12T13:33:01-03:00">
+    <meta property="article:modified_time" content="2022-04-12T13:33:01-03:00">
+    <meta property="article:tag" content="Containers">
+    <meta property="article:tag" content="Docker">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Docker - Primeiros Passos">
+  <meta name="twitter:description" content="Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!
+O que é Docker O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.">
+<meta name="application-name" content="Emerson Silva">
+<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/docker-primeiros-passos/index.en/" /><link rel="prev" href="http://localhost:1313/posts/kubernetes-configurando-o-minikube/index.en/" /><link rel="next" href="http://localhost:1313/posts/entendendo-o-yaml/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Docker - Primeiros Passos",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/docker-primeiros-passos\/index.en\/"
+        },"genre": "posts","keywords": "containers, docker","wordcount":  759 ,
+        "url": "http:\/\/localhost:1313\/posts\/docker-primeiros-passos\/index.en\/","datePublished": "2022-04-12T13:33:01-03:00","dateModified": "2022-04-12T13:33:01-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Silva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Silva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Docker - Primeiros Passos</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-04-12">2022-04-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;759 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é-docker">O que é Docker</a></li>
+    <li><a href="#arquitetura-docker">Arquitetura Docker</a></li>
+    <li><a href="#baixando-primeira-imagem">Baixando primeira imagem</a></li>
+    <li><a href="#criando-primeiro-container">Criando primeiro Container</a></li>
+    <li><a href="#administração-básicas-dos-containers">Administração básicas dos containers</a></li>
+    <li><a href="#video">Video</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!</p>
+<h2 id="o-que-é-docker">O que é Docker</h2>
+<p>O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.</p>
+<h2 id="arquitetura-docker">Arquitetura Docker</h2>
+<ul>
+<li>
+<p>Docker Engine: permite que os containers sejam contruídos, enviados e executados.</p>
+</li>
+<li>
+<p>Docker Client: Recebe ás entradas do usuário, via CLI, e as envias para a Engine</p>
+</li>
+<li>
+<p>Docker Registry: Gerencia os armazenamento de imagens</p>
+</li>
+<li>
+<p>Images: Template usado para criar os containers</p>
+</li>
+<li>
+<p>Containers: Provisionamento da aplicação e de recursos. Os containers são baseados nas IMAGES.</p>
+</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://media-exp1.licdn.com/dms/image/C4D12AQGu3FD9yV7IDA/article-inline_image-shrink_1000_1488/0/1564695520243?e=2147483647&amp;v=beta&amp;t=adhSiK5QSoMgng0BN1-_wmPiavn3JPGi2dIM9JbFOK0"
+        data-srcset="https://media-exp1.licdn.com/dms/image/C4D12AQGu3FD9yV7IDA/article-inline_image-shrink_1000_1488/0/1564695520243?e=2147483647&amp;v=beta&amp;t=adhSiK5QSoMgng0BN1-_wmPiavn3JPGi2dIM9JbFOK0, https://media-exp1.licdn.com/dms/image/C4D12AQGu3FD9yV7IDA/article-inline_image-shrink_1000_1488/0/1564695520243?e=2147483647&amp;v=beta&amp;t=adhSiK5QSoMgng0BN1-_wmPiavn3JPGi2dIM9JbFOK0 1.5x, https://media-exp1.licdn.com/dms/image/C4D12AQGu3FD9yV7IDA/article-inline_image-shrink_1000_1488/0/1564695520243?e=2147483647&amp;v=beta&amp;t=adhSiK5QSoMgng0BN1-_wmPiavn3JPGi2dIM9JbFOK0 2x"
+        data-sizes="auto"
+        alt="https://media-exp1.licdn.com/dms/image/C4D12AQGu3FD9yV7IDA/article-inline_image-shrink_1000_1488/0/1564695520243?e=2147483647&amp;v=beta&amp;t=adhSiK5QSoMgng0BN1-_wmPiavn3JPGi2dIM9JbFOK0"
+        title="docker" /></p>
+<p>O Client cria um container, que é uma soliciação ao Docker Engine(daemon), em seguida é feita uma busca pela imagem no Docker Registry. Atráves do Registry é feito o download, que é enviado para o Engine. Este será o responsável por entregar o container.</p>
+<p>Enfim, para mais detalhes, acesse a documentação oficial do Docker. Vamos por a mão na massa!!!</p>
+<p>Nesse tutorial vamos usar:</p>
+<p>VM Debian 9 Stretch</p>
+<p>Docker versão 20.10.14</p>
+<p>Instalação por Script
+Para ambientes de testes, o Docker fornece scripts para instalação de maneira rápida e não interativa. O código fonte dos scripts está no repositório de instalação da própria ferramenta.</p>
+<p>O uso desses scripts não são recomendados para ambientes de produção.</p>
+<p>Sem mais delongas, vamos lá colocar nosso laboratório para funcionar.</p>
+<p>Execute o o comando curl abaixo para que seja realizado o download do script:</p>
+<p><code>$ curl -fsSL https://get.docker.com -o get-docker.sh</code></p>
+<p>Após realizado o processo anterior, execute o script;</p>
+<p><code>$ sudo sh get-docker.sh</code></p>
+<p>O script irá buscar o código fonte nos repositórios do Docker e executar a instalação de tudo que é necessário para o software funcionar corretamente.</p>
+<p>Pronto, o Docker está instalado em sua VM Debian!!!</p>
+<h2 id="baixando-primeira-imagem">Baixando primeira imagem</h2>
+<p>O Docker possui um vasto repositório de images para containers.</p>
+<p>Link do repositório Docker: <a href="https://hub.docker.com/explore/" target="_blank" rel="noopener noreffer ">https://hub.docker.com/explore/</a></p>
+<p>Através do link podemos encontrar todas as imagens existentes de S.O, serviços, etc.</p>
+<p>Por meio de comandos Docker, também podemos fazer essa pesquisa. O comando que faz essa busca é o docker search image_name. O container que vamos executar é um provisionamento de uma aplicação Nginx.</p>
+<p>Execute o comando abaixo para pesquisar o Nginx:</p>
+<p><code>$ docker search nginx</code></p>
+<p>O Docker irá exibir o máximo possível de imagens do Nginx em seus repositórios:</p>
+<p>Vamos utilizar o primeiro da lista, que é o build oficial do Ngnix.</p>
+<p>Para baixar a imagem, digite o comando abaixo:</p>
+<p><code>$ docker pull nginx</code></p>
+<p>Esse comando é responsável por realizar o download da imagem diretamente do Registry Docker HUB.</p>
+<p>Para visualizar a imagem baixada, digite o comando abaixo:</p>
+<p><code>$ docker images</code></p>
+<h2 id="criando-primeiro-container">Criando primeiro Container</h2>
+<p>Para criar o nosso primeiro container, digite:</p>
+<p><code>$ docker run -i -t -d -p 8080:8080 nginx</code></p>
+<ul>
+<li><strong>run</strong>: cria o container</li>
+<li><strong>-i</strong>: permite interação com o container</li>
+<li><strong>-t</strong>: solicita o uso do shell</li>
+<li><strong>-d:</strong> container roda em background</li>
+<li><strong>-p</strong>: exposição da porta 8080 do container na porta 8080 do host(irei dar mais detalhes em um outro tutorial)</li>
+</ul>
+<p>Por fim, o nome da imagem, que no nosso lab é o Nginx.</p>
+<p>Para listar o container criado, digite o comando abaixo:</p>
+<p><code>$ docker ps</code></p>
+<p>Para que possamos acessar o bash do container, execute:</p>
+<p><code>$ docker exec -it Container_ID /bin/bash</code></p>
+<ul>
+<li>
+<p>exec: serve acessar o container</p>
+</li>
+<li>
+<p>Container_ID: ID gerado na criação do container. Nesse campo também podemos colocar o nome do container</p>
+</li>
+<li>
+<p>/bin/bash: O container irá iniciar com shell bash.</p>
+</li>
+</ul>
+<p>Pronto, estamos acessando o bash do container.</p>
+<p>Outra demostração, é o acesso a página web padrão do Nginx, demonstrando que a exposição da porta na criação do container funcionou:</p>
+<h2 id="administração-básicas-dos-containers">Administração básicas dos containers</h2>
+<p>Agora que já temos um containers em execução irei compartilhar um guia de comandos básicos do Docker.</p>
+<ul>
+<li><strong>docker ps</strong>: Lista os containers criados que estão em execução.</li>
+<li><strong>docker ps -a</strong>: Lista todos os containers, desde os que estão em execução e os que estão parados.</li>
+<li><strong>docker start</strong>: Inicia o container.</li>
+<li><strong>docker stop</strong>: Para o container.</li>
+<li><strong>docker logs ID_container</strong>: Mostra os logs recentes do container criado</li>
+<li><strong>docker inspect ID_container</strong>: Exibe informações detalhadas sobre o container.</li>
+<li><strong>docker stats ID_container</strong>: Exibe estatísticas de processamento do container.</li>
+<li><strong>docker rm ID_container</strong>: Apaga, somente containers que estão parados</li>
+<li><strong>docker rm -f ID_container</strong>: Apaga, de forma forçada, o container. Independente se o mesmo esteja em execução ou não.</li>
+<li><strong>docker images</strong>: Lista todas as imagens baixadas.</li>
+<li><strong>docker rmi image_name</strong>: Apaga imagem baixada.</li>
+</ul>
+<h2 id="video">Video</h2>
+
+
+    
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/J-nPX_fsgR4?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      ></iframe>
+    </div>
+
+<h2 id="referências">Referências</h2>
+<p><a href="https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script" target="_blank" rel="noopener noreffer ">https://docs.docker.com/install/linux/docker-ce/debian/#install-using-the-convenience-script</a></p>
+<p><a href="https://docs.docker.com/engine/reference/commandline/images/" target="_blank" rel="noopener noreffer ">https://docs.docker.com/engine/reference/commandline/images/</a></p>
+<p><a href="https://hub.docker.com/_/nginx/" target="_blank" rel="noopener noreffer ">https://hub.docker.com/_/nginx/</a></p>
+<p><a href="https://docs.docker.com/engine/docker-overview/" target="_blank" rel="noopener noreffer ">https://docs.docker.com/engine/docker-overview/</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2022-04-12</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/docker-primeiros-passos/index.en/" data-title="Docker - Primeiros Passos" data-hashtags="containers,docker"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/docker-primeiros-passos/index.en/" data-hashtag="containers"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/docker-primeiros-passos/index.en/" data-title="Docker - Primeiros Passos"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/docker-primeiros-passos/index.en/" data-title="Docker - Primeiros Passos"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/docker-primeiros-passos/index.en/" data-title="Docker - Primeiros Passos"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/containers/">Containers</a>,&nbsp;<a href="/tags/docker/">Docker</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/kubernetes-configurando-o-minikube/index.en/" class="prev" rel="prev" title="Kubernetes - Configurando O Minikube"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Kubernetes - Configurando O Minikube</a>
+            <a href="/posts/entendendo-o-yaml/index.en/" class="next" rel="next" title="YAML - Introdução rápida">YAML - Introdução rápida<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copiar para a área de transferência","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
