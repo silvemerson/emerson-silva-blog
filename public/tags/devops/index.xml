@@ -1,24 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Devops - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/devops/</link>
+        <link>https://emerson-silva.blog.br/tags/devops/</link>
         <description>Devops - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/devops/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 19 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/devops/" rel="self" type="application/rss+xml" /><item>
     <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title>
-    <link>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/</link>
+    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</link>
     <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/</guid>
+    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!</p>
 <h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
 <p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>]]></description>
 </item>
 <item>
     <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>http://localhost:1313/posts/glossario-cd/</link>
+    <link>https://emerson-silva.blog.br/posts/glossario-cd/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-cd/</guid>
+    <guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -27,10 +27,10 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>003 - Glossário Tech - o que é Continuous Integration</title>
-    <link>http://localhost:1313/posts/glossario-ci/</link>
+    <link>https://emerson-silva.blog.br/posts/glossario-ci/</link>
     <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-ci/</guid>
+    <guid>https://emerson-silva.blog.br/posts/glossario-ci/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -39,10 +39,10 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>001 - Glossário Tech - o que é Devops</title>
-    <link>http://localhost:1313/posts/glossario-devops/</link>
+    <link>https://emerson-silva.blog.br/posts/glossario-devops/</link>
     <pubDate>Tue, 09 Jan 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-devops/</guid>
+    <guid>https://emerson-silva.blog.br/posts/glossario-devops/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim! Antes de mais nada, um Feliz Ano Novo para vocês!
 E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -51,20 +51,20 @@ E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>G
 </item>
 <item>
     <title>Desbravando o OpenTofu: Parte 01 - Introdução e Fundamentos</title>
-    <link>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte1/</link>
+    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</link>
     <pubDate>Fri, 01 Dec 2023 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte1/</guid>
+    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos falar de uma ferramenta em potencial de Infra as Code chamada OpenTofu. Bora lá</p>
 <h2 id="como-surgiu-o-opentofu">Como surgiu o OpenTofu</h2>
 <p>Em 10 de agosto de 2023, a HashiCorp anunciou que após cerca de 9 anos de Terraform sendo de código aberto sob a licença MPL v2, eles repentinamente o mudaram para uma licença BSL v1.1 de código não aberto. Essa mudança é algo venoso para o Terraform e também para toda a comunidade. Foi então que surge o anteriormente denominado OpenTF, OpenTofu que é um fork do Terraform de código aberto, dirigido pela comunidade e fou abraçado(gerenciado) pela Linux Foundation.</p>]]></description>
 </item>
 <item>
     <title>DevOps e SRE Roadmap</title>
-    <link>http://localhost:1313/posts/devops-roadmap/</link>
+    <link>https://emerson-silva.blog.br/posts/devops-roadmap/</link>
     <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/devops-roadmap/</guid>
+    <guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
 <p>Espero que sim!</p>
 <p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>
@@ -75,10 +75,10 @@ E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>G
 </item>
 <item>
     <title>Criando imagens com Packer na GCP</title>
-    <link>http://localhost:1313/posts/packer-gcp-image/</link>
+    <link>https://emerson-silva.blog.br/posts/packer-gcp-image/</link>
     <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/packer-gcp-image/</guid>
+    <guid>https://emerson-silva.blog.br/posts/packer-gcp-image/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
 <p>Espero que sim!</p>
 <p>No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.</p>

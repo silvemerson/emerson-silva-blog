@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Sre - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/sre/</link>
+        <link>https://emerson-silva.blog.br/tags/sre/</link>
         <description>Sre - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/sre/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/sre/" rel="self" type="application/rss+xml" /><item>
     <title>002 - Glossário Tech - o que é SRE</title>
-    <link>http://localhost:1313/posts/glossario-sre/</link>
+    <link>https://emerson-silva.blog.br/posts/glossario-sre/</link>
     <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-sre/</guid>
+    <guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -17,10 +17,10 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>DevOps e SRE Roadmap</title>
-    <link>http://localhost:1313/posts/devops-roadmap/</link>
+    <link>https://emerson-silva.blog.br/posts/devops-roadmap/</link>
     <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/devops-roadmap/</guid>
+    <guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid>
     <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
 <p>Espero que sim!</p>
 <p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>

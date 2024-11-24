@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/">
+        <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP">
   <meta property="og:description" content="Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
@@ -16,19 +16,19 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
     <meta property="article:modified_time" content="2024-11-19T12:24:03-03:00">
     <meta property="article:tag" content="Devops">
     <meta property="article:tag" content="Iac">
-    <meta property="og:image" content="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/featured-image.png">
+    <meta property="og:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/featured-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/featured-image.png">
+  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/featured-image.png">
   <meta name="twitter:title" content="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP">
   <meta name="twitter:description" content="Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
 Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" /><link rel="prev" href="http://localhost:1313/posts/glossario-cd/" /><link rel="next" href="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/glossario-cd/" /><link rel="next" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -36,14 +36,14 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
         "inLanguage": "pt-br",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-primeira-parte2\/"
+            "@id": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-primeira-parte2\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-primeira-parte2\/featured-image.png",
+                            "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-primeira-parte2\/featured-image.png",
                             "width":  429 ,
                             "height":  117 
                         }],"genre": "posts","keywords": "devops, iac","wordcount":  770 ,
-        "url": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-primeira-parte2\/","datePublished": "2024-11-19T12:24:03-03:00","dateModified": "2024-11-19T12:24:03-03:00","publisher": {
+        "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-primeira-parte2\/","datePublished": "2024-11-19T12:24:03-03:00","dateModified": "2024-11-19T12:24:03-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -56,7 +56,7 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
+            <a href="/" title="Emerson Silva">My cool site</a>
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
@@ -68,7 +68,7 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
+                <a href="/" title="Emerson Silva">My cool site</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -309,7 +309,7 @@ Não esqueçam de compartilhar esse post em suas redes sociais</p>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP" data-hashtags="devops,iac"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP" data-hashtags="devops,iac"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -336,5 +336,5 @@ Não esqueçam de compartilhar esse post em suas redes sociais</p>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

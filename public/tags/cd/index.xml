@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Cd - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/cd/</link>
+        <link>https://emerson-silva.blog.br/tags/cd/</link>
         <description>Cd - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/cd/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 20 Nov 2024 12:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/cd/" rel="self" type="application/rss+xml" /><item>
     <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
-    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
+    <link>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</link>
     <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
+    <guid>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
@@ -17,10 +17,10 @@
 </item>
 <item>
     <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>http://localhost:1313/posts/glossario-cd/</link>
+    <link>https://emerson-silva.blog.br/posts/glossario-cd/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-cd/</guid>
+    <guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Automacao - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/automacao/</link>
+        <link>https://emerson-silva.blog.br/tags/automacao/</link>
         <description>Automacao - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 13 Apr 2022 18:37:11 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/automacao/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 13 Apr 2022 18:37:11 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/automacao/" rel="self" type="application/rss+xml" /><item>
     <title>YAML - Introdução rápida</title>
-    <link>http://localhost:1313/posts/entendendo-o-yaml/</link>
+    <link>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</link>
     <pubDate>Wed, 13 Apr 2022 18:37:11 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/entendendo-o-yaml/</guid>
+    <guid>https://emerson-silva.blog.br/posts/entendendo-o-yaml/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje vamos falar sobre o YAML. Entender como ele funciona, como é a sua indentação e como esse formato de serialização de dados facilita na construção de arquivos de configuração.</p>
 <h2 id="o-que-é">O que é</h2>
 <p>Foi lançado em 2001, inspirado em linguagens como como XML,C, Python entre tantas outras, é um formato de codificação de dados legíveis por humanos. Ela tem como objetivo é ter sintaxe legível e simples, onde ela pode ser mapeada facilmente pelos tipos de dados mais comuns na maioria das linguagens de alto nível. A sigla YAML pode significar em inglês YAML Ain’t markup language (YAML não é linguagem de marcação), uma brincadeira que os criadores fizeram para enfatizar o que o YAML é.</p>]]></description>

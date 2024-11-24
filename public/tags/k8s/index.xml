@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>K8s - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/k8s/</link>
+        <link>https://emerson-silva.blog.br/tags/k8s/</link>
         <description>K8s - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/k8s/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/k8s/" rel="self" type="application/rss+xml" /><item>
     <title>Meu primeiro Livro lançado</title>
-    <link>http://localhost:1313/posts/meu-primeiro-livro/</link>
+    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/meu-primeiro-livro/</guid>
+    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
     <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
 <p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
 <p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
