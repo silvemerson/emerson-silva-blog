@@ -12,6 +12,7 @@ theme = "LoveIt"
 
 
 [params]
+  author = "Emerson Silva"
   # LoveIt theme version
   version = "0.2.11"
   [params.comment] 
