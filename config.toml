@@ -9,9 +9,26 @@ title = "Emerson Silva"
 # Change the default theme to be use when building the site with Hugo
 theme = "LoveIt"
 
+
+
 [params]
   # LoveIt theme version
   version = "0.2.11"
+  [params.comment] 
+    enable = true
+  [giscus]
+    enable = true
+    repo = "silvemerson/emerson-silva-blog"
+    repoId = "R_kgDONTalJA"
+    category = "General"
+    categoryId = "DIC_kwDONTalJM4CkhmM"
+    mapping = "pathname"
+    reactionsEnabled = true
+    emitMetadata = true
+    inputPosition = "top"
+    theme = "dark"
+    lang = "pt"
+    lazyLoading = true    
   [params.home]
     rss = 10
     # Home page profile
@@ -38,6 +55,7 @@ theme = "LoveIt"
       # LoveIt DELETED | 0.2.0 replaced with hiddenFromHomePage in params.page
       # default behavior when you don't set "hiddenFromHomePage" in front matter
       defaultHiddenFromHomePage = false
+
 
 [params.social]
     GitHub = "silvemerson"
@@ -84,4 +102,6 @@ theme = "LoveIt"
   [markup.highlight]
     # false is a necessary configuration (https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
+  [markup.goldmark.renderer]
+    unsafe = true
 
