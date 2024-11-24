@@ -1,7 +1,7 @@
 [build]
   publish = "public"
   command = "hugo --enableGitInfo --minify"
-  environment = { HUGO_ENV = "production", HUGO_VERSION = "0.139.2" }
+  environment = { HUGO_ENV = "production", HUGO_VERSION = "0.139.2", HUGO_DISABLE_DEPRECATED_WARNINGS = "true" }
 
 [build.processing]
   skip_processing = false
@@ -19,3 +19,4 @@
 [context.production.environment]
   HUGO_VERSION = "0.139.2"
   HUGO_TITLE = "Emerson Silva Blog"
+  HUGO_DISABLE_DEPRECATED_WARNINGS = "true"
