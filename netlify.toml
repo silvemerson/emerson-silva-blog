@@ -19,4 +19,3 @@
   HUGO_VERSION = "0.139.2"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
-  HUGO_TITLE = "Emerson Silva Blog"
