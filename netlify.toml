@@ -1,6 +1,6 @@
 [build]
   publish = "public"
-  command = "hugo --enableGitInfo --minify"
+  command = "hugo"
 
 [build.processing]
   skip_processing = false
