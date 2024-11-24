@@ -1,7 +1,7 @@
 [build]
   publish = "public"
   command = "hugo --enableGitInfo --minify"
-  environment = { HUGO_ENV = "production" }
+  environment = { HUGO_ENV = "production", HUGO_VERSION = "0.139.2" }
 
 [build.processing]
   skip_processing = false
