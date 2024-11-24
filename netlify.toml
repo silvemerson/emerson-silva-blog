@@ -17,5 +17,5 @@
   compress = true
 
 [context.production.environment]
-  HUGO_VERSION = "0.68.3" 
+  HUGO_VERSION = "0.139.2"
   HUGO_TITLE = "Emerson Silva Blog"
