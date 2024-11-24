@@ -10,7 +10,7 @@
 [build.processing.js]
   bundle = false
   minify = true
-[build.processing.html]WW
+[build.processing.html]
   pretty_urls = true
 [build.processing.images]
   compress = true
