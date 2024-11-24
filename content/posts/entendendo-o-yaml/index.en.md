@@ -89,3 +89,23 @@ Então é isso pessoal, esse o nosso querido YAML!!
 A ideia de trazer uma explicação dele é bem objetiva, em breve teremos no blog posts sobre ferramentas que usam o YAML
 
 Até a próxima pessoal. 
+
+
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>

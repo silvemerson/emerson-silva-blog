@@ -50,3 +50,23 @@ Na prova prática não é abordado CI/CD ou as outras ferramentas que existem de
 ## Conclusão
 
 É uma prova legal de se fazer, é de nível associate, então o nível de dificuldade é relativo, além do conhecimento teórico, é necessário ter um domínio sobre git e o repositório do GitLab para poder fazer, por isso quanto mais práticar, melhor. É um ótimo desafio para quem gosta de GitLab.
+
+
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>

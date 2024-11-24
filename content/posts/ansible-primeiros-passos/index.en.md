@@ -23,3 +23,23 @@ No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Ansib
 
 Ansible é uma ferramenta de automação e gerência de configuração, sem a necessidade de um centralizador e de agentes instalados nas máquinas. Podemos configurar centenas de máquinas de um ponto qualquer através de um arquivo de formato muito simples chamado YAML.
 
+
+
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>

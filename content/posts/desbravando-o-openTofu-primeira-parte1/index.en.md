@@ -104,3 +104,21 @@ https://opentofu.org/docs/intro/
 
 https://www.linuxfoundation.org/press/announcing-opentofu
 
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
