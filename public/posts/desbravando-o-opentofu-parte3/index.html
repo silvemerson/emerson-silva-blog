@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">
+  <meta property="og:description" content="Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar
+Bora lá!
+Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-27T09:24:03-03:00">
+    <meta property="article:modified_time" content="2024-11-27T09:24:03-03:00">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Iac">
+    <meta property="article:tag" content="Opentofu">
+    <meta property="og:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/featured-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/featured-image.png">
+  <meta name="twitter:title" content="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">
+  <meta name="twitter:description" content="Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar
+Bora lá!
+Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.">
+<meta name="application-name" content="Emerson Silva">
+<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/featured-image.png",
+                            "width":  429 ,
+                            "height":  117 
+                        }],"genre": "posts","keywords": "devops, iac, opentofu","wordcount":  964 ,
+        "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/","datePublished": "2024-11-27T09:24:03-03:00","dateModified": "2024-11-27T09:24:03-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Silva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Silva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/iac/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>IaC</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-27">2024-11-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;964 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="featured-image"><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/posts/desbravando-o-opentofu-parte3/featured-image.png"
+        data-srcset="/posts/desbravando-o-opentofu-parte3/featured-image.png, /posts/desbravando-o-opentofu-parte3/featured-image.png 1.5x, /posts/desbravando-o-opentofu-parte3/featured-image.png 2x"
+        data-sizes="auto"
+        alt="/posts/desbravando-o-opentofu-parte3/featured-image.png"
+        title="/posts/desbravando-o-opentofu-parte3/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</a></li>
+    <li><a href="#conecte-se-a-aws">Conecte-se a AWS</a>
+      <ul>
+        <li><a href="#instalar-e-configurar-o-aws-cli">Instalar e Configurar o AWS CLI</a></li>
+      </ul>
+    </li>
+    <li><a href="#conhecendo-o-opentofu-import">Conhecendo o OpenTofu Import</a>
+      <ul>
+        <li><a href="#como-funciona-o-import">Como funciona o import</a></li>
+      </ul>
+    </li>
+    <li><a href="#sintaxe-do-comando">Sintaxe do Comando</a></li>
+    <li><a href="#exemplo-para-aws">Exemplo para AWS</a></li>
+    <li><a href="#benefícios-do-import-no-opentofu">Benefícios do Import no OpenTofu</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar</p>
+<p>Bora lá!</p>
+<h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
+<p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>
+<p>Então leia <a href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/" target="_blank" rel="noopener noreffer ">Desbravando o OpenTofu: Parte 01 – Introdução e Fundamentos
+</a></p>
+<h2 id="conecte-se-a-aws">Conecte-se a AWS</h2>
+<h3 id="instalar-e-configurar-o-aws-cli">Instalar e Configurar o AWS CLI</h3>
+<p>Baixe e instale o AWS CLI da AWS em sua máquina seguindo as instruções de instalação do <a href="https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html" target="_blank" rel="noopener noreffer ">AWS CLI</a>.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Baixe</span>
+</span></span><span class="line"><span class="cl">curl <span class="s2">&#34;https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip&#34;</span> -o <span class="s2">&#34;awscliv2.zip&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Descompacte</span>
+</span></span><span class="line"><span class="cl">unzip awscliv2.zip
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Instale</span>
+</span></span><span class="line"><span class="cl">sudo ./aws/install
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">#Valide</span>
+</span></span><span class="line"><span class="cl">aws --version
+</span></span></code></pre></div><ol>
+<li><strong>Faça login na sua conta AWS</strong>:</li>
+</ol>
+<p>Crie uma chave de acesso no <a href="https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html" target="_blank" rel="noopener noreffer ">IAM da AWS</a></p>
+<p>Depois de instalar o AWS, abra o terminal e execute:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">aws configure
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># output do terminal:</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">AWS Access Key ID <span class="o">[</span>****************LZWP<span class="o">]</span>: 
+</span></span><span class="line"><span class="cl">AWS Secret Access Key <span class="o">[</span>****************gVB9<span class="o">]</span>:  
+</span></span><span class="line"><span class="cl">Default region name <span class="o">[</span>us-east-1<span class="o">]</span>: 
+</span></span><span class="line"><span class="cl">Default output format <span class="o">[</span>json<span class="o">]</span>: 
+</span></span></code></pre></div><p>Insira seus dados de autenticação na AWS</p>
+<h2 id="conhecendo-o-opentofu-import">Conhecendo o OpenTofu Import</h2>
+<p>o comando import é usado para trazer recursos existentes na infraestrutura para dentro do código do OpenTofu, permitindo que esses recursos sejam gerenciados. É especialmente útil ao trabalhar com recursos criados fora do OpenTofu ou ao adotar o OpenTofu para gerenciar uma infraestrutura já existente.</p>
+<h3 id="como-funciona-o-import">Como funciona o import</h3>
+<p><strong>Identificação do recurso</strong>: O OpenTofu precisa saber qual é o recurso existente que você quer importar.
+Isso é feito fornecendo o identificador único do recurso (como o ARN de um recurso na AWS, o ID de uma instância EC2, etc.).</p>
+<p><strong>Mapeamento com o estado</strong>: O comando import associa o recurso existente ao estado gerenciado pelo OpenTofu.</p>
+<p><strong>Especificação do recurso</strong>: Você precisa ter a definição do recurso no código OpenTofu antes de importá-lo.</p>
+<h2 id="sintaxe-do-comando">Sintaxe do Comando</h2>
+<p>Conhecendo o comando <code>tofu import</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu import
+</span></span><span class="line"><span class="cl">The import <span class="nb">command</span> expects two arguments.
+</span></span><span class="line"><span class="cl">Usage: tofu <span class="o">[</span>global options<span class="o">]</span> import <span class="o">[</span>options<span class="o">]</span> ADDR ID
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  Import existing infrastructure into your OpenTofu state.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  This will find and import the specified resource into your OpenTofu
+</span></span><span class="line"><span class="cl">  state, allowing existing infrastructure to come under OpenTofu
+</span></span><span class="line"><span class="cl">  management without having to be initially created by OpenTofu.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  The ADDR specified is the address to import the resource to. Please
+</span></span><span class="line"><span class="cl">  see the documentation online <span class="k">for</span> resource addresses. The ID is a
+</span></span><span class="line"><span class="cl">  resource-specific ID to identify that resource being imported. Please
+</span></span><span class="line"><span class="cl">  reference the documentation <span class="k">for</span> the resource <span class="nb">type</span> you<span class="s1">&#39;re importing to
+</span></span></span><span class="line"><span class="cl"><span class="s1">  determine the ID syntax to use. It typically matches directly to the ID
+</span></span></span><span class="line"><span class="cl"><span class="s1">  that the provider uses.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  This command will not modify your infrastructure, but it will make
+</span></span></span><span class="line"><span class="cl"><span class="s1">  network requests to inspect parts of your infrastructure relevant to
+</span></span></span><span class="line"><span class="cl"><span class="s1">  the resource being imported.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">Options:
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -config=path            Path to a directory of OpenTofu configuration files
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          to use to configure the provider. Defaults to pwd.
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          If no config files are present, they must be provided
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          via the input prompts or env vars.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -input=false            Disable interactive input prompts.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -lock=false             Don&#39;</span>t hold a state lock during the operation. This is
+</span></span><span class="line"><span class="cl">                          dangerous <span class="k">if</span> others might concurrently run commands
+</span></span><span class="line"><span class="cl">                          against the same workspace.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -lock-timeout<span class="o">=</span>0s        Duration to retry a state lock.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  -no-color               If specified, output won<span class="s1">&#39;t contain any color.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -var &#39;</span><span class="nv">foo</span><span class="o">=</span>bar<span class="s1">&#39;          Set a variable in the OpenTofu configuration. This
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          flag can be set multiple times. This is only useful
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          with the &#34;-config&#34; flag.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -var-file=foo           Set variables in the OpenTofu configuration from
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          a file. If &#34;terraform.tfvars&#34; or any &#34;.auto.tfvars&#34;
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          files are present, they will be automatically loaded.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -ignore-remote-version  A rare option used for the remote backend only. See
+</span></span></span><span class="line"><span class="cl"><span class="s1">                          the remote backend documentation for more information.
+</span></span></span><span class="line"><span class="cl"><span class="s1">
+</span></span></span><span class="line"><span class="cl"><span class="s1">  -state, state-out, and -backup are legacy options supported for the local
+</span></span></span><span class="line"><span class="cl"><span class="s1">  backend only. For more information, see the local backend&#39;</span>s documentation.
+</span></span></code></pre></div><p>Para importar uma infra, o comando fica da seguinte forma:</p>
+<p>tofu import &lt;RESOURCE_TYPE&gt; &lt;RESOURCE_NAME&gt; &lt;RESOURCE_ID&gt;</p>
+<p><strong>&lt;RESOURCE_TYPE&gt;</strong>: Tipo de recurso que você quer importar (exemplo: aws_instance, aws_s3_bucket).</p>
+<p><strong>&lt;RESOURCE_NAME&gt;</strong>: Nome que você deu ao recurso no código OpenTofu.</p>
+<p><strong>&lt;RESOURCE_ID&gt;</strong>: Identificador único do recurso existente.</p>
+<h2 id="exemplo-para-aws">Exemplo para AWS</h2>
+<p>Vamos para o nosos cenário.</p>
+<p>Você tem uma instância EC2 criada manualmente na AWS e deseja gerenciá-la pelo OpenTofu.</p>
+<p>Defina o recurso no código OpenTofu: No arquivo .tf escreva o código do recurso correspondente, por exemplo:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;example&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">#</span> <span class="err">os</span> <span class="err">atributos</span> <span class="err">exatos</span> <span class="err">serão</span> <span class="err">preenchidos</span> <span class="err">após</span> <span class="err">o</span> <span class="err">import</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Identifique o ID da instância EC2 (por exemplo, i-030cd2c52f9fb25d8) e execute:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu import aws_instance.example i-030cd2c52f9fb25d8
+</span></span></code></pre></div><p><strong>Output</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">aws_instance.example: Importing from ID <span class="s2">&#34;i-030cd2c52f9fb25d8&#34;</span>...
+</span></span><span class="line"><span class="cl">aws_instance.example: Import prepared!
+</span></span><span class="line"><span class="cl">  Prepared aws_instance <span class="k">for</span> import
+</span></span><span class="line"><span class="cl">aws_instance.example: Refreshing state... <span class="o">[</span><span class="nv">id</span><span class="o">=</span>i-030cd2c52f9fb25d8<span class="o">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Import successful!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">The resources that were imported are shown above. These resources are now in
+</span></span><span class="line"><span class="cl">your OpenTofu state and will henceforth be managed by OpenTofu.
+</span></span></code></pre></div><p>Após o comando, o OpenTofu vai sincronizar o estado em seu <code>tfstate</code>, mas você precisará ajustar o código do recurso com os atributos reais da instância (como AMI, tipo, etc.). Para isso, execute:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu show 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># aws_instance.example:</span>
+</span></span><span class="line"><span class="cl">resource <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;example&#34;</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">ami</span>                                  <span class="o">=</span> <span class="s2">&#34;ami-0453ec754f44f9a4a&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">arn</span>                                  <span class="o">=</span> <span class="s2">&#34;arn:aws:ec2:us-east-1:061039793852:instance/i-030cd2c52f9fb25d8&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">associate_public_ip_address</span>          <span class="o">=</span> <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">availability_zone</span>                    <span class="o">=</span> <span class="s2">&#34;us-east-1c&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">cpu_core_count</span>                       <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">cpu_threads_per_core</span>                 <span class="o">=</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>...<span class="o">)</span>
+</span></span></code></pre></div><p>Adicione no seu arquivo <code>tf</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">resource</span> <span class="s2">&#34;aws_instance&#34;</span> <span class="s2">&#34;example&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">#</span> <span class="err">os</span> <span class="err">atributos</span> <span class="err">exatos</span> <span class="err">serão</span> <span class="err">preenchidos</span> <span class="err">após</span> <span class="err">o</span> <span class="err">import</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">ami</span>                                  <span class="err">=</span> <span class="nt">&#34;ami-0453ec754f44f9a4a&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">instance_type</span>                        <span class="err">=</span> <span class="s2">&#34;t2.micro&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">key_name</span>                             <span class="err">=</span> <span class="s2">&#34;aws-keypairs&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">security_groups</span>                      <span class="err">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">        <span class="s2">&#34;launch-wizard-2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="err">source_dest_check</span>                    <span class="err">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="err">subnet_id</span>                            <span class="err">=</span> <span class="s2">&#34;subnet-0bb09b9cceb57d045&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">tags</span>                                 <span class="err">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Name&#34;</span> <span class="err">=</span> <span class="s2">&#34;example&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">tags_all</span>                             <span class="err">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Name&#34;</span> <span class="err">=</span> <span class="s2">&#34;example&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>Por fim, execute o <code>plan</code> para verificar o estado:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">tofu plan
+</span></span></code></pre></div><p>Ele mostrará estado.</p>
+<p>Toop! Agora você pode usar o OpenTofu para atualizar, modificar ou destruir o recurso como qualquer outro gerenciado.</p>
+<h2 id="benefícios-do-import-no-opentofu">Benefícios do Import no OpenTofu</h2>
+<ul>
+<li>
+<p>Adaptação incremental: Adote o OpenTofu em uma infraestrutura existente sem recriar tudo.</p>
+</li>
+<li>
+<p>Gerenciamento centralizado: Passe a gerenciar recursos que antes eram manuais.</p>
+</li>
+<li>
+<p>Compatibilidade com a AWS: O suporte do OpenTofu à AWS é robusto, cobrindo diversos serviços e recursos.</p>
+</li>
+</ul>
+<h2 id="referências">Referências</h2>
+<p><a href="https://opentofu.org/docs/cli/import/" target="_blank" rel="noopener noreffer ">https://opentofu.org/docs/cli/import/</a></p>
+<p><a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">https://opentofu.org/</a></p>
+<p><a href="https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html" target="_blank" rel="noopener noreffer ">https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_credentials_access-keys.html</a></p>
+<p><a href="https://opentofu.org/docs/intro/" target="_blank" rel="noopener noreffer ">https://opentofu.org/docs/intro/</a></p>
+<p><a href="https://www.linuxfoundation.org/press/announcing-opentofu" target="_blank" rel="noopener noreffer ">https://www.linuxfoundation.org/press/announcing-opentofu</a></p>
+<p><a href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/" target="_blank" rel="noopener noreffer ">https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</a></p>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-11-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente" data-hashtags="devops,iac,opentofu"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/devops/">Devops</a>,&nbsp;<a href="/tags/iac/">Iac</a>,&nbsp;<a href="/tags/opentofu/">Opentofu</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-kaniko/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

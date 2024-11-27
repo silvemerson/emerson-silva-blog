@@ -2,21 +2,23 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>https://emerson-silva.blog.br/categories/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/categories/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/tags/devops/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/tags/iac/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/categories/iac/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/tags/opentofu/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/posts/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/tags/</loc><lastmod>2024-11-27T09:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/cd/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/ci/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/git/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/gitlab/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/kaniko/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/posts/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/tags/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/categories/trilha-ci/cd/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</loc><lastmod>2024-11-20T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte2/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/tags/devops/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/tags/iac/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/categories/iac/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/</loc><lastmod>2024-11-19T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/posts/glossario-cd/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/glossario-tech/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/categories/glossario-tech/</loc><lastmod>2024-04-27T01:30:26-03:00</lastmod></url><url>
@@ -31,7 +33,7 @@
             <loc>https://emerson-silva.blog.br/posts/glossario-sre/</loc><lastmod>2024-01-27T01:30:26-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/sre/</loc><lastmod>2024-01-27T01:30:26-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/posts/glossario-devops/</loc><lastmod>2024-01-09T01:30:26-03:00</lastmod></url><url>
-            <loc>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</loc><lastmod>2023-12-01T12:24:03-03:00</lastmod></url><url>
+            <loc>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte1/</loc><lastmod>2023-12-01T12:24:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/posts/opensource-summit-crossplane/</loc><lastmod>2023-09-29T22:54:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/crossplanne/</loc><lastmod>2023-09-29T22:54:03-03:00</lastmod></url><url>
             <loc>https://emerson-silva.blog.br/tags/live/</loc><lastmod>2023-09-29T22:54:03-03:00</lastmod></url><url>
