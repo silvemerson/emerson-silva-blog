@@ -1,6 +1,6 @@
 ---
 title: "Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"
-date: 2024-11-20T12:24:03-03:00
+date: 2024-12-10T12:24:03-03:00
 draft: false
 author: "Emerson Silva"
 comment: true 
