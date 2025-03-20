@@ -21,7 +21,7 @@ Tudo bem com vocês? Espero que sim!
 
 Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!
 
-As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.
+As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.
 
 
 ## Erro 404
