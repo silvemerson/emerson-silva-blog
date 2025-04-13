@@ -1,4 +1,5 @@
 baseURL = "https://emerson-silva.blog.br"
+googleAnalytics = "G-B7YRXX3Q8D"
 publishDir = "public"
 # [en, zh-cn, fr, ...] determines default content language
 defaultContentLanguage = "en"
@@ -15,7 +16,7 @@ theme = "LoveIt"
   author = "Emerson Silva"
   # LoveIt theme version
   version = "0.2.11"
-  googleAnalytics = "G-B7YRXX3Q8D"
+  
   [params.comment] 
     enable = true
   [giscus]
