@@ -1,14 +1,25 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>K8s - Tag - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/tags/k8s/</link>
+        <link>http://localhost:1313/tags/k8s/</link>
         <description>K8s - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 27 Feb 2024 00:56:52 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/k8s/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 10 Dec 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/k8s/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
+    <link>http://localhost:1313/posts/nginx-k8s-erros-page/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/nginx-k8s-erros-page/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!</p>
+<p>As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>]]></description>
+</item>
+<item>
     <title>Meu primeiro Livro lançado</title>
-    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
+    <link>http://localhost:1313/posts/meu-primeiro-livro/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
+    <guid>http://localhost:1313/posts/meu-primeiro-livro/</guid>
     <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
 <p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
 <p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>

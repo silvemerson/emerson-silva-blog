@@ -1,14 +1,37 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>All Posts - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>All Posts | Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 27 Nov 2024 09:24:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 10 Dec 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
+    <link>http://localhost:1313/posts/nginx-k8s-erros-page/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/nginx-k8s-erros-page/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!</p>
+<p>As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>]]></description>
+</item>
+<item>
+    <title>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</title>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje no nosso blog vamos seguier com a sequência de post voltado a CI/CD. Vamos falar de como criar uma pipeline para criar um EC2 na AWS usando o Gitlab CI e armazenando o tf state no prórprio GitLab. Bora lá?</p>
+<h2 id="o-que-é-o-terraform">O que é o Terraform</h2>
+<p>O Terraform é uma ferramenta open-source desenvolvida pela HashiCorp que permite o gerenciamento de infraestrutura como código (Infrastructure as Code - IaC). Com o Terraform, você pode definir, provisionar e gerenciar recursos de infraestrutura em diversos provedores (como AWS, Azure, Google Cloud, entre outros) de maneira declarativa.</p>]]></description>
+</item>
+<item>
     <title>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente</title>
-    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/</link>
+    <link>http://localhost:1313/posts/desbravando-o-opentofu-parte3/</link>
     <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/</guid>
+    <guid>http://localhost:1313/posts/desbravando-o-opentofu-parte3/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar</p>
 <p>Bora lá!</p>
 <h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
@@ -16,10 +39,10 @@
 </item>
 <item>
     <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
-    <link>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</link>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
     <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</guid>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
@@ -28,20 +51,46 @@
 </item>
 <item>
     <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title>
-    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/</link>
+    <link>http://localhost:1313/posts/desbravando-o-opentofu-parte2/</link>
     <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/</guid>
+    <guid>http://localhost:1313/posts/desbravando-o-opentofu-parte2/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!</p>
 <h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
 <p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>]]></description>
 </item>
 <item>
+    <title>Lançamento do curso Terraform na prática com AWS</title>
+    <link>http://localhost:1313/posts/curso-terraform-aws/</link>
+    <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/curso-terraform-aws/</guid>
+    <description><![CDATA[<p>Olá pessoal!</p>
+<p>Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da <a href="https://4linux.com.br/" target="_blank" rel="noopener noreffer ">4LINUX</a>
+chamado <strong>Terraform na prática – especialista em provisionamento Cloud na AWS</strong></p>
+<h2 id="o-que-o-curso-oferece">O que o curso oferece?</h2>
+<p>Este curso prepara o aluno para criar infraestrutura em código (IaC) usando o Terraform, com foco na AWS como cloud provider. O Terraform é a principal ferramenta para provisionar infraestrutura nos maiores provedores de Clouds públicas e privadas, permitindo criar, alterar, configurar e versionar toda a infraestrutura de forma automatizada e usando a linguagem declarativa HCL. Aprender Terraform é uma habilidade valiosa para profissionais de infraestrutura, DevOps e desenvolvedores que buscam melhorar a eficiência e escalabilidade de suas aplicações em nuvem. Curso preparatório para a certificação:
+Terraform Associate.</p>]]></description>
+</item>
+<item>
+    <title>Lançamento do curso Terraform na prática com AWS</title>
+    <link>http://localhost:1313/posts/prospero-2025/</link>
+    <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/prospero-2025/</guid>
+    <description><![CDATA[<p>Olá pessoal!</p>
+<p>Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da <a href="https://4linux.com.br/" target="_blank" rel="noopener noreffer ">4LINUX</a>
+chamado <strong>Terraform na prática – especialista em provisionamento Cloud na AWS</strong></p>
+<h2 id="o-que-o-curso-oferece">O que o curso oferece?</h2>
+<p>Este curso prepara o aluno para criar infraestrutura em código (IaC) usando o Terraform, com foco na AWS como cloud provider. O Terraform é a principal ferramenta para provisionar infraestrutura nos maiores provedores de Clouds públicas e privadas, permitindo criar, alterar, configurar e versionar toda a infraestrutura de forma automatizada e usando a linguagem declarativa HCL. Aprender Terraform é uma habilidade valiosa para profissionais de infraestrutura, DevOps e desenvolvedores que buscam melhorar a eficiência e escalabilidade de suas aplicações em nuvem. Curso preparatório para a certificação:
+Terraform Associate.</p>]]></description>
+</item>
+<item>
     <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-cd/</link>
+    <link>http://localhost:1313/posts/glossario-cd/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid>
+    <guid>http://localhost:1313/posts/glossario-cd/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -50,10 +99,10 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>003 - Glossário Tech - o que é Continuous Integration</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-ci/</link>
+    <link>http://localhost:1313/posts/glossario-ci/</link>
     <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-ci/</guid>
+    <guid>http://localhost:1313/posts/glossario-ci/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -62,70 +111,16 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>Meu primeiro Livro lançado</title>
-    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
+    <link>http://localhost:1313/posts/meu-primeiro-livro/</link>
     <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
+    <guid>http://localhost:1313/posts/meu-primeiro-livro/</guid>
     <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
 <p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
 <p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
 <p>É algo bem significativo isso pra mim e muitos outros virão!</p>
 <p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória.</p>
 <p>Quem tiver interesse em comprar, basta a: <a href="https://a.co/d/dmxgdnz" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a></p>]]></description>
-</item>
-<item>
-    <title>Kubernetes - Criando um cluster local com Kind</title>
-    <link>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</link>
-    <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</guid>
-    <description><![CDATA[<p>Olá pessoal</p>
-<p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
-<h2 id="o-que-é">O que é?</h2>
-<p>O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.</p>
-<h2 id="como-é-o-kind">Como é o Kind?</h2>
-<p>Ele consiste em:</p>
-<ul>
-<li>Pacotes Go que implementam criação de cluster, construção de imagem, etc.</li>
-<li>Uma interface de linha de comando (kind) construída sobre esses pacotes.</li>
-<li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
-<li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
-</ul>
-<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>]]></description>
-</item>
-<item>
-    <title>002 - Glossário Tech - o que é SRE</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-sre/</link>
-    <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-sre">O que é SRE</h2>
-<p>SRE significa &ldquo;Site Reliability Engineering&rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</p>]]></description>
-</item>
-<item>
-    <title>001 - Glossário Tech - o que é Devops</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-devops/</link>
-    <pubDate>Tue, 09 Jan 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-devops/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim! Antes de mais nada, um Feliz Ano Novo para vocês!
-E esse o nosso primeiro post do ano e vamos iniciar uma série chamada <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-devops">O que é DevOps</h2>
-<p>DevOps é uma abordagem de desenvolvimento de software que visa integrar as equipes de desenvolvimento (Dev) e operações (Ops) para melhorar a colaboração e a eficiência ao longo do ciclo de vida do desenvolvimento de software. A palavra &ldquo;DevOps&rdquo; é uma combinação de &ldquo;Desenvolvimento&rdquo; e &ldquo;Operações&rdquo;.</p>]]></description>
-</item>
-<item>
-    <title>Desbravando o OpenTofu: Parte 01 - Introdução e Fundamentos</title>
-    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte1/</link>
-    <pubDate>Fri, 01 Dec 2023 12:24:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte1/</guid>
-    <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos falar de uma ferramenta em potencial de Infra as Code chamada OpenTofu. Bora lá</p>
-<h2 id="como-surgiu-o-opentofu">Como surgiu o OpenTofu</h2>
-<p>Em 10 de agosto de 2023, a HashiCorp anunciou que após cerca de 9 anos de Terraform sendo de código aberto sob a licença MPL v2, eles repentinamente o mudaram para uma licença BSL v1.1 de código não aberto. Essa mudança é algo venoso para o Terraform e também para toda a comunidade. Foi então que surge o anteriormente denominado OpenTF, OpenTofu que é um fork do Terraform de código aberto, dirigido pela comunidade e fou abraçado(gerenciado) pela Linux Foundation.</p>]]></description>
 </item>
 </channel>
 </rss>

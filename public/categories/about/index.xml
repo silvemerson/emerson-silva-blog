@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>About - Category - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/categories/about/</link>
+        <link>http://localhost:1313/categories/about/</link>
         <description>About - Category - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 22 Mar 2022 17:55:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/about/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 22 Mar 2022 17:55:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/categories/about/" rel="self" type="application/rss+xml" /><item>
     <title>Sobre o Blog</title>
-    <link>https://emerson-silva.blog.br/posts/bem-vindo/</link>
+    <link>http://localhost:1313/posts/bem-vindo/</link>
     <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/bem-vindo/</guid>
+    <guid>http://localhost:1313/posts/bem-vindo/</guid>
     <description><![CDATA[<p>Olá pessoal</p>
 <p>Nas últimas semanas decidi enfim criar um blog para compartilhar um pouco sobre a minha jornada como SysAdmin, Analista de Infraestrutura e Lider técnico de operações de monitoramento.</p>
 <p>Então aqui no blog, vocês vão ver post sobre a cultura DevOps, sobre ferramentas e seu uso no dia a dia, sobre certificações e muito mais.</p>

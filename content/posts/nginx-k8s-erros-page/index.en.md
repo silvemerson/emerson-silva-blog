@@ -19,9 +19,9 @@ Salve salve pessoal!!!
 
 Tudo bem com vocês? Espero que sim!  
 
-Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!
+Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!
 
-As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.
+As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.
 
 
 ## Erro 404
@@ -33,7 +33,7 @@ Quando um usuário se depara com uma página 404 genérica e fria, a sensação 
 
 ## Qual o sentido de Personalizar as Páginas de Erro
 
-A personalização dessas páginas não é apenas uma questão estética ou técnica, mas uma estratégia de usabilidade e relacionamento com o usuário. Elas representam um ponto de contato com o visitante que, se bem administrado, pode transformar uma falha em uma experiência positiva.
+A personalização dessas páginas não é somente uma questão estética ou técnica, mas uma estratégia de usabilidade e relacionamento com o usuário. Elas representam um ponto de contato com o visitante que, se bem administrado, pode transformar uma falha em uma experiência positiva.
 
 Páginas de erro personalizadas demonstram que o proprietário do site se preocupa com a experiência do usuário. Elas transmitem um sentimento de que o erro não foi ignorado, mas sim compreendido e tratado de forma a não prejudicar a navegação. Isso pode aumentar a confiança do usuário no site, encorajá-lo a voltar, ou até mesmo ajudá-lo a resolver o problema sozinho. Por exemplo, em uma página 404 bem desenhada, o usuário pode ser redirecionado para o conteúdo correto rapidamente, sem precisar procurar por conta própria. Da mesma forma, uma página 500 personalizada pode dar um toque de empatia, explicando que a equipe está trabalhando para resolver o problema, o que humaniza ainda mais a experiência.
 
@@ -62,7 +62,7 @@ Pronto, instalado.
 
 ### Personalizações
 
-Agora, iremos criar um arquivo chamado `custom-error-pages.yaml` e adicione o contéudo abaixo:
+Agora, iremos criar um arquivo chamado `custom-error-pages.yaml` e adicione o conteúdo abaixo:
 
 ```yaml
 apiVersion: v1
@@ -98,7 +98,7 @@ Aplique esse `ConfigMap`:
 kubectl apply -f custom-error-pages.yaml
 
 ```
-Agora vamos configurar o um arquivo de values personalizado para carregar essa configuração. 
+Agora vamos configurar o arquivo de values personalizado para carregar essa configuração. 
 
 `custom-backend-values.yaml`
 
@@ -124,7 +124,7 @@ controller:
     mountPath: /www
 
 ```
-Agora vamos aplicar essa personalização e criar um novo microserviço chamado backend. 
+Agora vamos aplicar essa personalização e criar um novo microsserviço chamado backend. 
 
 ```bash
 helm install emersonlabs-nginx ingress-nginx/ingress-nginx

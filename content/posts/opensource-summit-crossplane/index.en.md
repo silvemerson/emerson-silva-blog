@@ -13,9 +13,9 @@ categories: ["Palestras"]
 lightgallery: true
 ---
 
-Olá pessoal, tudo certo? 
+Olá, pessoal, tudo certo? 
 
-Ontem, dia 28 de Stemebro, rolou uma conversa bem legal no DevOps Experience sobre o evento do [Open Source Summit - Europe](https://events.linuxfoundation.org/open-source-summit-europe/) e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.
+Ontem, dia 28 de Setembro, rolou uma conversa bem legal no DevOps Experience sobre o evento do [Open Source Summit - Europe](https://events.linuxfoundation.org/open-source-summit-europe/) e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.
 
 Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.
 

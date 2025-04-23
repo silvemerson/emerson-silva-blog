@@ -19,9 +19,9 @@ Venho comunicar vocês do lançamento do meu primeiro livro!!!
 
 **Kubernetes para Iniciantes: Fundamentos e Práticas**
 
-É algo bem significativo isso pra mim e muitos outros virão!
+É algo bem significativo isso para mim e muitos outros virão!
 
-Escrito no [LeanPub](https://leanpub.com/) e publicado na Amazon, esse livro marca inicio de uma nova etapa na minha carreira e também um reflexão até sobre toda a minha tragetória. 
+Escrito no [LeanPub](https://leanpub.com/) e publicado na Amazon, esse livro marca início de uma nova etapa na minha carreira e também uma reflexão até sobre toda a minha trajetória. 
 
 Quem tiver interesse em comprar, basta a: [Kubernetes para Iniciantes: Fundamentos e Práticas](https://a.co/d/dmxgdnz)
 

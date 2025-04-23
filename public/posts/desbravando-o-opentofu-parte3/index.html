@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/">
+        <title>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/desbravando-o-opentofu-parte3/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">
   <meta property="og:description" content="Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar
@@ -18,10 +18,10 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
     <meta property="article:tag" content="Devops">
     <meta property="article:tag" content="Iac">
     <meta property="article:tag" content="Opentofu">
-    <meta property="og:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/featured-image.png">
+    <meta property="og:image" content="http://localhost:1313/posts/desbravando-o-opentofu-parte3/featured-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/featured-image.png">
+  <meta name="twitter:image" content="http://localhost:1313/posts/desbravando-o-opentofu-parte3/featured-image.png">
   <meta name="twitter:title" content="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">
   <meta name="twitter:description" content="Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar
 Bora lá!
@@ -29,9 +29,9 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
 <meta name="application-name" content="Emerson Silva">
 <meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" /><link rel="prev" href="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" /><link rel="next" href="http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -39,14 +39,14 @@ Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a 
         "inLanguage": "pt-br",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/"
+            "@id": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-parte3\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/featured-image.png",
+                            "url": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-parte3\/featured-image.png",
                             "width":  429 ,
                             "height":  117 
                         }],"genre": "posts","keywords": "devops, iac, opentofu","wordcount":  964 ,
-        "url": "https:\/\/emerson-silva.blog.br\/posts\/desbravando-o-opentofu-parte3\/","datePublished": "2024-11-27T09:24:03-03:00","dateModified": "2024-11-27T09:24:03-03:00","publisher": {
+        "url": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-parte3\/","datePublished": "2024-11-27T09:24:03-03:00","dateModified": "2024-11-27T09:24:03-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -323,7 +323,7 @@ Isso é feito fornecendo o identificador único do recurso (como o ARN de um rec
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente" data-hashtags="devops,iac,opentofu"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente" data-hashtags="devops,iac,opentofu"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" data-title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -335,12 +335,13 @@ Isso é feito fornecendo o identificador único do recurso (como o ARN de um rec
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-kaniko/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</a></div>
+    <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-kaniko/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</a>
+            <a href="/posts/trilha-cicd-gitlab-terraform-aws/" class="next" rel="next" title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform">Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.139.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
 
@@ -349,5 +350,5 @@ Isso é feito fornecendo o identificador único do recurso (como o ARN de um rec
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

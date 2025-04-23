@@ -20,7 +20,7 @@ Faz muito tempo que não apareço por aqui.
 No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a Certificação AWS Certified Cloud Practitioner (CCP). 
 
 
-## O que é essa certificiação e um pouco mais
+## O que é essa certificação e um pouco mais
 
 O exame AWS Certified Cloud Practitioner oferece uma compressensão básica dos serviços, conceitos sobre a nuvem da AWS. É um ótimo ponto de partida para individuos sem experiência em T.I ou nuvem. 
 

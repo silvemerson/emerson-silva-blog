@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Http-Code - Tag - Emerson Silva</title>
+        <link>http://localhost:1313/tags/http-code/</link>
+        <description>Http-Code - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 10 Dec 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/http-code/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
+    <link>http://localhost:1313/posts/nginx-k8s-erros-page/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/nginx-k8s-erros-page/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!</p>
+<p>As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>]]></description>
+</item>
+</channel>
+</rss>

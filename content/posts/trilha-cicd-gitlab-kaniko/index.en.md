@@ -23,10 +23,10 @@ Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos 
 
 ## O que é o Kaniko
 
-O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário.  Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.
+O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.
 
 Usando o Kaniko com o GitLab CI/CD
-Para usar o Kaniko é necessário que exista um executor para que seja feito a criação da imagem e os executores são:
+Para usar o Kaniko é necessário existir um executor para ser feito a criação da imagem e os executores são:
 
 - Docker
 - Docker Machine

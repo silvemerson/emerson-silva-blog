@@ -22,7 +22,7 @@ Primeiro, vamos entender o que é exatamente o Minikube.
 
 ## O que é?
 
-O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a [documentação](https://minikube.sigs.k8s.io/docs/).
+O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó único para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a [documentação](https://minikube.sigs.k8s.io/docs/).
 
 ## Instalação
 
@@ -63,7 +63,7 @@ Feito, nosso cluster está instalado e em execução localmente. Vamos consultar
 
 ![Alt text for broken image link](minikube-nodes.png)
 
-Por default ele criou um node para que possamos fazer nossos testes. 
+Por default ele criou um node para quê possamos fazer nossos testes. 
 
 
 ## Primeiro Deploy
@@ -74,7 +74,7 @@ Que tal criarmos nosso primeiro deployment? Execute o comando abaixo em seu term
 ``` $ kubectl create deployment hello-node --image=k8s.gcr.io/echoserver:1.4 ```
 
 
-Nosso primeiro deployment foi criado. Vamos consultar os recursos que foram criados:
+Nosso primeiro deployment foi criado. Vamos consultar os recursos criados:
 
 ![Alt text for broken image link](minikube-deploy.png)
 
@@ -112,7 +112,7 @@ Mais alguns comandos para vocês testarem:
 **minikube logs**: visualiza os logs do cluster
 
 
-Por hoje é só pessoal, o Minikube é uma ótima ferramenta para testar o Kubernetes e brincar com orquestração de containers.
+Por hoje é só pessoal, o Minikube é uma ótima ferramenta para testar o Kubernetes e brincar com orquestração de contêineres.
 
 ## Referências
 

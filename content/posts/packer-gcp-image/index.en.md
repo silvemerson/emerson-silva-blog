@@ -21,7 +21,7 @@ No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packe
 
 ## O que é o Packer
 
-O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.
+O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres automatizadamente, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.
 
 Com o Packer, você pode definir as configurações da imagem em um arquivo de configuração declarativo, especificando o sistema operacional, as dependências, as configurações do aplicativo e outras personalizações desejadas. Em seguida, o Packer cria a imagem executando esse arquivo de configuração, provisionando e configurando uma instância temporária da máquina virtual ou do contêiner e, em seguida, capturando essa instância em uma imagem final.
 
@@ -118,13 +118,13 @@ Para entender melhor o nosso arquivo do Packer:
 
 **project_id**: Id do projeto na GCP.
 
-**source_image_family**: Versão do S.O escolhido como imagem base.
+**source_image_family**: versão do S.O escolhido como imagem base.
 
 **zone**: Região da imagem
 
 **ssh_username**: Usuário que vai ser criado.
 
-**image_name**: Nome da imagem personalizda que será criada.
+**image_name**: nome da imagem personalizada que será criada.
 
 **image_family**: Label para definir se a imagem é do Debian, Ubuntu, RHEL, etc.
 
@@ -142,7 +142,7 @@ Após criação do nosso arquivo Packer e o Script para inicializar o Docker nes
 $ packer validate ubuntu-docker.json 
 The configuration is valid.
 ```
-Pronto. Bora fazer o nosso deploy. Antes, faça o login na GCP e ative as APIS abaixo em sequência:
+Pronto. Bora fazer o nosso deploy. Antes, faça o login na GCP e ative as APIs abaixo em sequência:
 
 ```
 gcloud auth application-default login

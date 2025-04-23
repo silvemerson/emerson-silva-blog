@@ -27,11 +27,11 @@ A proposta do evento, é de várias palestras durante o dia todo, com temas vari
 
 Decide falar sobre Kubernetes, pra variar. Nem gosto haha 
 
-Então projetei um Hand On na GCP, provisionando o GKE, que é o serviço de Kubernetes da Google Cloud e usando alguns serviços da nuvem, como GCR, que trata-se do Registry de imagens de contêineres e o Filestore, um compartilhamento de arquivos via rede. 
+Então projetei um Hand On na GCP, provisionando o GKE, que é o serviço de Kubernetes da Google Cloud e usando alguns serviços da nuvem, como GCR, que se trata do Registry de imagens de contêineres e o Filestore, um compartilhamento de arquivos via rede. 
 
 ## Como foi a preparação e experiência?
 
-Como mencionei sobre o que foi a palestra, criei um repositório e registrei todo o roteiro do que seria feito na apresentação e segui meu jeito de passar o conteúdo. Pelo tempo curto, tentei passar os principais tópicos do Kubernetes para que ficasse claro os passos no lab, então falei sobre arquitetura e o que são objetos em Kubernetes. 
+Como mencionei sobre o que foi a palestra, criei um repositório e registrei todo o roteiro do que seria feito na apresentação e segui meu jeito de passar o conteúdo. Pelo tempo curto, tentei passar os principais tópicos do Kubernetes para que ficassem claro os passos no lab, então falei sobre arquitetura e o que são objetos em Kubernetes. 
 Apresentei como fazer um deploy, usando NodePort e LoadBalancer, pelos comentários na Live, gostaram da dinâmica. Meu tempo acabou e não consegui concluir o deploy final. 
 
 Sobre minha experiência, foi fantástica, fui o segundo a palestrar. Por ter vivência na sala de aula e já ter feito uma Live com a proposta parecida, foi bem tranquilo. 
