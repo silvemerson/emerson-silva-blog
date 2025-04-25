@@ -1,6 +1,6 @@
 ---
-title: "Ollama + Kubernetes - Orquestração com IA"
-date: 2025-04-25T01:30:26-03:00
+title: "Ollama + Kubernetes - Orquestrando com IA"
+date: 2025-04-26T01:30:26-03:00
 draft: false
 author: "Emerson Silva"
 resources:
@@ -12,7 +12,6 @@ categories: ["IA"]
 
 lightgallery: true
 ---
-
 
 
 <div id="giscus-comments">
