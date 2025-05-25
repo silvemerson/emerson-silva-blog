@@ -77,5 +77,17 @@
         <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config=null;</script><script src="/js/theme.min.js"></script></body>
+        </div><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config=null;</script><script src="/js/theme.min.js"></script><script>
+            var doNotTrack = false;
+            if ( true ) {
+                var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+                var doNotTrack = (dnt == "1" || dnt == "yes");
+            }
+            if (!doNotTrack) {
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-B7YRXX3Q8D');
+            }
+        </script><script src="https://www.googletagmanager.com/gtag/js?id=G-B7YRXX3Q8D" async></script></body>
 </html>
