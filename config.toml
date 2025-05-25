@@ -16,6 +16,15 @@ theme                = "LoveIt"
     name = "Emerson Silva"
     link = "https://emerson-silva.blog.br"
 
+  ##########################################################
+  # Google Analytics
+  #########################################################
+  [params.analytics]
+    enable = true
+    [params.analytics.google]
+      id = "G-B7YRXX3Q8D"
+      anonymizeIP = true
+      respectDoNotTrack = true
 
   ###########################################################################
   # Comentários – Giscus
@@ -76,11 +85,6 @@ theme                = "LoveIt"
     telegram      = "silvemerson"
 
 
-  [params.analytics]
-    enable = true   
-    [params.analytics.google]
-      id = "G-B7YRXX3Q8D"
-      respectDoNotTrack = true
 ###############################################################################
 # Menu principal
 ###############################################################################
