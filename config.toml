@@ -75,6 +75,12 @@ theme                = "LoveIt"
     youtube       = "UCvHjFEBsZF3iom8hHOQwpGA"
     telegram      = "silvemerson"
 
+
+  [params.analytics]
+    enable = true   
+    [params.analytics.google]
+      id = "G-B7YRXX3Q8D"
+      respectDoNotTrack = true
 ###############################################################################
 # Menu principal
 ###############################################################################
