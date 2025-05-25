@@ -5,8 +5,8 @@ draft: false
 author: "Emerson Silva"
 comment: true 
 resources:
-- name: "desenho-infra.png"
-  src: "desenho-infra.png"
+- name: "featured-image.png"
+  src: "featured-image.png"
 
 tags: ["kuberntes","k8s","nginx","metallb","nfs"]
 categories: ["EmersonLabs"]
@@ -43,6 +43,9 @@ Um servidor NFS containerizado pronto pro compartilhamento 🔁
 E um provisionador automático de PVCs pra facilitar sua vida 📂
 
 Ideal pra devs, SREs, entusiastas de Kubernetes ou qualquer pessoa que só quer ver a mágica acontecer localmente sem depender de nuvem.
+
+A ideia da infra é ficar assim:
+
 
 ![](desenho-infra.png)
 
