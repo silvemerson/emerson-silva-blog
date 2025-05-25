@@ -1,5 +1,5 @@
 ---
-title: "EmersonLabs: Infra com Kind,NFS,MetalLB e Nginx ingress"
+title: "EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress"
 date: 2025-05-24T19:10:03-03:00
 draft: false
 author: "Emerson Silva"
