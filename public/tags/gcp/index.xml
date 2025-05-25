@@ -1,19 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Gcp - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/gcp/</link>
-        <description>Gcp - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 11 Jul 2023 11:54:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/gcp/" rel="self" type="application/rss+xml" /><item>
-    <title>Criando imagens com Packer na GCP</title>
-    <link>http://localhost:1313/posts/packer-gcp-image/</link>
-    <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/packer-gcp-image/</guid>
-    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
-<p>Espero que sim!</p>
-<p>No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.</p>
-<h2 id="o-que-é-o-packer">O que é o Packer</h2>
-<p>O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gcp on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/tags/gcp/</link>
+    <description>Recent content in Gcp on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 11 Jul 2023 11:54:03 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/tags/gcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Criando imagens com Packer na GCP</title>
+      <link>https://emerson-silva.blog.br/posts/packer-gcp-image/</link>
+      <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/packer-gcp-image/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?&lt;/p&gt;&#xA;&lt;p&gt;Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-o-packer&#34;&gt;O que é o Packer&lt;/h2&gt;&#xA;&lt;p&gt;O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres automatizadamente, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.&lt;/p&gt;&#xA;&lt;p&gt;Com o Packer, você pode definir as configurações da imagem em um arquivo de configuração declarativo, especificando o sistema operacional, as dependências, as configurações do aplicativo e outras personalizações desejadas. Em seguida, o Packer cria a imagem executando esse arquivo de configuração, provisionando e configurando uma instância temporária da máquina virtual ou do contêiner e, em seguida, capturando essa instância em uma imagem final.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

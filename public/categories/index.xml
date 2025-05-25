@@ -1,87 +1,96 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Categories - Category - Emerson Silva</title>
-        <link>http://localhost:1313/categories/</link>
-        <description>Categories - Category - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 10 Dec 2024 12:24:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>Containers</title>
-    <link>http://localhost:1313/categories/containers/</link>
-    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/containers/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Trilha CI/CD</title>
-    <link>http://localhost:1313/categories/trilha-ci/cd/</link>
-    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/trilha-ci/cd/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>IaC</title>
-    <link>http://localhost:1313/categories/iac/</link>
-    <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/iac/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Cursos</title>
-    <link>http://localhost:1313/categories/cursos/</link>
-    <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/cursos/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Glossario-Tech</title>
-    <link>http://localhost:1313/categories/glossario-tech/</link>
-    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/glossario-tech/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Livros</title>
-    <link>http://localhost:1313/categories/livros/</link>
-    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/livros/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Palestras</title>
-    <link>http://localhost:1313/categories/palestras/</link>
-    <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/palestras/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Roadmap</title>
-    <link>http://localhost:1313/categories/roadmap/</link>
-    <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/roadmap/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Certificações</title>
-    <link>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</link>
-    <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/certifica%C3%A7%C3%B5es/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>About</title>
-    <link>http://localhost:1313/categories/about/</link>
-    <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
-    <author>Author</author>
-    <guid>http://localhost:1313/categories/about/</guid>
-    <description><![CDATA[]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/categories/</link>
+    <description>Recent content in Categories on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EmersonLabs</title>
+      <link>https://emerson-silva.blog.br/categories/emersonlabs/</link>
+      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/emersonlabs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Livros</title>
+      <link>https://emerson-silva.blog.br/categories/livros/</link>
+      <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/livros/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Containers</title>
+      <link>https://emerson-silva.blog.br/categories/containers/</link>
+      <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/containers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trilha CI/CD</title>
+      <link>https://emerson-silva.blog.br/categories/trilha-ci/cd/</link>
+      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/trilha-ci/cd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>IaC</title>
+      <link>https://emerson-silva.blog.br/categories/iac/</link>
+      <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/iac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cursos</title>
+      <link>https://emerson-silva.blog.br/categories/cursos/</link>
+      <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/cursos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Glossario-Tech</title>
+      <link>https://emerson-silva.blog.br/categories/glossario-tech/</link>
+      <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/glossario-tech/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Palestras</title>
+      <link>https://emerson-silva.blog.br/categories/palestras/</link>
+      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/palestras/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Roadmap</title>
+      <link>https://emerson-silva.blog.br/categories/roadmap/</link>
+      <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/roadmap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificações</title>
+      <link>https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/</link>
+      <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>https://emerson-silva.blog.br/categories/about/</link>
+      <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/about/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Documentation</title>
+      <link>https://emerson-silva.blog.br/categories/documentation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://emerson-silva.blog.br/categories/documentation/</guid>
+      <description></description>
+    </item>
+  </channel>
 </rss>

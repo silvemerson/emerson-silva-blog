@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/">
+        <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko">
   <meta property="og:description" content="Salve salve pessoal!!!
 Tudo bem com vocês? Espero que sim!
 Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI
-O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
+O que é o Kaniko O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
   <meta property="og:locale" content="pt_br">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -21,21 +21,21 @@ O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de ima
     <meta property="article:tag" content="Kaniko">
     <meta property="article:tag" content="Ci">
     <meta property="article:tag" content="Cd">
-    <meta property="og:image" content="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/featured-image.png">
+    <meta property="og:image" content="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/featured-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/featured-image.png">
+  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/featured-image.png">
   <meta name="twitter:title" content="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko">
   <meta name="twitter:description" content="Salve salve pessoal!!!
 Tudo bem com vocês? Espero que sim!
 Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI
-O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
+O que é o Kaniko O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
 <meta name="application-name" content="Emerson Silva">
 <meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" /><link rel="prev" href="http://localhost:1313/posts/desbravando-o-opentofu-parte2/" /><link rel="next" href="http://localhost:1313/posts/desbravando-o-opentofu-parte3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/" /><link rel="next" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -43,14 +43,14 @@ O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de ima
         "inLanguage": "pt-br",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/trilha-cicd-gitlab-kaniko\/"
+            "@id": "https:\/\/emerson-silva.blog.br\/posts\/trilha-cicd-gitlab-kaniko\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/posts\/trilha-cicd-gitlab-kaniko\/featured-image.png",
+                            "url": "https:\/\/emerson-silva.blog.br\/posts\/trilha-cicd-gitlab-kaniko\/featured-image.png",
                             "width":  767 ,
                             "height":  238 
-                        }],"genre": "posts","keywords": "git, gitlab, kaniko, ci, cd","wordcount":  550 ,
-        "url": "http:\/\/localhost:1313\/posts\/trilha-cicd-gitlab-kaniko\/","datePublished": "2024-11-20T12:24:03-03:00","dateModified": "2024-11-20T12:24:03-03:00","publisher": {
+                        }],"genre": "posts","keywords": "git, gitlab, kaniko, ci, cd","wordcount":  541 ,
+        "url": "https:\/\/emerson-silva.blog.br\/posts\/trilha-cicd-gitlab-kaniko\/","datePublished": "2024-11-20T12:24:03-03:00","dateModified": "2024-11-20T12:24:03-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -91,7 +91,7 @@ O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de ima
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/trilha-ci/cd/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Trilha CI/CD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-20">2024-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;550 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-20">2024-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;541 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -117,9 +117,9 @@ O que é o Kaniko O Kaniko é um ferramenta utilizada para a criação de de ima
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
 <h2 id="o-que-é-o-kaniko">O que é o Kaniko</h2>
-<p>O Kaniko é um ferramenta utilizada para a criação de de imagens de contêineres em um arquivo Docker, dentro de um contêiner, cluster de K8s ou até mesmo dentro de uma pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemom do Docker, pois é possível executar os comandos de dentro de um arquivo Docker dentro do espaço do usuário.  Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>
+<p>O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>
 <p>Usando o Kaniko com o GitLab CI/CD
-Para usar o Kaniko é necessário que exista um executor para que seja feito a criação da imagem e os executores são:</p>
+Para usar o Kaniko é necessário existir um executor para ser feito a criação da imagem e os executores são:</p>
 <ul>
 <li>Docker</li>
 <li>Docker Machine</li>
@@ -243,7 +243,7 @@ Para usar o Kaniko é necessário que exista um executor para que seja feito a c
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko" data-hashtags="git,gitlab,kaniko,ci,cd"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko" data-hashtags="git,gitlab,kaniko,ci,cd"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -258,9 +258,9 @@ Para usar o Kaniko é necessário que exista um executor para que seja feito a c
     <div class="post-nav"><a href="/posts/desbravando-o-opentofu-parte2/" class="prev" rel="prev" title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</a>
             <a href="/posts/desbravando-o-opentofu-parte3/" class="next" rel="next" title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-</article></div>
+<div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
@@ -270,5 +270,5 @@ Para usar o Kaniko é necessário que exista um executor para que seja feito a c
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/nginx-k8s-erros-page/">
+        <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP">
   <meta property="og:description" content="Salve salve pessoal!!!
 Tudo bem com vocês? Espero que sim!
-Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!
-As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.">
+Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!
+As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.">
   <meta property="og:locale" content="pt_br">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-12-10T12:24:03-03:00">
-    <meta property="article:modified_time" content="2024-12-10T12:24:03-03:00">
+    <meta property="article:published_time" content="2025-03-20T19:10:03-03:00">
+    <meta property="article:modified_time" content="2025-03-20T19:10:03-03:00">
     <meta property="article:tag" content="Kuberntes">
     <meta property="article:tag" content="K8s">
     <meta property="article:tag" content="Nginx">
     <meta property="article:tag" content="Http-Code">
-    <meta property="og:image" content="http://localhost:1313/posts/nginx-k8s-erros-page/featured-image.png">
+    <meta property="og:image" content="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/featured-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/nginx-k8s-erros-page/featured-image.png">
+  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/featured-image.png">
   <meta name="twitter:title" content="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP">
   <meta name="twitter:description" content="Salve salve pessoal!!!
 Tudo bem com vocês? Espero que sim!
-Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!
-As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.">
+Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!
+As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.">
 <meta name="application-name" content="Emerson Silva">
 <meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/nginx-k8s-erros-page/" /><link rel="prev" href="http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="next" href="https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,14 +42,14 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
         "inLanguage": "pt-br",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/nginx-k8s-erros-page\/"
+            "@id": "https:\/\/emerson-silva.blog.br\/posts\/nginx-k8s-erros-page\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/posts\/nginx-k8s-erros-page\/featured-image.png",
+                            "url": "https:\/\/emerson-silva.blog.br\/posts\/nginx-k8s-erros-page\/featured-image.png",
                             "width":  767 ,
                             "height":  238 
-                        }],"genre": "posts","keywords": "kuberntes, k8s, nginx, http-code","wordcount":  879 ,
-        "url": "http:\/\/localhost:1313\/posts\/nginx-k8s-erros-page\/","datePublished": "2024-12-10T12:24:03-03:00","dateModified": "2024-12-10T12:24:03-03:00","publisher": {
+                        }],"genre": "posts","keywords": "kuberntes, k8s, nginx, http-code","wordcount":  880 ,
+        "url": "https:\/\/emerson-silva.blog.br\/posts\/nginx-k8s-erros-page\/","datePublished": "2025-03-20T19:10:03-03:00","dateModified": "2025-03-20T19:10:03-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -90,7 +90,7 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nginx + Kubernetes: Personalizando Páginas de Erro HTTP</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-10">2024-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;879 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-20">2025-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;880 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -120,13 +120,13 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
 </nav></div>
             </div><div class="content" id="content"><p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
-<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de errros no Nginx no Kubernetes. Bora lá!!</p>
-<p>As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são apenas inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!</p>
+<p>As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>
 <h2 id="erro-404">Erro 404</h2>
 <p>O erro 404, frequentemente encontrado por quem navega na web, ocorre quando o servidor não consegue localizar o conteúdo solicitado. Isso pode acontecer por diversos motivos, como links quebrados, URLs digitadas incorretamente ou até mesmo quando uma página é removida sem ser redirecionada. Apesar de ser um erro comum, sua importância não deve ser subestimada.</p>
 <p>Quando um usuário se depara com uma página 404 genérica e fria, a sensação de frustração é quase inevitável. A falta de informações adicionais pode fazer com que o visitante se sinta perdido e desmotivado a continuar explorando o site. No entanto, ao personalizar a página 404, o proprietário do site tem a chance de transformar uma experiência negativa em algo mais construtivo. Em vez de simplesmente mostrar uma mensagem de erro, uma página 404 personalizada pode oferecer links para outras áreas relevantes do site, um mecanismo de busca ou até mesmo uma mensagem divertida e acolhedora que ajude o usuário a se sentir mais confortável. A personalização transforma uma simples falha técnica em uma oportunidade para manter o engajamento e o interesse do usuário.</p>
 <h2 id="qual-o-sentido-de-personalizar-as-páginas-de-erro">Qual o sentido de Personalizar as Páginas de Erro</h2>
-<p>A personalização dessas páginas não é apenas uma questão estética ou técnica, mas uma estratégia de usabilidade e relacionamento com o usuário. Elas representam um ponto de contato com o visitante que, se bem administrado, pode transformar uma falha em uma experiência positiva.</p>
+<p>A personalização dessas páginas não é somente uma questão estética ou técnica, mas uma estratégia de usabilidade e relacionamento com o usuário. Elas representam um ponto de contato com o visitante que, se bem administrado, pode transformar uma falha em uma experiência positiva.</p>
 <p>Páginas de erro personalizadas demonstram que o proprietário do site se preocupa com a experiência do usuário. Elas transmitem um sentimento de que o erro não foi ignorado, mas sim compreendido e tratado de forma a não prejudicar a navegação. Isso pode aumentar a confiança do usuário no site, encorajá-lo a voltar, ou até mesmo ajudá-lo a resolver o problema sozinho. Por exemplo, em uma página 404 bem desenhada, o usuário pode ser redirecionado para o conteúdo correto rapidamente, sem precisar procurar por conta própria. Da mesma forma, uma página 500 personalizada pode dar um toque de empatia, explicando que a equipe está trabalhando para resolver o problema, o que humaniza ainda mais a experiência.</p>
 <p>Além disso, personalizar essas páginas também pode refletir a identidade da marca. As mensagens, o design e os recursos presentes nessas páginas podem ser alinhados com o tom e a voz do site, criando uma continuidade na comunicação. Isso é crucial em uma época onde os usuários esperam que os sites ofereçam uma experiência coesa e sem fricções.</p>
 <p>Pronto pessoal, depois de uma leitura didática e teórica, vamos para o que interessa, mão na massa. Vem comigo!</p>
@@ -140,7 +140,7 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx
 </span></span></code></pre></div><p>Pronto, instalado.</p>
 <h3 id="personalizações">Personalizações</h3>
-<p>Agora, iremos criar um arquivo chamado <code>custom-error-pages.yaml</code> e adicione o contéudo abaixo:</p>
+<p>Agora, iremos criar um arquivo chamado <code>custom-error-pages.yaml</code> e adicione o conteúdo abaixo:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">ConfigMap</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
@@ -168,7 +168,7 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">&lt;/html&gt;</span><span class="w">
 </span></span></span></code></pre></div><p>Aplique esse <code>ConfigMap</code>:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f custom-error-pages.yaml
-</span></span></code></pre></div><p>Agora vamos configurar o um arquivo de values personalizado para carregar essa configuração.</p>
+</span></span></code></pre></div><p>Agora vamos configurar o arquivo de values personalizado para carregar essa configuração.</p>
 <p><code>custom-backend-values.yaml</code></p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">controller</span><span class="p">:</span><span class="w">
@@ -189,7 +189,7 @@ As páginas de erro 404 e 500 são parte fundamental da navegação na web. Tem 
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extraVolumeMounts</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">custom-error-pages</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/www</span><span class="w">
-</span></span></span></code></pre></div><p>Agora vamos aplicar essa personalização e criar um novo microserviço chamado backend.</p>
+</span></span></span></code></pre></div><p>Agora vamos aplicar essa personalização e criar um novo microsserviço chamado backend.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx
 </span></span></code></pre></div><p>Vocês vão ter o seguinte resultado:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods,svc
@@ -245,12 +245,12 @@ Não se esqueçam de compartilhar em suas redes sociais.</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-12-10</span>
+                <span>Updated on 2025-03-20</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP" data-hashtags="kuberntes,k8s,nginx,http-code"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/nginx-k8s-erros-page/" data-hashtag="kuberntes"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP" data-hashtags="kuberntes,k8s,nginx,http-code"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-hashtag="kuberntes"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -262,11 +262,12 @@ Não se esqueçam de compartilhar em suas redes sociais.</p>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-terraform-aws/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</a></div>
+    <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-terraform-aws/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</a>
+            <a href="/posts/ebook-mentes-automatizadas/" class="next" rel="next" title="Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps">Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-</article></div>
+<div id="comments"></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
@@ -276,5 +277,5 @@ Não se esqueçam de compartilhar em suas redes sociais.</p>
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

@@ -1,31 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Glossario-Tech - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/glossario-tech/</link>
-        <description>Glossario-Tech - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Apr 2024 01:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/glossario-tech/" rel="self" type="application/rss+xml" /><item>
-    <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>http://localhost:1313/posts/glossario-cd/</link>
-    <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-cd/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-cd">O que é CD</h2>
-<p>CD é a sigla para Continuous Delivery (Entrega Contínua) ou Continuous Deployment (Implantação Contínua), duas práticas relacionadas à Integração Contínua (CI) que têm como objetivo automatizar as etapas que seguem a integração de código, garantindo que o software esteja sempre pronto para ser entregue ou implantado em produção.</p>]]></description>
-</item>
-<item>
-    <title>003 - Glossário Tech - o que é Continuous Integration</title>
-    <link>http://localhost:1313/posts/glossario-ci/</link>
-    <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-ci/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-ci">O que é CI</h2>
-<p>CI é a sigla para Continuous Integration (Integração Contínua), uma prática de desenvolvimento de software em que as mudanças no código são integradas regularmente em um repositório compartilhado e, em seguida, automaticamente testadas e validadas.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Glossario-Tech on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/tags/glossario-tech/</link>
+    <description>Recent content in Glossario-Tech on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 27 Apr 2024 01:30:26 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/tags/glossario-tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
+      <link>https://emerson-silva.blog.br/posts/glossario-cd/</link>
+      <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid>
+      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;br&gt;&#xA;E bora pra mais um post do &lt;strong&gt;Glossario Tech&lt;/strong&gt; onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-cd&#34;&gt;O que é CD&lt;/h2&gt;&#xA;&lt;p&gt;CD é a sigla para Continuous Delivery (Entrega Contínua) ou Continuous Deployment (Implantação Contínua), duas práticas relacionadas à Integração Contínua (CI) que têm como objetivo automatizar as etapas que seguem a integração de código, garantindo que o software esteja sempre pronto para ser entregue ou implantado em produção.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>003 - Glossário Tech - o que é Continuous Integration</title>
+      <link>https://emerson-silva.blog.br/posts/glossario-ci/</link>
+      <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/glossario-ci/</guid>
+      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;br&gt;&#xA;E bora pra mais um post do &lt;strong&gt;Glossario Tech&lt;/strong&gt; onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-ci&#34;&gt;O que é CI&lt;/h2&gt;&#xA;&lt;p&gt;CI é a sigla para Continuous Integration (Integração Contínua), uma prática de desenvolvimento de software em que as mudanças no código são integradas regularmente em um repositório compartilhado e, em seguida, automaticamente testadas e validadas.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

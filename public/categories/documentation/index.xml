@@ -1,7 +1,11 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Documentation - Category - Emerson Silva</title>
-        <link>http://localhost:1313/categories/documentation/</link>
-        <description>Documentation - Category - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><atom:link href="http://localhost:1313/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Documentation on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/categories/documentation/</link>
+    <description>Recent content in Documentation on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <atom:link href="https://emerson-silva.blog.br/categories/documentation/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
 </rss>

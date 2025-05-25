@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nfs on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/tags/nfs/</link>
+    <description>Recent content in Nfs on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/tags/nfs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
+      <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
+      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
+      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.&lt;/p&gt;&#xA;&lt;p&gt;Bora lá?&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-essa-infra&#34;&gt;O que é essa infra?&lt;/h2&gt;&#xA;&lt;p&gt;Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho&lt;/p&gt;&#xA;&lt;p&gt;A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

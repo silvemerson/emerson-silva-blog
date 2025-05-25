@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Criando imagens com Packer na GCP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="http://localhost:1313/posts/packer-gcp-image/">
+        <title>Criando imagens com Packer na GCP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/packer-gcp-image/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Criando imagens com Packer na GCP">
   <meta property="og:description" content="Olá pessoal, tudo bem?
 Espero que sim!
 No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.
-O que é o Packer O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.">
+O que é o Packer O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres automatizadamente, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.
+Com o Packer, você pode definir as configurações da imagem em um arquivo de configuração declarativo, especificando o sistema operacional, as dependências, as configurações do aplicativo e outras personalizações desejadas. Em seguida, o Packer cria a imagem executando esse arquivo de configuração, provisionando e configurando uma instância temporária da máquina virtual ou do contêiner e, em seguida, capturando essa instância em uma imagem final.">
   <meta property="og:locale" content="pt_br">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -20,21 +21,22 @@ O que é o Packer O Packer é uma ferramenta de automação de criação de imag
     <meta property="article:tag" content="Iac">
     <meta property="article:tag" content="Gcp">
     <meta property="article:tag" content="Packer">
-    <meta property="og:image" content="http://localhost:1313/posts/packer-gcp-image/featured-image.png">
+    <meta property="og:image" content="https://emerson-silva.blog.br/posts/packer-gcp-image/featured-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/posts/packer-gcp-image/featured-image.png">
+  <meta name="twitter:image" content="https://emerson-silva.blog.br/posts/packer-gcp-image/featured-image.png">
   <meta name="twitter:title" content="Criando imagens com Packer na GCP">
   <meta name="twitter:description" content="Olá pessoal, tudo bem?
 Espero que sim!
 No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.
-O que é o Packer O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.">
+O que é o Packer O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres automatizadamente, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.
+Com o Packer, você pode definir as configurações da imagem em um arquivo de configuração declarativo, especificando o sistema operacional, as dependências, as configurações do aplicativo e outras personalizações desejadas. Em seguida, o Packer cria a imagem executando esse arquivo de configuração, provisionando e configurando uma instância temporária da máquina virtual ou do contêiner e, em seguida, capturando essa instância em uma imagem final.">
 <meta name="application-name" content="Emerson Silva">
 <meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/packer-gcp-image/" /><link rel="prev" href="http://localhost:1313/posts/kubernetes-days-4linux/" /><link rel="next" href="http://localhost:1313/posts/devops-roadmap/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/packer-gcp-image/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/kubernetes-days-4linux/" /><link rel="next" href="https://emerson-silva.blog.br/posts/devops-roadmap/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -42,14 +44,14 @@ O que é o Packer O Packer é uma ferramenta de automação de criação de imag
         "inLanguage": "pt-br",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/posts\/packer-gcp-image\/"
+            "@id": "https:\/\/emerson-silva.blog.br\/posts\/packer-gcp-image\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/posts\/packer-gcp-image\/featured-image.png",
+                            "url": "https:\/\/emerson-silva.blog.br\/posts\/packer-gcp-image\/featured-image.png",
                             "width":  915 ,
                             "height":  418 
-                        }],"genre": "posts","keywords": "devops, iac, gcp, packer","wordcount":  771 ,
-        "url": "http:\/\/localhost:1313\/posts\/packer-gcp-image\/","datePublished": "2023-07-11T11:54:03-03:00","dateModified": "2023-07-11T11:54:03-03:00","publisher": {
+                        }],"genre": "posts","keywords": "devops, iac, gcp, packer","wordcount":  769 ,
+        "url": "https:\/\/emerson-silva.blog.br\/posts\/packer-gcp-image\/","datePublished": "2023-07-11T11:54:03-03:00","dateModified": "2023-07-11T11:54:03-03:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
                 "@type": "Person",
@@ -90,7 +92,7 @@ O que é o Packer O Packer é uma ferramenta de automação de criação de imag
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Criando imagens com Packer na GCP</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/iac/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>IaC</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-11">2023-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;771 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2023-07-11">2023-07-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;769 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
@@ -117,7 +119,7 @@ O que é o Packer O Packer é uma ferramenta de automação de criação de imag
 <p>Espero que sim!</p>
 <p>No post do blog de hoje, vamos falar dessa ferramenta sensacional que é o Packer da HashiCorp. Bora lá.</p>
 <h2 id="o-que-é-o-packer">O que é o Packer</h2>
-<p>O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres de forma automatizada, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.</p>
+<p>O Packer é uma ferramenta de automação de criação de imagens desenvolvida pela HashiCorp. Ele permite criar imagens de máquinas virtuais ou contêineres automatizadamente, garantindo a criação de imagens consistentes e prontas para serem implantadas em diferentes plataformas.</p>
 <p>Com o Packer, você pode definir as configurações da imagem em um arquivo de configuração declarativo, especificando o sistema operacional, as dependências, as configurações do aplicativo e outras personalizações desejadas. Em seguida, o Packer cria a imagem executando esse arquivo de configuração, provisionando e configurando uma instância temporária da máquina virtual ou do contêiner e, em seguida, capturando essa instância em uma imagem final.</p>
 <p>O Packer suporta várias plataformas de virtualização, como Amazon Web Services (AWS), Microsoft Azure, Google Cloud Platform (GCP), VMware, Docker e outros. Ele também é extensível e permite que você crie seus próprios plugins para suportar plataformas adicionais.</p>
 <h2 id="instalação">Instalação</h2>
@@ -184,10 +186,10 @@ Available commands are:
 </span></span></code></pre></div><p>Para entender melhor o nosso arquivo do Packer:</p>
 <p><strong>type</strong>: tipo de builder, no caso vamos suar a GCP.</p>
 <p><strong>project_id</strong>: Id do projeto na GCP.</p>
-<p><strong>source_image_family</strong>: Versão do S.O escolhido como imagem base.</p>
+<p><strong>source_image_family</strong>: versão do S.O escolhido como imagem base.</p>
 <p><strong>zone</strong>: Região da imagem</p>
 <p><strong>ssh_username</strong>: Usuário que vai ser criado.</p>
-<p><strong>image_name</strong>: Nome da imagem personalizda que será criada.</p>
+<p><strong>image_name</strong>: nome da imagem personalizada que será criada.</p>
 <p><strong>image_family</strong>: Label para definir se a imagem é do Debian, Ubuntu, RHEL, etc.</p>
 <p><strong>disk_size</strong>: Tamanho do disco da imagem.</p>
 <p>Por fim temos os parametros referente ao provisioners:</p>
@@ -196,7 +198,7 @@ Available commands are:
 <p>Após criação do nosso arquivo Packer e o Script para inicializar o Docker nessa imagem personalizada, vamos validar nossas configurações com o seguinte comando:</p>
 <pre tabindex="0"><code>$ packer validate ubuntu-docker.json 
 The configuration is valid.
-</code></pre><p>Pronto. Bora fazer o nosso deploy. Antes, faça o login na GCP e ative as APIS abaixo em sequência:</p>
+</code></pre><p>Pronto. Bora fazer o nosso deploy. Antes, faça o login na GCP e ative as APIs abaixo em sequência:</p>
 <pre tabindex="0"><code>gcloud auth application-default login
 
 gcloud services enable sourcerepo.googleapis.com
@@ -271,7 +273,7 @@ gcloud services enable compute
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://localhost:1313/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP" data-hashtags="devops,iac,gcp,packer"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/packer-gcp-image/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="http://localhost:1313/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP" data-hashtags="devops,iac,gcp,packer"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/packer-gcp-image/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/packer-gcp-image/" data-title="Criando imagens com Packer na GCP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -288,7 +290,7 @@ gcloud services enable compute
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
                 </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
         </div>
     </footer></div>
@@ -298,5 +300,5 @@ gcloud services enable compute
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

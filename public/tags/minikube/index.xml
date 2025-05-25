@@ -1,19 +1,19 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Minikube - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/minikube/</link>
-        <description>Minikube - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Tue, 22 Mar 2022 17:56:52 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/minikube/" rel="self" type="application/rss+xml" /><item>
-    <title>Kubernetes - Configurando O Minikube</title>
-    <link>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</link>
-    <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/kubernetes-configurando-o-minikube/</guid>
-    <description><![CDATA[<p>Olá pessoal</p>
-<p>Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.</p>
-<p>Primeiro, vamos entender o que é exatamente o Minikube.</p>
-<h2 id="o-que-é">O que é?</h2>
-<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó unico para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer ">documentação</a>.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Minikube on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/tags/minikube/</link>
+    <description>Recent content in Minikube on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Tue, 22 Mar 2022 17:56:52 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/tags/minikube/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kubernetes - Configurando O Minikube</title>
+      <link>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</link>
+      <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</guid>
+      <description>&lt;p&gt;Olá pessoal&lt;/p&gt;&#xA;&lt;p&gt;Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.&lt;/p&gt;&#xA;&lt;p&gt;Primeiro, vamos entender o que é exatamente o Minikube.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é&#34;&gt;O que é?&lt;/h2&gt;&#xA;&lt;p&gt;O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó único para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a &lt;a href=&#34;https://minikube.sigs.k8s.io/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

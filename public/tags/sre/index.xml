@@ -1,33 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Sre - Tag - Emerson Silva</title>
-        <link>http://localhost:1313/tags/sre/</link>
-        <description>Sre - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/sre/" rel="self" type="application/rss+xml" /><item>
-    <title>002 - Glossário Tech - o que é SRE</title>
-    <link>http://localhost:1313/posts/glossario-sre/</link>
-    <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/glossario-sre/</guid>
-    <description><![CDATA[<p>Salve salve pessoal!!!</p>
-<p>Tudo bem com vocês? Espero que sim!<br>
-E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
-<h2 id="o-que-é-sre">O que é SRE</h2>
-<p>SRE significa &ldquo;Site Reliability Engineering&rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.</p>]]></description>
-</item>
-<item>
-    <title>DevOps e SRE Roadmap</title>
-    <link>http://localhost:1313/posts/devops-roadmap/</link>
-    <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
-    <author>Emerson Silva</author>
-    <guid>http://localhost:1313/posts/devops-roadmap/</guid>
-    <description><![CDATA[<p>Olá pessoal, tudo bem?</p>
-<p>Espero que sim!</p>
-<p>No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.</p>
-<h2 id="por-onde-começar">Por onde começar?</h2>
-<h3 id="o-que-é-devops">O que é DevOps</h3>
-<p>Antes de tudo, entender a cultura DevOps!</p>
-<p>DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.</p>]]></description>
-</item>
-</channel>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sre on Emerson Silva</title>
+    <link>https://emerson-silva.blog.br/tags/sre/</link>
+    <description>Recent content in Sre on Emerson Silva</description>
+    <generator>Hugo</generator>
+    <language>pt-br</language>
+    <lastBuildDate>Sat, 27 Jan 2024 01:30:26 -0300</lastBuildDate>
+    <atom:link href="https://emerson-silva.blog.br/tags/sre/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>002 - Glossário Tech - o que é SRE</title>
+      <link>https://emerson-silva.blog.br/posts/glossario-sre/</link>
+      <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/glossario-sre/</guid>
+      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;br&gt;&#xA;E bora pra mais um post do &lt;strong&gt;Glossario Tech&lt;/strong&gt; onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-sre&#34;&gt;O que é SRE&lt;/h2&gt;&#xA;&lt;p&gt;SRE significa &amp;ldquo;Site Reliability Engineering&amp;rdquo; (Engenharia de Confiabilidade de Sistemas, em português). É uma disciplina da engenharia de software que se concentra em garantir a confiabilidade e o desempenho dos sistemas, especialmente em ambientes de produção.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DevOps e SRE Roadmap</title>
+      <link>https://emerson-silva.blog.br/posts/devops-roadmap/</link>
+      <pubDate>Mon, 28 Aug 2023 11:54:03 -0300</pubDate>
+      <guid>https://emerson-silva.blog.br/posts/devops-roadmap/</guid>
+      <description>&lt;p&gt;Olá pessoal, tudo bem?&lt;/p&gt;&#xA;&lt;p&gt;Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;No post do blog de hoje, vamos falar sobre os caminhos para ingressar como DevOps Engineer ou SRE.&lt;/p&gt;&#xA;&lt;h2 id=&#34;por-onde-começar&#34;&gt;Por onde começar?&lt;/h2&gt;&#xA;&lt;h3 id=&#34;o-que-é-devops&#34;&gt;O que é DevOps&lt;/h3&gt;&#xA;&lt;p&gt;Antes de tudo, entender a cultura DevOps!&lt;/p&gt;&#xA;&lt;p&gt;DevOps que é a junção de Development e Operations, trata-se de uma forma de trabalhar, uma forma de pensar. Uma cultura que enfatiza a comunicação entre os profissionais de desenvolvimento e operações, tratando as equipes com um unico time para que juntos possam realizar entregas com exelência.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
