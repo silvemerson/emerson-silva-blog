@@ -24,7 +24,7 @@ theme                = "LoveIt"
     [params.analytics.google]
       id = "G-B7YRXX3Q8D"
       anonymizeIP = true
-      respectDoNotTrack = true
+      respectDoNotTrack = false
 
   ###########################################################################
   # Comentários – Giscus

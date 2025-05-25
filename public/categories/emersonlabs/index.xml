@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>EmersonLabs - Categoria - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/categories/emersonlabs/</link>
+        <link>http://localhost:1313/categories/emersonlabs/</link>
         <description>EmersonLabs - Categoria - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/emersonlabs/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/categories/emersonlabs/" rel="self" type="application/rss+xml" /><item>
     <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
-    <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
+    <link>http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
     <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
+    <guid>http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.</p>

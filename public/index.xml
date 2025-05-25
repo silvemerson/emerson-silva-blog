@@ -1,16 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/</link>
+        <link>http://localhost:1313/</link>
         <description>This is my cool site</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate>
-            <atom:link href="https://emerson-silva.blog.br/index.xml" rel="self" type="application/rss+xml" />
+            <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
-    <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
+    <link>http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
     <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
+    <guid>http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.</p>
@@ -21,10 +21,10 @@
 </item>
 <item>
     <title>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</title>
-    <link>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</link>
+    <link>http://localhost:1313/posts/ebook-mentes-automatizadas/</link>
     <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</guid>
+    <guid>http://localhost:1313/posts/ebook-mentes-automatizadas/</guid>
     <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
 <p>Venho comunicar vocês do lançamento do meu novo e-book!!! Mais escrito de forma independente.</p>
 <p><strong>Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</strong></p>
@@ -33,10 +33,10 @@
 </item>
 <item>
     <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
-    <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
+    <link>http://localhost:1313/posts/nginx-k8s-erros-page/</link>
     <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
+    <guid>http://localhost:1313/posts/nginx-k8s-erros-page/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!</p>
@@ -44,10 +44,10 @@
 </item>
 <item>
     <title>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</title>
-    <link>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/</link>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/</link>
     <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/</guid>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje no nosso blog vamos seguier com a sequência de post voltado a CI/CD. Vamos falar de como criar uma pipeline para criar um EC2 na AWS usando o Gitlab CI e armazenando o tf state no prórprio GitLab. Bora lá?</p>
@@ -56,10 +56,10 @@
 </item>
 <item>
     <title>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente</title>
-    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/</link>
+    <link>http://localhost:1313/posts/desbravando-o-opentofu-parte3/</link>
     <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/</guid>
+    <guid>http://localhost:1313/posts/desbravando-o-opentofu-parte3/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos seguir com mais um post sobre essa ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Hoje vamos falar</p>
 <p>Bora lá!</p>
 <h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
@@ -67,10 +67,10 @@
 </item>
 <item>
     <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</title>
-    <link>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</link>
+    <link>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</link>
     <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-kaniko/</guid>
+    <guid>http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
@@ -79,20 +79,20 @@
 </item>
 <item>
     <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</title>
-    <link>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/</link>
+    <link>http://localhost:1313/posts/desbravando-o-opentofu-parte2/</link>
     <pubDate>Tue, 19 Nov 2024 12:24:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte2/</guid>
+    <guid>http://localhost:1313/posts/desbravando-o-opentofu-parte2/</guid>
     <description><![CDATA[<p>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!</p>
 <h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
 <p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>]]></description>
 </item>
 <item>
     <title>Lançamento do curso Terraform na prática com AWS</title>
-    <link>https://emerson-silva.blog.br/posts/curso-terraform-aws/</link>
+    <link>http://localhost:1313/posts/curso-terraform-aws/</link>
     <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/curso-terraform-aws/</guid>
+    <guid>http://localhost:1313/posts/curso-terraform-aws/</guid>
     <description><![CDATA[<p>Olá pessoal!</p>
 <p>Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da <a href="https://4linux.com.br/" target="_blank" rel="noopener noreffer ">4LINUX</a>
 chamado <strong>Terraform na prática – especialista em provisionamento Cloud na AWS</strong></p>
@@ -102,10 +102,10 @@ Terraform Associate.</p>]]></description>
 </item>
 <item>
     <title>004 - Glossário Tech - o que é Continuous Delivery/Deployment</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-cd/</link>
+    <link>http://localhost:1313/posts/glossario-cd/</link>
     <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-cd/</guid>
+    <guid>http://localhost:1313/posts/glossario-cd/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
@@ -114,10 +114,10 @@ E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algu
 </item>
 <item>
     <title>003 - Glossário Tech - o que é Continuous Integration</title>
-    <link>https://emerson-silva.blog.br/posts/glossario-ci/</link>
+    <link>http://localhost:1313/posts/glossario-ci/</link>
     <pubDate>Wed, 27 Mar 2024 01:30:26 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/glossario-ci/</guid>
+    <guid>http://localhost:1313/posts/glossario-ci/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!<br>
 E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>

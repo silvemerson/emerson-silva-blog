@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>4linux - Tag - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/tags/4linux/</link>
+        <link>http://localhost:1313/tags/4linux/</link>
         <description>4linux - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sun, 10 Nov 2024 12:18:30 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/4linux/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sun, 10 Nov 2024 12:18:30 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/4linux/" rel="self" type="application/rss+xml" /><item>
     <title>Lançamento do curso Terraform na prática com AWS</title>
-    <link>https://emerson-silva.blog.br/posts/curso-terraform-aws/</link>
+    <link>http://localhost:1313/posts/curso-terraform-aws/</link>
     <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/curso-terraform-aws/</guid>
+    <guid>http://localhost:1313/posts/curso-terraform-aws/</guid>
     <description><![CDATA[<p>Olá pessoal!</p>
 <p>Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da <a href="https://4linux.com.br/" target="_blank" rel="noopener noreffer ">4LINUX</a>
 chamado <strong>Terraform na prática – especialista em provisionamento Cloud na AWS</strong></p>

@@ -1,14 +1,14 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Http-Code - Tag - Emerson Silva</title>
-        <link>https://emerson-silva.blog.br/tags/http-code/</link>
+        <link>http://localhost:1313/tags/http-code/</link>
         <description>Http-Code - Tag - Emerson Silva</description>
-        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Thu, 20 Mar 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/http-code/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Thu, 20 Mar 2025 19:10:03 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/http-code/" rel="self" type="application/rss+xml" /><item>
     <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
-    <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
+    <link>http://localhost:1313/posts/nginx-k8s-erros-page/</link>
     <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
     <author>Emerson Silva</author>
-    <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
+    <guid>http://localhost:1313/posts/nginx-k8s-erros-page/</guid>
     <description><![CDATA[<p>Salve salve pessoal!!!</p>
 <p>Tudo bem com vocês? Espero que sim!</p>
 <p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!</p>
