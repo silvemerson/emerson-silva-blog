@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Opensouce-Summit on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/tags/opensouce-summit/</link>
-    <description>Recent content in Opensouce-Summit on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Fri, 29 Sep 2023 22:54:03 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/tags/opensouce-summit/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Creating Dynamic Kubernetes Resources with Crossplane</title>
-      <link>https://emerson-silva.blog.br/posts/opensource-summit-crossplane/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/opensource-summit-crossplane/</guid>
-      <description>&lt;p&gt;Olá, pessoal, tudo certo?&lt;/p&gt;&#xA;&lt;p&gt;Ontem, dia 28 de Setembro, rolou uma conversa bem legal no DevOps Experience sobre o evento do &lt;a href=&#34;https://events.linuxfoundation.org/open-source-summit-europe/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Open Source Summit - Europe&lt;/a&gt; e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.&lt;/p&gt;&#xA;&lt;p&gt;Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Opensouce-Summit - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/opensouce-summit/</link>
+        <description>Opensouce-Summit - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Fri, 29 Sep 2023 22:54:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/opensouce-summit/" rel="self" type="application/rss+xml" /><item>
+    <title>Creating Dynamic Kubernetes Resources with Crossplane</title>
+    <link>https://emerson-silva.blog.br/posts/opensource-summit-crossplane/</link>
+    <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/opensource-summit-crossplane/</guid>
+    <description><![CDATA[<p>Olá, pessoal, tudo certo?</p>
+<p>Ontem, dia 28 de Setembro, rolou uma conversa bem legal no DevOps Experience sobre o evento do <a href="https://events.linuxfoundation.org/open-source-summit-europe/" target="_blank" rel="noopener noreffer ">Open Source Summit - Europe</a> e o assunto que eu trouxe foi sobre a palestra de Creating Dynamic Kubernetes Resources with Crossplane.</p>
+<p>Crossplane é um projeto CNCF popular que usa definições e controladores de recursos personalizados do Kubernetes para gerenciar qualquer recurso que tenha uma API de gerenciamento. Embora o modelo declarativo do Kubernetes seja extremamente poderoso, ele pode ser limitado na modelagem de padrões lógicos mais complexos, como loops e condicionais.</p>]]></description>
+</item>
+</channel>
 </rss>

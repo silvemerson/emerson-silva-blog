@@ -5,7 +5,7 @@
 FROM alpine:3.9 AS build
 
 # The Hugo version
-ARG VERSION=0.68.3
+ARG VERSION=0.145.0
 
 ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSION}_Linux-64bit.tar.gz /hugo.tar.gz
 RUN tar -zxvf hugo.tar.gz
@@ -42,4 +42,4 @@ RUN rm -fr * .??*
 # is copied into the public fold of nginx
 COPY --from=build /site/public /usr/share/nginx/html
 
-EXPOSE 8080
+EXPOSE 80

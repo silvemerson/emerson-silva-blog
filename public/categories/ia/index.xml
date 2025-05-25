@@ -1,0 +1,33 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>IA - Categoria - Emerson Silva</title>
+        <link>http://localhost:1313/categories/ia/</link>
+        <description>IA - Categoria - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 26 Apr 2025 01:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/categories/ia/" rel="self" type="application/rss+xml" /><item>
+    <title>Ollama &#43; Kubernetes - Orquestrando com IA</title>
+    <link>http://localhost:1313/posts/ollama&#43;llama2&#43;k8s/index.en/</link>
+    <pubDate>Sat, 26 Apr 2025 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/ollama&#43;llama2&#43;k8s/index.en/</guid>
+    <description><![CDATA[<h2></h2>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>]]></description>
+</item>
+</channel>
+</rss>

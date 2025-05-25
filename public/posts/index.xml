@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Emerson Silva</title>
+        <title>Posts - Emerson Silva</title>
         <link>https://emerson-silva.blog.br/posts/</link>
-        <description>All Posts | Emerson Silva</description>
+        <description>Posts | Emerson Silva</description>
         <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/posts/" rel="self" type="application/rss+xml" /><item>
     <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
     <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>

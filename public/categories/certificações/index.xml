@@ -1,26 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Certificações on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/</link>
-    <description>Recent content in Certificações on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sat, 03 Dec 2022 12:17:03 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AWS CCP - Como se preparar</title>
-      <link>https://emerson-silva.blog.br/posts/aws-ccp/</link>
-      <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/aws-ccp/</guid>
-      <description>&lt;p&gt;Olá pessoal!&lt;/p&gt;&#xA;&lt;p&gt;Faz muito tempo que não apareço por aqui.&lt;/p&gt;&#xA;&lt;p&gt;No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a Certificação AWS Certified Cloud Practitioner (CCP).&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-essa-certificação-e-um-pouco-mais&#34;&gt;O que é essa certificação e um pouco mais&lt;/h2&gt;&#xA;&lt;p&gt;O exame AWS Certified Cloud Practitioner oferece uma compressensão básica dos serviços, conceitos sobre a nuvem da AWS. É um ótimo ponto de partida para individuos sem experiência em T.I ou nuvem.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>GitLab Associate - Como se preparar</title>
-      <link>https://emerson-silva.blog.br/posts/gitlab-associate/</link>
-      <pubDate>Wed, 18 May 2022 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/gitlab-associate/</guid>
-      <description>&lt;p&gt;Olá pessoal!&lt;/p&gt;&#xA;&lt;p&gt;No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a GitLab Certified Associate.&lt;/p&gt;&#xA;&lt;h2 id=&#34;criar-conta-e-link-do-treinamento&#34;&gt;Criar conta e link do Treinamento&lt;/h2&gt;&#xA;&lt;p&gt;Para criar uma conta, acesse o link: &lt;a href=&#34;https://gitlab.edcast.com/log_in&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://gitlab.edcast.com/log_in&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;O link para o treinamento: &lt;a href=&#34;https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&amp;amp;limit=5&amp;amp;tab=content&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&amp;limit=5&amp;tab=content&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;como-estudar&#34;&gt;Como estudar&lt;/h2&gt;&#xA;&lt;p&gt;A prova e guia de estudos atualmente está versão v3.0, e após a compra do exame, a GitLab disponibilza um curso com video e textos para que seja feita uma prova teórica e posteriormente a prova prática.&#xA;Para liberar a prova prática, é necessário alcançar o 100% de acertos. As questão são abordadas no Self-Study, isso facilita bastante.&#xA;Além disso, dentro do Self-Study é disponilizado questões práticas que ajudam na segunda prova.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Certificações - Categoria - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/</link>
+        <description>Certificações - Categoria - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 03 Dec 2022 12:17:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/certifica%C3%A7%C3%B5es/" rel="self" type="application/rss+xml" /><item>
+    <title>AWS CCP - Como se preparar</title>
+    <link>https://emerson-silva.blog.br/posts/aws-ccp/</link>
+    <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/aws-ccp/</guid>
+    <description><![CDATA[<p>Olá pessoal!</p>
+<p>Faz muito tempo que não apareço por aqui.</p>
+<p>No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a Certificação AWS Certified Cloud Practitioner (CCP).</p>
+<h2 id="o-que-é-essa-certificação-e-um-pouco-mais">O que é essa certificação e um pouco mais</h2>
+<p>O exame AWS Certified Cloud Practitioner oferece uma compressensão básica dos serviços, conceitos sobre a nuvem da AWS. É um ótimo ponto de partida para individuos sem experiência em T.I ou nuvem.</p>]]></description>
+</item>
+<item>
+    <title>GitLab Associate - Como se preparar</title>
+    <link>https://emerson-silva.blog.br/posts/gitlab-associate/</link>
+    <pubDate>Wed, 18 May 2022 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/gitlab-associate/</guid>
+    <description><![CDATA[<p>Olá pessoal!</p>
+<p>No post de hoje do blog, vou comentar um pouco como foi a minha preparação para a GitLab Certified Associate.</p>
+<h2 id="criar-conta-e-link-do-treinamento">Criar conta e link do Treinamento</h2>
+<p>Para criar uma conta, acesse o link: <a href="https://gitlab.edcast.com/log_in" target="_blank" rel="noopener noreffer ">https://gitlab.edcast.com/log_in</a></p>
+<p>O link para o treinamento: <a href="https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&amp;limit=5&amp;tab=content" target="_blank" rel="noopener noreffer ">https://gitlab-learn.leapest.com/hw/buy/MP00055560556783?page=1&limit=5&tab=content</a></p>
+<h2 id="como-estudar">Como estudar</h2>
+<p>A prova e guia de estudos atualmente está versão v3.0, e após a compra do exame, a GitLab disponibilza um curso com video e textos para que seja feita uma prova teórica e posteriormente a prova prática.
+Para liberar a prova prática, é necessário alcançar o 100% de acertos. As questão são abordadas no Self-Study, isso facilita bastante.
+Além disso, dentro do Self-Study é disponilizado questões práticas que ajudam na segunda prova.</p>]]></description>
+</item>
+</channel>
 </rss>

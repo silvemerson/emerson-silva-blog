@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress">
+  <meta property="og:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.
+Bora lá?
+O que é essa infra? Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho
+A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-05-24T19:10:03-03:00">
+    <meta property="article:modified_time" content="2025-05-24T19:10:03-03:00">
+    <meta property="article:tag" content="Kuberntes">
+    <meta property="article:tag" content="K8s">
+    <meta property="article:tag" content="Nginx">
+    <meta property="article:tag" content="Metallb">
+    <meta property="article:tag" content="Nfs">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress">
+  <meta name="twitter:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.
+Bora lá?
+O que é essa infra? Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho
+A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" /><link rel="prev" href="http://localhost:1313/posts/ebook-mentes-automatizadas/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/emersonlabs-kind-nfs-metallb-nginx\/index.en\/"
+        },"genre": "posts","keywords": "kuberntes, k8s, nginx, metallb, nfs","wordcount":  562 ,
+        "url": "http:\/\/localhost:1313\/posts\/emersonlabs-kind-nfs-metallb-nginx\/index.en\/","datePublished": "2025-05-24T19:10:03-03:00","dateModified": "2025-05-24T19:10:03-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/emersonlabs/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>EmersonLabs</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-05-24">2025-05-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;562 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é-essa-infra">O que é essa infra?</a></li>
+    <li><a href="#clone-o-reposítório">Clone o reposítório</a></li>
+    <li><a href="#crie-seu-cluster-kind">Crie seu Cluster Kind</a></li>
+    <li><a href="#instalando-metallb">Instalando MetalLB</a></li>
+    <li><a href="#nginx-ingress">Nginx Ingress</a></li>
+    <li><a href="#nfs">NFS</a></li>
+    <li><a href="#testando-integração">Testando integração</a></li>
+    <li><a href="#conclusão">Conclusão</a></li>
+    <li><a href="#referências">Referências</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.</p>
+<p>Bora lá?</p>
+<h2 id="o-que-é-essa-infra">O que é essa infra?</h2>
+<p>Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho</p>
+<p>A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.</p>
+<p>Com esse combo, você terá:</p>
+<p>Um cluster Kubernetes local via KIND 🧱</p>
+<p>Um LoadBalancer funcional com MetalLB 📦</p>
+<p>Um Ingress Controller top com NGINX 🚦</p>
+<p>Um servidor NFS containerizado pronto pro compartilhamento 🔁</p>
+<p>E um provisionador automático de PVCs pra facilitar sua vida 📂</p>
+<p>Ideal pra devs, SREs, entusiastas de Kubernetes ou qualquer pessoa que só quer ver a mágica acontecer localmente sem depender de nuvem.</p>
+<p>A ideia da infra é ficar assim:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/desenho-infra.png"
+        data-srcset="/desenho-infra.png, /desenho-infra.png 1.5x, /desenho-infra.png 2x"
+        data-sizes="auto"
+        alt="/desenho-infra.png"
+        title="/desenho-infra.png" /></p>
+<p>Bora colocar esse cluster pra rodar?</p>
+<h2 id="clone-o-reposítório">Clone o reposítório</h2>
+<p>Realize o clone do repositório abaixo e não se esqueça de me seguir no GitHub também:</p>
+<p><code>git clone https://github.com/silvemerson/kind-infra-lab.git</code></p>
+<h2 id="crie-seu-cluster-kind">Crie seu Cluster Kind</h2>
+<p>Crie seu cluster local com KIND usando o arquivo de configuração customizado cluster.yaml. Este arquivo define a rede e recursos do cluster.</p>
+<p>kind create cluster &ndash;config cluster.yaml</p>
+<p>Se ainda não sabe utilizar o Kind, segue um post bem legal sobre ele <a href="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" target="_blank" rel="noopener noreffer ">aqui</a></p>
+<h2 id="instalando-metallb">Instalando MetalLB</h2>
+<p>Para quem não conhece, o <a href="https://metallb.io/concepts/" target="_blank" rel="noopener noreffer ">MetalLB</a> é uma excelente ferramenta para quem não está na nuvem e tem acesso dinâmico a um serviço de LoadBalancer.</p>
+<p>MetalLB permitirá que seu cluster KIND tenha IPs de LoadBalancer, já que KIND não tem isso nativamente.</p>
+<p><code>kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.9/config/manifests/metallb-native.yaml</code></p>
+<p>Criei um arquivo loadbalancer/metallb-config.yaml no repositório com o seguinte conteúdo, ajustando o range IP para sua rede KIND:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">metallb.io/v1beta1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">IPAddressPool</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">kind-pool</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">metallb-system</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">spec</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">addresses</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="m">172.18.0.240-172.18.0.250</span><span class="w">  </span><span class="c"># intervalo seguro fora dos IPs dos nodes</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nn">---</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">metallb.io/v1beta1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">L2Advertisement</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">l2</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l">metallb-system</span></span></span></code></pre></div></div>
+<p>Altere de acordo com o range de IP do Kind. Consulte com o Docker inspect. Aplique:</p>
+<p><code>kubectl apply -f loadbalancer/metallb-config.yaml</code></p>
+<h2 id="nginx-ingress">Nginx Ingress</h2>
+<p>Crie o namespace dedicado e instale o ingress NGINX, expondo o serviço como LoadBalancer para receber tráfego externo:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create namespace ingress-nginx
+</span></span><span class="line"><span class="cl">helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+</span></span><span class="line"><span class="cl">helm repo update
+</span></span><span class="line"><span class="cl">helm install ingress-nginx ingress-nginx/ingress-nginx <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --namespace ingress-nginx <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>  --set controller.service.type<span class="o">=</span>LoadBalancer</span></span></code></pre></div></div>
+<h2 id="nfs">NFS</h2>
+<p>Use o arquivo nfs-server-compose.yaml para criar um container Docker com servidor NFS, que será usado para armazenamento compartilhado.</p>
+<p>Inicie o container:</p>
+<p><code>docker compose -f nfs/nfs-server-compose.yaml up -d</code></p>
+<p>Após criar o NFS, verifique qual IP ele recebeu ao ser criado, em seguida, execute a instação do client no Kind:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm repo add nfs https://kubernetes-sigs.github.io/nfs-subdir-external-provisioner
+</span></span><span class="line"><span class="cl">helm repo update
+</span></span><span class="line"><span class="cl">kubectl create ns nfs-provisioner
+</span></span><span class="line"><span class="cl">helm upgrade --install nfs-provisioner nfs/nfs-subdir-external-provisioner <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --namespace nfs-provisioner <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --set nfs.server<span class="o">=</span>172.18.0.5 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --set nfs.path<span class="o">=</span><span class="s2">&#34;/&#34;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --set storageClass.name<span class="o">=</span>nfs-client <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    --set storageClass.defaultClass<span class="o">=</span>true</span></span></code></pre></div></div>
+<h2 id="testando-integração">Testando integração</h2>
+<p>Crie um namespace de teste e aplique um PVC para validar se o provisionador está funcionando:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl create ns test-nfs
+</span></span><span class="line"><span class="cl">kubectl apply -f nfs/pvc-nfs-test.yaml
+</span></span><span class="line"><span class="cl">kubectl get pvc -n test-nfs</span></span></code></pre></div></div>
+<p>Resultado:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">NAME           STATUS   VOLUME                                     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+</span></span><span class="line"><span class="cl">nfs-test-pvc   Bound    pvc-ceca3596-4409-421c-89c7-a504fd1cb44d   1Gi        RWX            nfs-client     13s</span></span></code></pre></div></div>
+<h2 id="conclusão">Conclusão</h2>
+<p>E assim teremos uma infra pronta para uso localmente e leve pessoal. Faça o fork e melhorem essa infra!!!</p>
+<p>até a próxima</p>
+<p>TMJ</p>
+<h2 id="referências">Referências</h2>
+<p><a href="https://github.com/silvemerson/kind-infra-lab#" target="_blank" rel="noopener noreffer ">https://github.com/silvemerson/kind-infra-lab#</a></p>
+<p><a href="https://metallb.io/installation/" target="_blank" rel="noopener noreffer ">https://metallb.io/installation/</a></p>
+<p><a href="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" target="_blank" rel="noopener noreffer ">https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</a></p>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2025-05-24</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress" data-hashtags="kuberntes,k8s,nginx,metallb,nfs"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-hashtag="kuberntes"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/emersonlabs-kind-nfs-metallb-nginx/index.en/" data-title="EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2femersonlabs-kind-nfs-metallb-nginx%2findex.en%2f&amp;text=EmersonLabs%3a%20Infra%20com%20Kind%2c%20NFS%2c%20MetalLB%20e%20Nginx%20ingress" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kuberntes/">Kuberntes</a>,&nbsp;<a href="/tags/k8s/">K8s</a>,&nbsp;<a href="/tags/nginx/">Nginx</a>,&nbsp;<a href="/tags/metallb/">Metallb</a>,&nbsp;<a href="/tags/nfs/">Nfs</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/ebook-mentes-automatizadas/index.en/" class="prev" rel="prev" title="Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

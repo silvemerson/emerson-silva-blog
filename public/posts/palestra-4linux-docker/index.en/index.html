@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Live - Orquestrando aplicações com Docker Swarm - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/palestra-4linux-docker/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Live - Orquestrando aplicações com Docker Swarm">
+  <meta property="og:description" content="Olá pessoal!
+No post de hoje do blog, vou comentar um pouco como foi a minha experiência na Live da 4Linux falando sobre Docker.
+É primeiro post sobre algo que não seja um passo a passo técnico, então a ideia que seja mais uma resenha com alguns detalhes e curiosidades.
+Sobre o que foi a palestra? A palestra foi realizada pela 4Linux, para compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Contêineres.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-10-28T12:18:30-03:00">
+    <meta property="article:modified_time" content="2022-10-28T12:18:30-03:00">
+    <meta property="article:tag" content="Palestras">
+    <meta property="article:tag" content="Opensource">
+    <meta property="article:tag" content="Live">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Live - Orquestrando aplicações com Docker Swarm">
+  <meta name="twitter:description" content="Olá pessoal!
+No post de hoje do blog, vou comentar um pouco como foi a minha experiência na Live da 4Linux falando sobre Docker.
+É primeiro post sobre algo que não seja um passo a passo técnico, então a ideia que seja mais uma resenha com alguns detalhes e curiosidades.
+Sobre o que foi a palestra? A palestra foi realizada pela 4Linux, para compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Contêineres.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/palestra-4linux-docker/index.en/" /><link rel="prev" href="http://localhost:1313/posts/ansible-primeiros-passos/index.en/" /><link rel="next" href="http://localhost:1313/posts/aws-ccp/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Live - Orquestrando aplicações com Docker Swarm",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/palestra-4linux-docker\/index.en\/"
+        },"genre": "posts","keywords": "palestras, opensource, live","wordcount":  331 ,
+        "url": "http:\/\/localhost:1313\/posts\/palestra-4linux-docker\/index.en\/","datePublished": "2022-10-28T12:18:30-03:00","dateModified": "2022-10-28T12:18:30-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Live - Orquestrando aplicações com Docker Swarm</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/palestras/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Palestras</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2022-10-28">2022-10-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;331 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#sobre-o-que-foi-a-palestra">Sobre o que foi a palestra?</a></li>
+    <li><a href="#como-foi-a-preparação-e-experiência">Como foi a preparação e experiência?</a></li>
+    <li><a href="#live-está-gravada-no-youtube">Live está gravada no Youtube</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal!</p>
+<p>No post de hoje do blog, vou comentar um pouco como foi a minha experiência na Live da 4Linux falando sobre Docker.</p>
+<p>É primeiro post sobre algo que não seja um passo a passo técnico, então a ideia que seja mais uma resenha com alguns detalhes e curiosidades.</p>
+<h2 id="sobre-o-que-foi-a-palestra">Sobre o que foi a palestra?</h2>
+<p>A palestra foi realizada pela 4Linux, para compartilhar conhecimento com a comunidade e também mostrar um pouco do curso de Orquestração de Contêineres.</p>
+<p>O objetivo era falar de Docker até o deploy no Swarm, então detalhei um passo a passo, montei um cronograma com os comandos para quem fosse acompanhar. A Live foi no Youtube e ficou gravado, vou deixar o link ao final desse post rápido.</p>
+<p>O que foi passado de conhecimento foi da criação de uma conta na GCP, Introdução ao Docker, comandos básicos, dicas, volumes até o deploy no Swarm. Bastante conteúdo.</p>
+<h2 id="como-foi-a-preparação-e-experiência">Como foi a preparação e experiência?</h2>
+<p>A preparação foi bem tranquila, usei um roteiro voltado a Cloud, então todo o ambiente foi construído na GCP, elaborei um repositório no Github com todos os comandos por etapas. Tentei fazer a dinâmica que tenho nas aulas que ministro, para quem não sabe, sou instrutor também, e ministro treinamentos voltado a Kubernetes, Docker e CICD. Então seguindo o que já faço, fiz uma palestra onde tudo estaria no terminal e mão na massa. Algo leve para quem nunca tenha trabalhado com Docker até alguém com experiência.</p>
+<p>Sobre a experiência, foi algo marcante, porque de fato foi a minha primeira Live aberta ao público, apesar estar sempre em sala de aula, bateu um nervosismo sim haha</p>
+<p>Mas contei com apoio de colegas de time, minha família, amigos e a minha namorada e tudo fluiu.</p>
+<p>A expectativa e participar de mais eventos assim, não só pela empresa, mas pelas comunidades voltada a DevOps e passar o conhecimento e retribuir um pouco do tanto que que recebo com o conhecimento compartilhado.</p>
+<h2 id="live-está-gravada-no-youtube">Live está gravada no Youtube</h2>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/J4n_cmnm8VI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"></iframe>
+    </div>
+
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2022-10-28</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm" data-hashtags="palestras,opensource,live"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-hashtag="palestras"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/palestra-4linux-docker/index.en/" data-title="Live - Orquestrando aplicações com Docker Swarm" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fpalestra-4linux-docker%2findex.en%2f&amp;text=Live%20-%20Orquestrando%20aplica%c3%a7%c3%b5es%20com%20Docker%20Swarm" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/palestras/">Palestras</a>,&nbsp;<a href="/tags/opensource/">Opensource</a>,&nbsp;<a href="/tags/live/">Live</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/ansible-primeiros-passos/index.en/" class="prev" rel="prev" title="Ansible - Primeiro Passos"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Ansible - Primeiro Passos</a>
+            <a href="/posts/aws-ccp/index.en/" class="next" rel="next" title="AWS CCP - Como se preparar">AWS CCP - Como se preparar<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

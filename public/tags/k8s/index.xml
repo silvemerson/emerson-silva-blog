@@ -1,40 +1,57 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>K8s on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/tags/k8s/</link>
-    <description>Recent content in K8s on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/tags/k8s/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
-      <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
-      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.&lt;/p&gt;&#xA;&lt;p&gt;Bora lá?&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-essa-infra&#34;&gt;O que é essa infra?&lt;/h2&gt;&#xA;&lt;p&gt;Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho&lt;/p&gt;&#xA;&lt;p&gt;A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</title>
-      <link>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</link>
-      <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</guid>
-      <description>&lt;p&gt;Salve salve pessoal, tudo bem com vocês? Espero que sim.&lt;/p&gt;&#xA;&lt;p&gt;Venho comunicar vocês do lançamento do meu novo e-book!!! Mais escrito de forma independente.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Depois de mais de um ano do lançamento do &lt;a href=&#34;https://emerson-silva.blog.br/posts/meu-primeiro-livro/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/a&gt; venho com mais um lançamento, agora falando sobre IA no mundo DevOps&lt;/p&gt;&#xA;&lt;p&gt;Escrito no &lt;a href=&#34;https://leanpub.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;LeanPub&lt;/a&gt; e publicado na Amazon, esse e-book da continuidade a um dos meus projetos pessoais de publicar e compartilhar conteúdo na internet.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
-      <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
-      <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
-      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!&lt;/p&gt;&#xA;&lt;p&gt;As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meu primeiro Livro lançado</title>
-      <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
-      <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
-      <description>&lt;p&gt;Salve salve pessoal, tudo bem com vocês? Espero que sim.&lt;/p&gt;&#xA;&lt;p&gt;Venho comunicar vocês do lançamento do meu primeiro livro!!!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;É algo bem significativo isso para mim e muitos outros virão!&lt;/p&gt;&#xA;&lt;p&gt;Escrito no &lt;a href=&#34;https://leanpub.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;LeanPub&lt;/a&gt; e publicado na Amazon, esse livro marca início de uma nova etapa na minha carreira e também uma reflexão até sobre toda a minha trajetória.&lt;/p&gt;&#xA;&lt;p&gt;Quem tiver interesse em comprar, basta a: &lt;a href=&#34;https://a.co/d/dmxgdnz&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>K8s - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/k8s/</link>
+        <description>K8s - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/k8s/" rel="self" type="application/rss+xml" /><item>
+    <title>EmersonLabs: Infra com Kind, NFS, MetalLB e Nginx ingress</title>
+    <link>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/emersonlabs-kind-nfs-metallb-nginx/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vou detalhar um pouco a construção de uma Infra Local Kind,NFS,MetalLB e Nginx ingress.</p>
+<p>Bora lá?</p>
+<h2 id="o-que-é-essa-infra">O que é essa infra?</h2>
+<p>Então galera, bem-vindos ao seu playground Kubernetes local, onde o Kind encontra o MetalLB, o NGINX dá as ordens e o NFS guarda tudo com carinho</p>
+<p>A ideia é ter um combo de ferramentas distribuída e como pouco uso de recursos computacionais para quem está estudando K8s e também ter uma ambiente local de desenvolvimento bem robusto e prático. Esse é um dos meus labs.</p>]]></description>
+</item>
+<item>
+    <title>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</title>
+    <link>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</link>
+    <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</guid>
+    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
+<p>Venho comunicar vocês do lançamento do meu novo e-book!!! Mais escrito de forma independente.</p>
+<p><strong>Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</strong></p>
+<p>Depois de mais de um ano do lançamento do <a href="https://emerson-silva.blog.br/posts/meu-primeiro-livro/" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a> venho com mais um lançamento, agora falando sobre IA no mundo DevOps</p>
+<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse e-book da continuidade a um dos meus projetos pessoais de publicar e compartilhar conteúdo na internet.</p>]]></description>
+</item>
+<item>
+    <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
+    <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
+    <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!</p>
+<p>As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>]]></description>
+</item>
+<item>
+    <title>Meu primeiro Livro lançado</title>
+    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
+    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
+<p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
+<p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
+<p>É algo bem significativo isso para mim e muitos outros virão!</p>
+<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse livro marca início de uma nova etapa na minha carreira e também uma reflexão até sobre toda a minha trajetória.</p>
+<p>Quem tiver interesse em comprar, basta a: <a href="https://a.co/d/dmxgdnz" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a></p>]]></description>
+</item>
+</channel>
 </rss>

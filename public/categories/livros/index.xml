@@ -1,26 +1,32 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Livros on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/categories/livros/</link>
-    <description>Recent content in Livros on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Fri, 09 May 2025 01:30:26 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/categories/livros/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</title>
-      <link>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</link>
-      <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</guid>
-      <description>&lt;p&gt;Salve salve pessoal, tudo bem com vocês? Espero que sim.&lt;/p&gt;&#xA;&lt;p&gt;Venho comunicar vocês do lançamento do meu novo e-book!!! Mais escrito de forma independente.&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;Depois de mais de um ano do lançamento do &lt;a href=&#34;https://emerson-silva.blog.br/posts/meu-primeiro-livro/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/a&gt; venho com mais um lançamento, agora falando sobre IA no mundo DevOps&lt;/p&gt;&#xA;&lt;p&gt;Escrito no &lt;a href=&#34;https://leanpub.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;LeanPub&lt;/a&gt; e publicado na Amazon, esse e-book da continuidade a um dos meus projetos pessoais de publicar e compartilhar conteúdo na internet.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Meu primeiro Livro lançado</title>
-      <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
-      <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
-      <description>&lt;p&gt;Salve salve pessoal, tudo bem com vocês? Espero que sim.&lt;/p&gt;&#xA;&lt;p&gt;Venho comunicar vocês do lançamento do meu primeiro livro!!!&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;É algo bem significativo isso para mim e muitos outros virão!&lt;/p&gt;&#xA;&lt;p&gt;Escrito no &lt;a href=&#34;https://leanpub.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;LeanPub&lt;/a&gt; e publicado na Amazon, esse livro marca início de uma nova etapa na minha carreira e também uma reflexão até sobre toda a minha trajetória.&lt;/p&gt;&#xA;&lt;p&gt;Quem tiver interesse em comprar, basta a: &lt;a href=&#34;https://a.co/d/dmxgdnz&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;Kubernetes para Iniciantes: Fundamentos e Práticas&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Livros - Categoria - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/categories/livros/</link>
+        <description>Livros - Categoria - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Fri, 09 May 2025 01:30:26 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/livros/" rel="self" type="application/rss+xml" /><item>
+    <title>Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</title>
+    <link>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</link>
+    <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/</guid>
+    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
+<p>Venho comunicar vocês do lançamento do meu novo e-book!!! Mais escrito de forma independente.</p>
+<p><strong>Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps</strong></p>
+<p>Depois de mais de um ano do lançamento do <a href="https://emerson-silva.blog.br/posts/meu-primeiro-livro/" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a> venho com mais um lançamento, agora falando sobre IA no mundo DevOps</p>
+<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse e-book da continuidade a um dos meus projetos pessoais de publicar e compartilhar conteúdo na internet.</p>]]></description>
+</item>
+<item>
+    <title>Meu primeiro Livro lançado</title>
+    <link>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</link>
+    <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/meu-primeiro-livro/</guid>
+    <description><![CDATA[<p>Salve salve pessoal, tudo bem com vocês? Espero que sim.</p>
+<p>Venho comunicar vocês do lançamento do meu primeiro livro!!!</p>
+<p><strong>Kubernetes para Iniciantes: Fundamentos e Práticas</strong></p>
+<p>É algo bem significativo isso para mim e muitos outros virão!</p>
+<p>Escrito no <a href="https://leanpub.com/" target="_blank" rel="noopener noreffer ">LeanPub</a> e publicado na Amazon, esse livro marca início de uma nova etapa na minha carreira e também uma reflexão até sobre toda a minha trajetória.</p>
+<p>Quem tiver interesse em comprar, basta a: <a href="https://a.co/d/dmxgdnz" target="_blank" rel="noopener noreffer ">Kubernetes para Iniciantes: Fundamentos e Práticas</a></p>]]></description>
+</item>
+</channel>
 </rss>

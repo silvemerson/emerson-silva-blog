@@ -1,278 +1,87 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Tags on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/tags/</link>
-    <description>Recent content in Tags on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>K8s</title>
-      <link>https://emerson-silva.blog.br/tags/k8s/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/k8s/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kuberntes</title>
-      <link>https://emerson-silva.blog.br/tags/kuberntes/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/kuberntes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Metallb</title>
-      <link>https://emerson-silva.blog.br/tags/metallb/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/metallb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nfs</title>
-      <link>https://emerson-silva.blog.br/tags/nfs/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/nfs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nginx</title>
-      <link>https://emerson-silva.blog.br/tags/nginx/</link>
-      <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/nginx/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Devops</title>
-      <link>https://emerson-silva.blog.br/tags/devops/</link>
-      <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/devops/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ia</title>
-      <link>https://emerson-silva.blog.br/tags/ia/</link>
-      <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/ia/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Http-Code</title>
-      <link>https://emerson-silva.blog.br/tags/http-code/</link>
-      <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/http-code/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Cd</title>
-      <link>https://emerson-silva.blog.br/tags/cd/</link>
-      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/cd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ci</title>
-      <link>https://emerson-silva.blog.br/tags/ci/</link>
-      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/ci/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Git</title>
-      <link>https://emerson-silva.blog.br/tags/git/</link>
-      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/git/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gitlab</title>
-      <link>https://emerson-silva.blog.br/tags/gitlab/</link>
-      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/gitlab/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Terraform</title>
-      <link>https://emerson-silva.blog.br/tags/terraform/</link>
-      <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/terraform/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Iac</title>
-      <link>https://emerson-silva.blog.br/tags/iac/</link>
-      <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/iac/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Opentofu</title>
-      <link>https://emerson-silva.blog.br/tags/opentofu/</link>
-      <pubDate>Wed, 27 Nov 2024 09:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/opentofu/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kaniko</title>
-      <link>https://emerson-silva.blog.br/tags/kaniko/</link>
-      <pubDate>Wed, 20 Nov 2024 12:24:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/kaniko/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>4linux</title>
-      <link>https://emerson-silva.blog.br/tags/4linux/</link>
-      <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/4linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Aws</title>
-      <link>https://emerson-silva.blog.br/tags/aws/</link>
-      <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/aws/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Glossario-Tech</title>
-      <link>https://emerson-silva.blog.br/tags/glossario-tech/</link>
-      <pubDate>Sat, 27 Apr 2024 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/glossario-tech/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kubernetes</title>
-      <link>https://emerson-silva.blog.br/tags/kubernetes/</link>
-      <pubDate>Tue, 27 Feb 2024 00:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/kubernetes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Kind</title>
-      <link>https://emerson-silva.blog.br/tags/kind/</link>
-      <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/kind/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Sre</title>
-      <link>https://emerson-silva.blog.br/tags/sre/</link>
-      <pubDate>Sat, 27 Jan 2024 01:30:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/sre/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Crossplanne</title>
-      <link>https://emerson-silva.blog.br/tags/crossplanne/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/crossplanne/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Live</title>
-      <link>https://emerson-silva.blog.br/tags/live/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/live/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Opensouce-Summit</title>
-      <link>https://emerson-silva.blog.br/tags/opensouce-summit/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/opensouce-summit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Opensource</title>
-      <link>https://emerson-silva.blog.br/tags/opensource/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/opensource/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Palestras</title>
-      <link>https://emerson-silva.blog.br/tags/palestras/</link>
-      <pubDate>Fri, 29 Sep 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/palestras/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Gcp</title>
-      <link>https://emerson-silva.blog.br/tags/gcp/</link>
-      <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/gcp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Packer</title>
-      <link>https://emerson-silva.blog.br/tags/packer/</link>
-      <pubDate>Tue, 11 Jul 2023 11:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/packer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ansible</title>
-      <link>https://emerson-silva.blog.br/tags/ansible/</link>
-      <pubDate>Fri, 02 Jun 2023 22:54:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/ansible/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ccp</title>
-      <link>https://emerson-silva.blog.br/tags/ccp/</link>
-      <pubDate>Sat, 03 Dec 2022 12:17:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/ccp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Automacao</title>
-      <link>https://emerson-silva.blog.br/tags/automacao/</link>
-      <pubDate>Wed, 13 Apr 2022 18:37:11 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/automacao/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Yaml</title>
-      <link>https://emerson-silva.blog.br/tags/yaml/</link>
-      <pubDate>Wed, 13 Apr 2022 18:37:11 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/yaml/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Containers</title>
-      <link>https://emerson-silva.blog.br/tags/containers/</link>
-      <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/containers/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Docker</title>
-      <link>https://emerson-silva.blog.br/tags/docker/</link>
-      <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/docker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Minikube</title>
-      <link>https://emerson-silva.blog.br/tags/minikube/</link>
-      <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/minikube/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>https://emerson-silva.blog.br/tags/about/</link>
-      <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/about/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hello</title>
-      <link>https://emerson-silva.blog.br/tags/hello/</link>
-      <pubDate>Tue, 22 Mar 2022 17:55:26 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/tags/hello/</guid>
-      <description></description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/</link>
+        <description>Tags - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sat, 24 May 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>K8s</title>
+    <link>https://emerson-silva.blog.br/tags/k8s/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/k8s/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Kuberntes</title>
+    <link>https://emerson-silva.blog.br/tags/kuberntes/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/kuberntes/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Metallb</title>
+    <link>https://emerson-silva.blog.br/tags/metallb/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/metallb/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Nfs</title>
+    <link>https://emerson-silva.blog.br/tags/nfs/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/nfs/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Nginx</title>
+    <link>https://emerson-silva.blog.br/tags/nginx/</link>
+    <pubDate>Sat, 24 May 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/nginx/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Devops</title>
+    <link>https://emerson-silva.blog.br/tags/devops/</link>
+    <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/devops/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Ia</title>
+    <link>https://emerson-silva.blog.br/tags/ia/</link>
+    <pubDate>Fri, 09 May 2025 01:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/ia/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Http-Code</title>
+    <link>https://emerson-silva.blog.br/tags/http-code/</link>
+    <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/http-code/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Cd</title>
+    <link>https://emerson-silva.blog.br/tags/cd/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/cd/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Ci</title>
+    <link>https://emerson-silva.blog.br/tags/ci/</link>
+    <pubDate>Tue, 10 Dec 2024 12:24:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/tags/ci/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>

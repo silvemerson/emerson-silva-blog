@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko">
+  <meta property="og:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI
+O que é o Kaniko O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-20T12:24:03-03:00">
+    <meta property="article:modified_time" content="2024-11-20T12:24:03-03:00">
+    <meta property="article:tag" content="Git">
+    <meta property="article:tag" content="Gitlab">
+    <meta property="article:tag" content="Kaniko">
+    <meta property="article:tag" content="Ci">
+    <meta property="article:tag" content="Cd">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko">
+  <meta name="twitter:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI
+O que é o Kaniko O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" /><link rel="prev" href="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" /><link rel="next" href="http://localhost:1313/posts/desbravando-o-opentofu-parte3/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/trilha-cicd-gitlab-kaniko\/index.en\/"
+        },"genre": "posts","keywords": "git, gitlab, kaniko, ci, cd","wordcount":  541 ,
+        "url": "http:\/\/localhost:1313\/posts\/trilha-cicd-gitlab-kaniko\/index.en\/","datePublished": "2024-11-20T12:24:03-03:00","dateModified": "2024-11-20T12:24:03-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/trilha-ci/cd/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Trilha CI/CD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-20">2024-11-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;541 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-que-é-o-kaniko">O que é o Kaniko</a></li>
+    <li><a href="#criando-pipeline">Criando Pipeline</a></li>
+    <li><a href="#executando-job">Executando Job</a></li>
+    <li><a href="#referências">REFERÊNCIAS</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje no nosso blog se inicia uma nova sequência de post voltado a CI/CD. Vamos começar falando de como fazer build de imagens com o Kaniko no Gitlab-CI</p>
+<h2 id="o-que-é-o-kaniko">O que é o Kaniko</h2>
+<p>O Kaniko é uma ferramenta utilizada para a criação de imagens de contêineres em um arquivo Docker, num contêiner, cluster de K8s ou até mesmo numa pipeline, que é o objetivo do nosso artigo. Com o Kaniko, não há a necessidade da execução de um daemon do Docker, por ser possível executar os comandos de em um arquivo Docker no espaço do usuário. Basicamente, ele vai gerar a imagem do contêiner baseado de um Dockerfile e enviar para o repositório de imagens definido.</p>
+<p>Usando o Kaniko com o GitLab CI/CD
+Para usar o Kaniko é necessário existir um executor para ser feito a criação da imagem e os executores são:</p>
+<ul>
+<li>Docker</li>
+<li>Docker Machine</li>
+<li>Kubernetes</li>
+</ul>
+<p>Ao construir uma imagem com Kaniko em conjunto do GitLab CI/CD, é recomendado que se utilize a imagem na pipeline do  gcr.io/kaniko-project/executor:debug , porque ela possui um shell, e ter um shell é necessário para utilizar imagens no GitLab CI/CD. Além disso, é necessário que exista um arquivo config.json com as informações de autenticação para o servidor de Registry do contêiner desejado.</p>
+<h2 id="criando-pipeline">Criando Pipeline</h2>
+<p>No nosso exemplo, vamos criar uma pipeline simples onde o nosso Registry será o DockerHub e o nosso Dockerfile vai criar uma aplicação simples do nodejs. Então crie um repositório no Dockerhub com o nome da aplicação e no GitLab e crie os arquivos abaixo.</p>
+<p><strong>Dockerfile</strong>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-Dockerfile">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-Dockerfile" data-lang="Dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> node:12-alpine</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apk add --no-cache python2 g++ make<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> . .<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> yarn install --production<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;node&#34;</span><span class="p">,</span> <span class="s2">&#34;src/index.js&#34;</span><span class="p">]</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3000</span></span></span></code></pre></div></div>
+<p>Pipeline, com o nome de arquivo .gitlab-ci.yaml:</p>
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">variables</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">DOCKER_HUB_IMAGE</span><span class="p">:</span><span class="w"> </span><span class="l">$DOCKER_HUB_IMAGE</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">DOCKER_HUB_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="l">$DOCKER_HUB_PASSWORD</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">DOCKER_HUB_REGISTRY</span><span class="p">:</span><span class="w"> </span><span class="l">$DOCKER_HUB_REGISTRY</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">DOCKER_HUB_USER</span><span class="p">:</span><span class="w"> </span><span class="l">$DOCKER_HUB_USER</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">DOCKER_HOST</span><span class="p">:</span><span class="w"> </span><span class="l">tcp://docker:2375</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">stages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kaniko</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l">build</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">gcr.io/kaniko-project/executor:debug</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;&#34;</span><span class="p">]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">mkdir -p /kaniko/.docker</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">echo &#34;{\&#34;auths\&#34;:{\&#34;${DOCKER_HUB_REGISTRY}\&#34;:{\&#34;auth\&#34;:\&#34;$(printf &#34;%s:%s&#34; &#34;${DOCKER_HUB_USER}&#34; &#34;${DOCKER_HUB_PASSWORD}&#34; | base64 | tr -d &#39;\n&#39;)\&#34;}}}&#34; &gt; /kaniko/.docker/config.json</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="p">&gt;-</span><span class="sd">
+</span></span></span><span class="line"><span class="cl"><span class="sd">      /kaniko/executor
+</span></span></span><span class="line"><span class="cl"><span class="sd">      --context &#34;${CI_PROJECT_DIR}&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">      --dockerfile &#34;${CI_PROJECT_DIR}/Dockerfile&#34;
+</span></span></span><span class="line"><span class="cl"><span class="sd">      --destination &#34;${DOCKER_HUB_IMAGE}:${CI_COMMIT_TAG}&#34;</span></span></span></code></pre></div></div>
+<p>Os pontos de atenção nessa nossa pipeline é as variáveis, elas são definidas no próprio GitLab, no menu de Settings -&gt; CI/CD -&gt; Variables</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog.4linux.com.br/wp-content/uploads/2022/04/gitlab01.png"
+        data-srcset="https://blog.4linux.com.br/wp-content/uploads/2022/04/gitlab01.png, https://blog.4linux.com.br/wp-content/uploads/2022/04/gitlab01.png 1.5x, https://blog.4linux.com.br/wp-content/uploads/2022/04/gitlab01.png 2x"
+        data-sizes="auto"
+        alt="https://blog.4linux.com.br/wp-content/uploads/2022/04/gitlab01.png"
+        title="alt text" /></p>
+<p><strong>DOCKER_HUB_IMAGE</strong>: Nome da imagem
+<strong>DOCKER_HUB_PASSWORD</strong>: Senha do seu DockerHub
+<strong>DOCKER_HUB_REGISTRY</strong>: URL do seu DockerHub, por padrão é <a href="https://index.docker.io/v1/" target="_blank" rel="noopener noreffer ">https://index.docker.io/v1/</a>
+<strong>DOCKER_HUB_USER</strong>: Nome do seu usuario que faz login no DockerHub.</p>
+<p>Observem que na Pipeline,  existe a linha que cria um diretório .docker, nesse diretório, é onde é criado também o arquivo config.json que vai receber as credenciais de acessos do DockerHub ou do Registry definido nas variáveis.</p>
+<h2 id="executando-job">Executando Job</h2>
+<p>A pipeline de vocês irá ser executada após o commit enviados ao repositório do GitLab, na branch definida, por padrão irá rodar na “main” e vocês terão a seguinte visão conforme imagens abaixo.</p>
+<p>Job em execução:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png"
+        data-srcset="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png 1.5x, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png 2x"
+        data-sizes="auto"
+        alt="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png"
+        title="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko01.png" /></p>
+<p>O gitlab-runner foi criado e está preparando o executor, que trata-se de uma Docker-Machine, e usando a imagem que recomendamos no começo do post:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png"
+        data-srcset="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png 1.5x, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png 2x"
+        data-sizes="auto"
+        alt="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png"
+        title="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko02.png" /></p>
+<p>Pronto, foi feito o build da imagem que escrevemos no Dockerfile:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png"
+        data-srcset="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png 1.5x, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png 2x"
+        data-sizes="auto"
+        alt="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png"
+        title="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko03.png" /></p>
+<p>Nosso job foi executado com sucesso:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png"
+        data-srcset="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png 1.5x, https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png 2x"
+        data-sizes="auto"
+        alt="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png"
+        title="https://blog.4linux.com.br/wp-content/uploads/2022/04/kaniko04.png" /></p>
+<p>É isso pessoal, testem e explorem essa ótima ferramenta chamada Kaniko. Não se esqueçam de compartilhar em suas redes sociais.</p>
+<p>Até a próxima.</p>
+<h2 id="referências">REFERÊNCIAS</h2>
+<p><a href="https://github.com/GoogleContainerTools/kaniko" target="_blank" rel="noopener noreffer ">https://github.com/GoogleContainerTools/kaniko</a></p>
+<p><a href="https://docs.gitlab.com/ee/ci/docker/using_kaniko.html" target="_blank" rel="noopener noreffer ">https://docs.gitlab.com/ee/ci/docker/using_kaniko.html</a></p>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2024-11-20</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko" data-hashtags="git,gitlab,kaniko,ci,cd"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" data-title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2ftrilha-cicd-gitlab-kaniko%2findex.en%2f&amp;text=Trilha%20CI%2fCD%20-%20Gitlab-CI%20-%20Build%20de%20imagens%20de%20cont%c3%aaineres%20com%20Kaniko" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git/">Git</a>,&nbsp;<a href="/tags/gitlab/">Gitlab</a>,&nbsp;<a href="/tags/kaniko/">Kaniko</a>,&nbsp;<a href="/tags/ci/">Ci</a>,&nbsp;<a href="/tags/cd/">Cd</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/desbravando-o-opentofu-parte2/index.en/" class="prev" rel="prev" title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</a>
+            <a href="/posts/desbravando-o-opentofu-parte3/index.en/" class="next" rel="next" title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente">Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

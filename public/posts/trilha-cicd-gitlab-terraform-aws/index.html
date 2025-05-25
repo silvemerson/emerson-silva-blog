@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/">
+        <title>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform">
   <meta property="og:description" content="Salve salve pessoal!!!
@@ -30,11 +30,12 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
 Tudo bem com vocês? Espero que sim!
 Hoje no nosso blog vamos seguier com a sequência de post voltado a CI/CD. Vamos falar de como criar uma pipeline para criar um EC2 na AWS usando o Gitlab CI e armazenando o tf state no prórprio GitLab. Bora lá?
 O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela HashiCorp que permite o gerenciamento de infraestrutura como código (Infrastructure as Code - IaC). Com o Terraform, você pode definir, provisionar e gerenciar recursos de infraestrutura em diversos provedores (como AWS, Azure, Google Cloud, entre outros) de maneira declarativa.">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" /><link rel="next" href="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-parte3/" /><link rel="next" href="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -58,15 +59,15 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -75,24 +76,24 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
 </header><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/trilha-ci/cd/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Trilha CI/CD</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-10">2024-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;523 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/trilha-ci/cd/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Trilha CI/CD</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-10">2024-12-10</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;523 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutos&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -102,7 +103,7 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
         alt="/posts/trilha-cicd-gitlab-terraform-aws/featured-image.png"
         title="/posts/trilha-cicd-gitlab-terraform-aws/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>Conteúdos</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
@@ -141,26 +142,41 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
 <p><strong>Aplicar</strong>: Aplique as mudanças para provisionar recursos com terraform apply.</p>
 <h2 id="criando-manifestos-do-terraform">Criando manifestos do Terraform</h2>
 <p>Primeiro, crie um arquivo chamado <code>backend.tf</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-hcl">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">terraform</span> {
 </span></span><span class="line"><span class="cl">  <span class="k">backend</span> <span class="s2">&#34;http&#34;</span> {
 </span></span><span class="line"><span class="cl">    
 </span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><p>Segundo, crie outro arquivo chamado <code>ec2.tf</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_instance&#34; &#34;gitlab-ci-example-pipeline&#34;</span> {
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p>Segundo, crie outro arquivo chamado <code>ec2.tf</code></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-hcl">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl"><span class="k">resource</span> <span class="s2">&#34;aws_instance&#34; &#34;gitlab-ci-example-pipeline&#34;</span> {
 </span></span><span class="line"><span class="cl"><span class="n">  ami</span>           <span class="o">=</span> <span class="s2">&#34;ami-01b7be8d0c978c77c&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">  instance_type</span> <span class="o">=</span> <span class="s2">&#34;t2.micro&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="n">  tags</span> <span class="o">=</span> {
 </span></span><span class="line"><span class="cl"><span class="n">    Name</span> <span class="o">=</span> <span class="s2">&#34;gitlab-ci-example-pipeline&#34;</span>
 </span></span><span class="line"><span class="cl">  }
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><p>Por fim, crie um arquivo chamado <code>provider.tf</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<p>Por fim, crie um arquivo chamado <code>provider.tf</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-hcl">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-hcl" data-lang="hcl"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="k">provider</span> <span class="s2">&#34;aws&#34;</span> {
 </span></span><span class="line"><span class="cl"><span class="n">  region</span> <span class="o">=</span> <span class="s2">&#34;us-east-1&#34;</span>
-</span></span><span class="line"><span class="cl">}
-</span></span></code></pre></div><h3 id="criando-pipeline">Criando Pipeline</h3>
+</span></span><span class="line"><span class="cl">}</span></span></code></pre></div></div>
+<h3 id="criando-pipeline">Criando Pipeline</h3>
 <p>Os pontos de atenção nessa nossa pipeline é as variáveis, elas são definidas no próprio GitLab, no menu de Settings -&gt; CI/CD -&gt; Variables</p>
 <p><img
         class="lazyload"
@@ -175,28 +191,48 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
 <p><strong>AWS_ACCESS_KEY_ID</strong>: KEY para autenticação na AWS.</p>
 <p><strong>AWS_DEFAULT_REGION</strong>: Região da AWS.</p>
 <p>Crie um arquivo chamado <code>.gitlab-ci.yml</code> e inicie primeiro definindo a imagem que vamos utilizar para exeuctar essa pipeline:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">image</span><span class="p">:</span><span class="w">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">image</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">hashicorp/terraform:light</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/usr/bin/env&#34;</span><span class="p">]</span><span class="w">
-</span></span></span></code></pre></div><p>Após isso, vamos definir os stages:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">stages</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&#34;/usr/bin/env&#34;</span><span class="p">]</span></span></span></code></pre></div></div>
+<p>Após isso, vamos definir os stages:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">stages</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">plan</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">apply</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">destroy</span><span class="w">
-</span></span></span></code></pre></div><p><strong>plan</strong>: Para planejar nossa infra.</p>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">destroy</span></span></span></code></pre></div></div>
+<p><strong>plan</strong>: Para planejar nossa infra.</p>
 <p><strong>apply</strong>: Para Criar a nossa infra.</p>
 <p><strong>destroy</strong>: Para destruir nossa infra.</p>
 <p>Agora, bora definir as váriaveis:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">variables</span><span class="p">:</span><span class="w">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">variables</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">GITLAB_CI_TOKEN</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${GITLAB_CI_TOKEN}&#34;</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">AWS_SECRET_ACCESS_KEY</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${AWS_SECRET_ACCESS_KEY}&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">AWS_ACCESS_KEY_ID</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${AWS_ACCESS_KEY_ID}&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TF_ADDRESS</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;https://gitlab.com/api/v4/projects/ID_PROJETO/terraform/state/state-name&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TF_USERNAME</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;SEU USER&#34;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TF_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${GITLAB_CI_TOKEN}&#34;</span><span class="w"> 
-</span></span></span></code></pre></div><p>Preencha com a informações do seu repositório e token.</p>
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">TF_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;${GITLAB_CI_TOKEN}&#34;</span><span class="w"> </span></span></span></code></pre></div></div>
+<p>Preencha com a informações do seu repositório e token.</p>
 <p>Finalize a pipeline com os stages que definimos, além de configurar um <code>before_script</code> para executar sempre antes dos stages para carregar o tfstate:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">before_script</span><span class="p">:</span><span class="w">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-yml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yml" data-lang="yml"><span class="line"><span class="cl"><span class="nt">before_script</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="l">terraform init -backend-config=&#34;address=$TF_ADDRESS&#34; -backend-config=&#34;lock_address=$TF_ADDRESS/lock&#34; -backend-config=&#34;unlock_address=$TF_ADDRESS/lock&#34; -backend-config=&#34;username=$TF_USERNAME&#34; -backend-config=&#34;password=$TF_PASSWORD&#34; -backend-config=&#34;lock_method=POST&#34; -backend-config=&#34;unlock_method=DELETE&#34; -backend-config=&#34;retry_wait_min=5&#34;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">plan</span><span class="p">:</span><span class="w">
@@ -213,8 +249,8 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">stage</span><span class="p">:</span><span class="w"> </span><span class="l">destroy</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">when</span><span class="p">:</span><span class="w"> </span><span class="l">manual</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">script</span><span class="p">:</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">terraform destroy -input=false -lock=false -auto-approve</span><span class="w">
-</span></span></span></code></pre></div><h2 id="executando-job">Executando Job</h2>
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span>- <span class="l">terraform destroy -input=false -lock=false -auto-approve</span></span></span></code></pre></div></div>
+<h2 id="executando-job">Executando Job</h2>
 <p>Job em execução:</p>
 <p><img
         class="lazyload"
@@ -260,12 +296,12 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-12-10</span>
+                <span>Atualizado em 2024-12-10</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform" data-hashtags="git,gitlab,terraform,ci,cd"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform" data-hashtags="git,gitlab,terraform,ci,cd"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-hashtag="git"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" data-title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2femerson-silva.blog.br%2fposts%2ftrilha-cicd-gitlab-terraform-aws%2f&amp;text=Trilha%20CI%2fCD%20-%20Gitlab-CI%20-%20Deploy%20de%20uma%20EC2%20usando%20Terraform" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -273,24 +309,29 @@ O que é o Terraform O Terraform é uma ferramenta open-source desenvolvida pela
     <div class="post-info-more">
         <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/git/">Git</a>,&nbsp;<a href="/tags/gitlab/">Gitlab</a>,&nbsp;<a href="/tags/terraform/">Terraform</a>,&nbsp;<a href="/tags/ci/">Ci</a>,&nbsp;<a href="/tags/cd/">Cd</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/posts/desbravando-o-opentofu-parte3/" class="prev" rel="prev" title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente</a>
             <a href="/posts/nginx-k8s-erros-page/" class="next" rel="next" title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP">Nginx + Kubernetes: Personalizando Páginas de Erro HTTP<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments"></div></article></div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"giscus":{"category":"General","categoryId":"DIC_kwDONTalJM4CkhmM","darkTheme":"github-dark","emitMetadata":true,"inputPosition":"top","lang":"pt","lazyLoading":true,"lightTheme":"github-light","mapping":"pathname","reactionsEnabled":true,"repo":"silvemerson/emerson-silva-blog","repoId":"R_kgDONTalJA"}},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
 </html>

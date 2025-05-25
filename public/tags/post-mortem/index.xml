@@ -1,0 +1,18 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Post Mortem - Tag - Emerson Silva</title>
+        <link>http://localhost:1313/tags/post-mortem/</link>
+        <description>Post Mortem - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Wed, 27 Nov 2024 13:30:26 -0300</lastBuildDate><atom:link href="http://localhost:1313/tags/post-mortem/" rel="self" type="application/rss+xml" /><item>
+    <title>005 - Glossário Tech - Post Mortem no SRE</title>
+    <link>http://localhost:1313/posts/glossario-sre-post-mortem/</link>
+    <pubDate>Wed, 27 Nov 2024 13:30:26 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>http://localhost:1313/posts/glossario-sre-post-mortem/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!<br>
+E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
+<p>No universo do Site Reliability Engineering (SRE), um post mortem é um processo estruturado para analisar incidentes ou interrupções nos sistemas com o objetivo de aprender com os erros, identificar melhorias e evitar que problemas semelhantes aconteçam no futuro. Essa prática é essencial para organizações que buscam operar sistemas confiáveis em escala.</p>]]></description>
+</item>
+</channel>
+</rss>

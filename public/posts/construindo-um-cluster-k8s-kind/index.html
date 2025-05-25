@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Kubernetes - Criando um cluster local com Kind - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/">
+        <title>Kubernetes - Criando um cluster local com Kind - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Kubernetes - Criando um cluster local com Kind">
   <meta property="og:description" content="Olá pessoal
@@ -29,11 +29,12 @@ Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de cons
 O que é? O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.
 Como é o Kind? Ele consiste em:
 Pacotes Go que implementam criação de cluster, construção de imagem, etc. Uma interface de linha de comando (kind) construída sobre esses pacotes. Imagens Docker escritas para executar systemd, Kubernetes, etc. A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm. O Kind ainda é um trabalho em em construção. Para acompanhar, consulte 1.0 Roadmap">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/glossario-sre/" /><link rel="next" href="https://emerson-silva.blog.br/posts/meu-primeiro-livro/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/glossario-sre/" /><link rel="next" href="https://emerson-silva.blog.br/posts/meu-primeiro-livro/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -57,15 +58,15 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -74,24 +75,24 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
 </header><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Kubernetes - Criando um cluster local com Kind</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-22">2024-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;641 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutes&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-02-22">2024-02-22</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;641 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutos&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -101,7 +102,7 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
         alt="/posts/construindo-um-cluster-k8s-kind/featured-image.png"
         title="/posts/construindo-um-cluster-k8s-kind/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>Conteúdos</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
@@ -136,25 +137,40 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
 <p>Antes de escutar a criação do cluster, você precisa ter instalado o <a href="https://github.com/docker/docker-install" target="_blank" rel="noopener noreffer ">Docker</a> ou o <a href="https://podman.io/docs/installation" target="_blank" rel="noopener noreffer ">Podman</a> em sua máquina.</p>
 <p>Bora instalar o Kind.</p>
 <p><strong>Execute</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># para AMD64/x86_64</span>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># para AMD64/x86_64</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="k">$(</span>uname -m<span class="k">)</span> <span class="o">=</span> x86_64 <span class="o">]</span> <span class="o">&amp;&amp;</span> curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.22.0/kind-linux-amd64
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Para ARM64</span>
 </span></span><span class="line"><span class="cl"><span class="o">[</span> <span class="k">$(</span>uname -m<span class="k">)</span> <span class="o">=</span> aarch64 <span class="o">]</span> <span class="o">&amp;&amp;</span> curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.22.0/kind-linux-arm64
 </span></span><span class="line"><span class="cl">chmod +x ./kind
-</span></span><span class="line"><span class="cl">sudo mv ./kind /usr/local/bin/kind
-</span></span></code></pre></div><h3 id="criando-nosso-cluster-local">Criando nosso cluster local</h3>
+</span></span><span class="line"><span class="cl">sudo mv ./kind /usr/local/bin/kind</span></span></code></pre></div></div>
+<h3 id="criando-nosso-cluster-local">Criando nosso cluster local</h3>
 <p>Antes de criar o nosso cluster, vamos criar um arquivo <code>yaml</code> com as informações do nosso cluster.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Cluster</span><span class="w">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-yaml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">Cluster</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">kind.x-k8s.io/v1alpha4</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">sparta</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">nodes</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l">control-plane</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l">worker</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l">worker</span><span class="w">
-</span></span></span></code></pre></div><p>Execute o comando de criar o cluster usando o arquivo de configuração que criamos:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l">worker</span></span></span></code></pre></div></div>
+<p>Execute o comando de criar o cluster usando o arquivo de configuração que criamos:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ kind create cluster --config cluster.yaml
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Creating cluster <span class="s2">&#34;sparta&#34;</span> ...
@@ -170,25 +186,40 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">kubectl cluster-info --context kind-sparta
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">Have a nice day! 
-</span></span></code></pre></div><p>Feito, agora visualize que o nosso cluster está em execução localmente com o <code>cluster-info</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl cluster-info --context kind-sparta
+</span></span><span class="line"><span class="cl">Have a nice day! </span></span></code></pre></div></div>
+<p>Feito, agora visualize que o nosso cluster está em execução localmente com o <code>cluster-info</code></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl cluster-info --context kind-sparta
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Kubernetes control plane is running at https://127.0.0.1:39911
 </span></span><span class="line"><span class="cl">CoreDNS is running at https://127.0.0.1:39911/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">To further debug and diagnose cluster problems, use <span class="s1">&#39;kubectl cluster-info dump&#39;</span>.
-</span></span></code></pre></div><h3 id="listando-nodes-criados">Listando nodes criados</h3>
+</span></span><span class="line"><span class="cl">To further debug and diagnose cluster problems, use <span class="s1">&#39;kubectl cluster-info dump&#39;</span>.</span></span></code></pre></div></div>
+<h3 id="listando-nodes-criados">Listando nodes criados</h3>
 <p>Agora que passamos da etapa de criação do nosso cluster local, vamos listar os nós criados e visualizar suas informações.</p>
 <p><strong>Listando nós</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl get nodes
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl get nodes
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">NAME                   STATUS   ROLES           AGE     VERSION
 </span></span><span class="line"><span class="cl">sparta-control-plane   Ready    control-plane   3m51s   v1.29.2
 </span></span><span class="line"><span class="cl">sparta-worker          Ready    &lt;none&gt;          3m28s   v1.29.2
-</span></span><span class="line"><span class="cl">sparta-worker2         Ready    &lt;none&gt;          3m27s   v1.29.2
-</span></span></code></pre></div><p><strong>Visualizando informações de um dos nodes</strong>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sparta-worker2         Ready    &lt;none&gt;          3m27s   v1.29.2</span></span></code></pre></div></div>
+<p><strong>Visualizando informações de um dos nodes</strong>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ kubectl describe node sparta-control-plane
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Name:               sparta-control-plane
@@ -207,22 +238,37 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
 </span></span><span class="line"><span class="cl">Taints:             node-role.kubernetes.io/control-plane:NoSchedule
 </span></span><span class="line"><span class="cl">Unschedulable:      <span class="nb">false</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="o">(</span>...<span class="o">)</span>
-</span></span></code></pre></div><h3 id="criando-nosso-primeiro-deploy">Criando nosso primeiro deploy</h3>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>...<span class="o">)</span></span></span></code></pre></div></div>
+<h3 id="criando-nosso-primeiro-deploy">Criando nosso primeiro deploy</h3>
 <p>Agora que visualizamos as informações dos nodes, vamos realizar um deploy para teste.</p>
 <p><strong>Criando deploy</strong></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl create deploy webserver --image nginx
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ kubectl create deploy webserver --image nginx
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">deployment.apps/webserver created
-</span></span></code></pre></div><p><strong>Validando aplicação:</strong></p>
+</span></span><span class="line"><span class="cl">deployment.apps/webserver created</span></span></code></pre></div></div>
+<p><strong>Validando aplicação:</strong></p>
 <p>Crie um <code>port-forward</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">$ kubectl port-forward webserver-667ddc69b6-5qnp2 8081:80
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">Forwarding from 127.0.0.1:8081 -&gt; <span class="m">80</span>
-</span></span><span class="line"><span class="cl">Forwarding from <span class="o">[</span>::1<span class="o">]</span>:8081 -&gt; <span class="m">80</span>
-</span></span></code></pre></div><p>Agora, execute um curl em outro terminal no endereço <code>http://127.0.0.1:8081</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ curl http://127.0.0.1:8081 
+</span></span><span class="line"><span class="cl">Forwarding from <span class="o">[</span>::1<span class="o">]</span>:8081 -&gt; <span class="m">80</span></span></span></code></pre></div></div>
+<p>Agora, execute um curl em outro terminal no endereço <code>http://127.0.0.1:8081</code></p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ curl http://127.0.0.1:8081 
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">&lt;!DOCTYPE html&gt;
 </span></span><span class="line"><span class="cl">&lt;html&gt;
@@ -246,8 +292,8 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">&lt;p&gt;&lt;em&gt;Thank you <span class="k">for</span> using nginx.&lt;/em&gt;&lt;/p&gt;
 </span></span><span class="line"><span class="cl">&lt;/body&gt;
-</span></span><span class="line"><span class="cl">&lt;/html&gt;
-</span></span></code></pre></div><p>Feito, viram como foi tranquilo a criação de um cluster local com o Kind e ainda realizar um deploy? Rápido, leve e prático.</p>
+</span></span><span class="line"><span class="cl">&lt;/html&gt;</span></span></code></pre></div></div>
+<p>Feito, viram como foi tranquilo a criação de um cluster local com o Kind e ainda realizar um deploy? Rápido, leve e prático.</p>
 <p>Espero que vocês tenham gostado do post prático de hoje. Nos veremos em breve.</p>
 <p>Se púderem, compartilhem em suas redes sociais.</p>
 <p>Abraço.</p>
@@ -274,12 +320,12 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2024-02-22</span>
+                <span>Atualizado em 2024-02-22</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind" data-hashtags="kind,kubernetes"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-hashtag="kind"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind" data-hashtags="kind,kubernetes"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-hashtag="kind"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/" data-title="Kubernetes - Criando um cluster local com Kind" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2femerson-silva.blog.br%2fposts%2fconstruindo-um-cluster-k8s-kind%2f&amp;text=Kubernetes%20-%20Criando%20um%20cluster%20local%20com%20Kind" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -287,7 +333,7 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
     <div class="post-info-more">
         <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kind/">Kind</a>,&nbsp;<a href="/tags/kubernetes/">Kubernetes</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
@@ -296,15 +342,18 @@ Pacotes Go que implementam criação de cluster, construção de imagem, etc. Um
 </div>
 </article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
 </html>

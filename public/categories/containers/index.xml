@@ -1,40 +1,60 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Containers on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/categories/containers/</link>
-    <description>Recent content in Containers on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Thu, 20 Mar 2025 19:10:03 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/categories/containers/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
-      <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
-      <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
-      <description>&lt;p&gt;Salve salve pessoal!!!&lt;/p&gt;&#xA;&lt;p&gt;Tudo bem com vocês? Espero que sim!&lt;/p&gt;&#xA;&lt;p&gt;Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!&lt;/p&gt;&#xA;&lt;p&gt;As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kubernetes - Criando um cluster local com Kind</title>
-      <link>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</link>
-      <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</guid>
-      <description>&lt;p&gt;Olá pessoal&lt;/p&gt;&#xA;&lt;p&gt;Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é&#34;&gt;O que é?&lt;/h2&gt;&#xA;&lt;p&gt;O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.&lt;/p&gt;&#xA;&lt;h2 id=&#34;como-é-o-kind&#34;&gt;Como é o Kind?&lt;/h2&gt;&#xA;&lt;p&gt;Ele consiste em:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pacotes Go que implementam criação de cluster, construção de imagem, etc.&lt;/li&gt;&#xA;&lt;li&gt;Uma interface de linha de comando (kind) construída sobre esses pacotes.&lt;/li&gt;&#xA;&lt;li&gt;Imagens Docker escritas para executar systemd, Kubernetes, etc.&lt;/li&gt;&#xA;&lt;li&gt;A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;O Kind ainda é um trabalho em em construção. Para acompanhar, consulte &lt;a href=&#34;https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;1.0 Roadmap&lt;/a&gt;&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Docker - Primeiros Passos</title>
-      <link>https://emerson-silva.blog.br/posts/docker-primeiros-passos/</link>
-      <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/docker-primeiros-passos/</guid>
-      <description>&lt;p&gt;Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é-docker&#34;&gt;O que é Docker&lt;/h2&gt;&#xA;&lt;p&gt;O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Kubernetes - Configurando O Minikube</title>
-      <link>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</link>
-      <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</guid>
-      <description>&lt;p&gt;Olá pessoal&lt;/p&gt;&#xA;&lt;p&gt;Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.&lt;/p&gt;&#xA;&lt;p&gt;Primeiro, vamos entender o que é exatamente o Minikube.&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-é&#34;&gt;O que é?&lt;/h2&gt;&#xA;&lt;p&gt;O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó único para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a &lt;a href=&#34;https://minikube.sigs.k8s.io/docs/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;documentação&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Containers - Categoria - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/categories/containers/</link>
+        <description>Containers - Categoria - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Thu, 20 Mar 2025 19:10:03 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/categories/containers/" rel="self" type="application/rss+xml" /><item>
+    <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP</title>
+    <link>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</link>
+    <pubDate>Thu, 20 Mar 2025 19:10:03 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/</guid>
+    <description><![CDATA[<p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!</p>
+<p>Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!</p>
+<p>As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.</p>]]></description>
+</item>
+<item>
+    <title>Kubernetes - Criando um cluster local com Kind</title>
+    <link>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</link>
+    <pubDate>Thu, 22 Feb 2024 12:56:52 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/construindo-um-cluster-k8s-kind/</guid>
+    <description><![CDATA[<p>Olá pessoal</p>
+<p>Hoje vou demonstrar como baixar, instalar e configurar o Kind, uma forma de construir um Cluster local do Kubernetes.</p>
+<h2 id="o-que-é">O que é?</h2>
+<p>O Kind é uma ferramenta para executar clusters locais do Kubernetes usando “nós” de contêiner Docker. Kind foi projetado principalmente para testar o próprio Kubernetes, mas pode ser usado para desenvolvimento local ou CI.</p>
+<h2 id="como-é-o-kind">Como é o Kind?</h2>
+<p>Ele consiste em:</p>
+<ul>
+<li>Pacotes Go que implementam criação de cluster, construção de imagem, etc.</li>
+<li>Uma interface de linha de comando (kind) construída sobre esses pacotes.</li>
+<li>Imagens Docker escritas para executar systemd, Kubernetes, etc.</li>
+<li>A integração do kubetest também construída nesses pacotes (WIP) tipo bootstrap cada em “nó” com kubeadm.</li>
+</ul>
+<p>O Kind ainda é um trabalho em em construção. Para acompanhar, consulte <a href="https://kind.sigs.k8s.io/docs/contributing/1.0-roadmap" target="_blank" rel="noopener noreffer ">1.0 Roadmap</a></p>]]></description>
+</item>
+<item>
+    <title>Docker - Primeiros Passos</title>
+    <link>https://emerson-silva.blog.br/posts/docker-primeiros-passos/</link>
+    <pubDate>Tue, 12 Apr 2022 13:33:01 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/docker-primeiros-passos/</guid>
+    <description><![CDATA[<p>Olá pessoal, hoje vou apresentar uma tecnologia de software que fornece conteiners, chamada Docker. Vamos lá!</p>
+<h2 id="o-que-é-docker">O que é Docker</h2>
+<p>O Docker é uma plataforma aberta que separa suas aplicações para que seja possível uma entrega rápida de software. Essa tecnologia permite a executço um serviço em um ambiente isolado, esse provisionamento é chamado de container. Esse isolamento e segurança permite que seja executado muitos containers simultâneamente em um determinado host. Os containers são executados diretamente no kernel da máquina utilizada.</p>]]></description>
+</item>
+<item>
+    <title>Kubernetes - Configurando O Minikube</title>
+    <link>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</link>
+    <pubDate>Tue, 22 Mar 2022 17:56:52 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/kubernetes-configurando-o-minikube/</guid>
+    <description><![CDATA[<p>Olá pessoal</p>
+<p>Hoje vou demonstrar como baixar, instalar e configurar o Minikube. Nesse passo a passo vou exemplificar como fazer isso no Linux.</p>
+<p>Primeiro, vamos entender o que é exatamente o Minikube.</p>
+<h2 id="o-que-é">O que é?</h2>
+<p>O Minikube configura rapidamente um cluster local do Kubernetes no macOS, Linux e Windows. Ele é totalmente gratuito e fácil de instalar. Ele cria uma VM com nó único para que você possa fazer seus testes no K8s. Para mais informações sobre ele acesso aqui a <a href="https://minikube.sigs.k8s.io/docs/" target="_blank" rel="noopener noreffer ">documentação</a>.</p>]]></description>
+</item>
+</channel>
 </rss>

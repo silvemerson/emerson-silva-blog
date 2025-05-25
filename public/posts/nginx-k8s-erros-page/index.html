@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP - Emerson Silva</title><meta name="Description" content="This is Emerson Silva"><meta property="og:url" content="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/">
+        <title>Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/">
   <meta property="og:site_name" content="Emerson Silva">
   <meta property="og:title" content="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP">
   <meta property="og:description" content="Salve salve pessoal!!!
@@ -29,11 +29,12 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
 Tudo bem com vocês? Espero que sim!
 Hoje aqui no blog vamos falar sobre como podemos personalizar páginas de erros no Nginx no Kubernetes. Bora lá!
 As páginas de erro 404, 401, 500, entre outros, são parte fundamental da navegação na web. Tem outros erros, mas vamos falar de pelo menos um nesse laboratório. Elas surgem quando algo não ocorre como esperado durante a interação do usuário com um site. Esses erros não são somente inevitáveis em muitos casos, mas também oferecem uma oportunidade valiosa para otimizar a experiência do usuário, evitando frustrações e proporcionando uma navegação mais amigável e informativa.">
-<meta name="application-name" content="Emerson Silva">
-<meta name="apple-mobile-web-app-title" content="Emerson Silva"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="next" href="https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" /><link rel="prev" href="https://emerson-silva.blog.br/posts/trilha-cicd-gitlab-terraform-aws/" /><link rel="next" href="https://emerson-silva.blog.br/posts/ebook-mentes-automatizadas/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
@@ -57,15 +58,15 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
             },"description": ""
     }
     </script></head>
-    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Emerson Silva">Emerson Silva</a>
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -74,24 +75,24 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Emerson Silva">Emerson Silva</a>
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
 </header><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">Contents</h2>
+            <h2 class="toc-title">Conteúdos</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Nginx + Kubernetes: Personalizando Páginas de Erro HTTP</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">included in <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-20">2025-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;880 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutes&nbsp;</div>
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/containers/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Containers</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-03-20">2025-03-20</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;880 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutos&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -101,7 +102,7 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
         alt="/posts/nginx-k8s-erros-page/featured-image.png"
         title="/posts/nginx-k8s-erros-page/featured-image.png" /></div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span>Conteúdos</span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
@@ -133,15 +134,30 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
 <h2 id="mão-na-massa">Mão na massa</h2>
 <p>Como pré-requisito, tenha um K8s em execução, seja na nuvem, bare-metal, minukube, kind, k3s, a sua escolha. E não podemos esquecer do helm e um copo de café.</p>
 <p>Vamos começar adicionando o chart no Nginx:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">helm repo update
-</span></span></code></pre></div><p>Agora, instalando chart:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx
-</span></span></code></pre></div><p>Pronto, instalado.</p>
+</span></span><span class="line"><span class="cl">helm repo update</span></span></code></pre></div></div>
+<p>Agora, instalando chart:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx</span></span></code></pre></div></div>
+<p>Pronto, instalado.</p>
 <h3 id="personalizações">Personalizações</h3>
 <p>Agora, iremos criar um arquivo chamado <code>custom-error-pages.yaml</code> e adicione o conteúdo abaixo:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-yaml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l">v1</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l">ConfigMap</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">metadata</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">custom-error-pages</span><span class="w">
@@ -165,12 +181,22 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">&lt;p&gt;Oops! A página não foi encontrada!&lt;/p&gt;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="l">&lt;p&gt;&lt;a href=&#34;/&#34;&gt;Voltar para o Home&lt;/a&gt;&lt;/p&gt;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">&lt;/body&gt;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">&lt;/html&gt;</span><span class="w">
-</span></span></span></code></pre></div><p>Aplique esse <code>ConfigMap</code>:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f custom-error-pages.yaml
-</span></span></code></pre></div><p>Agora vamos configurar o arquivo de values personalizado para carregar essa configuração.</p>
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="l">&lt;/html&gt;</span></span></span></code></pre></div></div>
+<p>Aplique esse <code>ConfigMap</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl apply -f custom-error-pages.yaml</span></span></code></pre></div></div>
+<p>Agora vamos configurar o arquivo de values personalizado para carregar essa configuração.</p>
 <p><code>custom-backend-values.yaml</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
+    <div class="code-header language-yaml">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">controller</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">config</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">custom-http-errors</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;404&#34;</span><span class="w">
@@ -188,11 +214,21 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
 </span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;404.html&#34;</span><span class="w">     
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">extraVolumeMounts</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span>- <span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l">custom-error-pages</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/www</span><span class="w">
-</span></span></span></code></pre></div><p>Agora vamos aplicar essa personalização e criar um novo microsserviço chamado backend.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx
-</span></span></code></pre></div><p>Vocês vão ter o seguinte resultado:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods,svc
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="l">/www</span></span></span></code></pre></div></div>
+<p>Agora vamos aplicar essa personalização e criar um novo microsserviço chamado backend.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">helm install emersonlabs-nginx ingress-nginx/ingress-nginx</span></span></code></pre></div></div>
+<p>Vocês vão ter o seguinte resultado:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl get pods,svc
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">NAME                                                       READY   STATUS    RESTARTS      AGE
 </span></span><span class="line"><span class="cl">pod/emersonlabs-nginx-ingress-nginx-controller-5c4797fff4-xttbc      1/1     Running   <span class="m">0</span> <span class="o">(</span>1s<span class="o">)</span>   1s
@@ -201,13 +237,18 @@ As páginas de erro 404, 401, 500, entre outros, são parte fundamental da naveg
 </span></span><span class="line"><span class="cl">NAME                                                 TYPE           CLUSTER-IP       EXTERNAL-IP      PORT<span class="o">(</span>S<span class="o">)</span>                      AGE
 </span></span><span class="line"><span class="cl">service/emersonlabs-nginx-ingress-nginx-controller             LoadBalancer   10.109.118.177   192.168.56.100   80:30910/TCP,443:31572/TCP   142m
 </span></span><span class="line"><span class="cl">service/emersonlabs-nginx-ingress-nginx-controller-admission   ClusterIP      10.103.142.127   &lt;none&gt;           443/TCP                      142m
-</span></span><span class="line"><span class="cl">service/emersonlabs-nginx-ingress-nginx-defaultbackend         ClusterIP      10.101.15.139    &lt;none&gt;           80/TCP                       133m
-</span></span></code></pre></div><h3 id="o-que-estamos-fazendo-de-fato">O que estamos fazendo de fato?</h3>
+</span></span><span class="line"><span class="cl">service/emersonlabs-nginx-ingress-nginx-defaultbackend         ClusterIP      10.101.15.139    &lt;none&gt;           80/TCP                       133m</span></span></code></pre></div></div>
+<h3 id="o-que-estamos-fazendo-de-fato">O que estamos fazendo de fato?</h3>
 <p>O serviço do emersonlabs-nginx-ingress-nginx-defaultbackend, vai ser responsável por tratar os erros de HTTP que o Nginx Controller receber, como criamos uma página personalizada, ela quem vai aparece em erros 404 HTTP.</p>
 <p>Vamos simular?</p>
 <p>Se você não estiver usando um LoadBalancer para acessar o IP dele, use o port-forward:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n nginx port-forward service/emersonlabs-nginx-ingress-nginx-controller 8080:80
-</span></span></code></pre></div><p>Resultado:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">kubectl -n nginx port-forward service/emersonlabs-nginx-ingress-nginx-controller 8080:80</span></span></code></pre></div></div>
+<p>Resultado:</p>
 <p><a href="https://i.ibb.co/Kz3kkpZy/Captura-de-tela-de-2025-03-20-14-42-05.png" target="_blank" rel="noopener noreffer "><img
         class="lazyload"
         src="/svg/loading.min.svg"
@@ -245,12 +286,12 @@ Não se esqueçam de compartilhar em suas redes sociais.</p>
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>Updated on 2025-03-20</span>
+                <span>Atualizado em 2025-03-20</span>
             </div></div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP" data-hashtags="kuberntes,k8s,nginx,http-code"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-hashtag="kuberntes"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP" data-hashtags="kuberntes,k8s,nginx,http-code"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-hashtag="kuberntes"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@14.9.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="https://emerson-silva.blog.br/posts/nginx-k8s-erros-page/" data-title="Nginx &#43; Kubernetes: Personalizando Páginas de Erro HTTP" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=https%3a%2f%2femerson-silva.blog.br%2fposts%2fnginx-k8s-erros-page%2f&amp;text=Nginx%20%2b%20Kubernetes%3a%20Personalizando%20P%c3%a1ginas%20de%20Erro%20HTTP" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
             </div>
         </div>
     </div>
@@ -258,24 +299,29 @@ Não se esqueçam de compartilhar em suas redes sociais.</p>
     <div class="post-info-more">
         <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/kuberntes/">Kuberntes</a>,&nbsp;<a href="/tags/k8s/">K8s</a>,&nbsp;<a href="/tags/nginx/">Nginx</a>,&nbsp;<a href="/tags/http-code/">Http-Code</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
         </section>
     </div>
 
     <div class="post-nav"><a href="/posts/trilha-cicd-gitlab-terraform-aws/" class="prev" rel="prev" title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform</a>
             <a href="/posts/ebook-mentes-automatizadas/" class="next" rel="next" title="Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps">Lançamento - Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-<div id="comments"></div></article></div>
+<div id="comments"><div id="giscus" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://giscus.app">Giscus</a>.
+            </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.147.5">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank"></a></span></div>
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
                 <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"lightgallery":true};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{"giscus":{"category":"General","categoryId":"DIC_kwDONTalJM4CkhmM","darkTheme":"github-dark","emitMetadata":true,"inputPosition":"top","lang":"pt","lazyLoading":true,"lightTheme":"github-light","mapping":"pathname","reactionsEnabled":true,"repo":"silvemerson/emerson-silva-blog","repoId":"R_kgDONTalJA"}},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
 </html>

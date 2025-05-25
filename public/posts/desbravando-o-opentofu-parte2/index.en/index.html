@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP">
+  <meta property="og:description" content="Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
+Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-19T12:24:03-03:00">
+    <meta property="article:modified_time" content="2024-11-19T12:24:03-03:00">
+    <meta property="article:tag" content="Devops">
+    <meta property="article:tag" content="Iac">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP">
+  <meta name="twitter:description" content="Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!
+Antes de iniciar, vocês precisam ler isso Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o OpenTofu, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" /><link rel="prev" href="http://localhost:1313/posts/curso-terraform-aws/index.en/" /><link rel="next" href="http://localhost:1313/posts/trilha-cicd-gitlab-kaniko/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-parte2\/index.en\/"
+        },"genre": "posts","keywords": "devops, iac","wordcount":  770 ,
+        "url": "http:\/\/localhost:1313\/posts\/desbravando-o-opentofu-parte2\/index.en\/","datePublished": "2024-11-19T12:24:03-03:00","dateModified": "2024-11-19T12:24:03-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/iac/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>IaC</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-19">2024-11-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;770 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;4 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</a></li>
+    <li><a href="#instalação-do-opentofu">Instalação do OpenTofu</a></li>
+    <li><a href="#conecte-se-a-gcp">Conecte-se a GCP</a>
+      <ul>
+        <li><a href="#instalar-e-configurar-o-gcloud-cli">Instalar e Configurar o gcloud CLI</a></li>
+      </ul>
+    </li>
+    <li><a href="#configure-o-provedor-gcp-no-providertf">Configure o Provedor GCP no provider.tf</a></li>
+    <li><a href="#defina-variáveis-básicas-no-variablestf">Defina Variáveis Básicas no variables.tf</a></li>
+    <li><a href="#crie-o-recurso-do-firewall">Crie o Recurso do Firewall</a></li>
+    <li><a href="#crie-o-recurso-da-instância">Crie o Recurso da Instância</a></li>
+    <li><a href="#adicione-um-arquivo-de-saída">Adicione um Arquivo de Saída</a></li>
+    <li><a href="#construindo-o-ambiente">Construindo o ambiente</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Olá pessoal, hoje no blog, vamos realizar um deploy na GCP com uma ferramenta em potencial de Infra as Code chamada OpenTofu, um fork do Terraform. Bora lá!</p>
+<h2 id="antes-de-iniciar-vocês-precisam-ler-isso">Antes de iniciar, vocês precisam ler isso</h2>
+<p>Antes que possamos iniciar o passo a passo para provisionar uma VM na GCP usando o <a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">OpenTofu</a>, você precisa ler o post anterior que fala sobre o que é, porque ela nasceu e sobre a licença BSL.</p>
+<p>Então leia <a href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/" target="_blank" rel="noopener noreffer ">Desbravando o OpenTofu: Parte 01 – Introdução e Fundamentos
+</a></p>
+<h2 id="instalação-do-opentofu">Instalação do OpenTofu</h2>
+<p>Certifique-se de que o OpenTofu está instalado. Siga os passos abaixo:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">curl -s https://packagecloud.io/install/repositories/opentofu/tofu/script.deb.sh?any<span class="o">=</span><span class="nb">true</span> -o /tmp/tofu-repository-setup.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo bash /tmp/tofu-repository-setup.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm /tmp/tofu-repository-setup.sh
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">sudo apt-get install tofu</span></span></code></pre></div></div>
+<h2 id="conecte-se-a-gcp">Conecte-se a GCP</h2>
+<h3 id="instalar-e-configurar-o-gcloud-cli">Instalar e Configurar o gcloud CLI</h3>
+<p>Baixe e instale o SDK do Google Cloud em sua máquina seguindo as instruções de instalação do <a href="https://cloud.google.com/sdk/docs/install?hl=pt-br" target="_blank" rel="noopener noreffer ">SDK</a>.</p>
+<ol>
+<li><strong>Faça login na sua conta GCP</strong>:</li>
+</ol>
+<p>Depois de instalar o SDK, abra o terminal e execute:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud auth login</span></span></code></pre></div></div>
+<p>Isso abrirá uma página de autenticação no seu navegador. Após o login, seu terminal estará autenticado com sua conta do Google Cloud.</p>
+<ol start="2">
+<li><strong>Defina o projeto padrão</strong>:</li>
+</ol>
+<p>Para evitar a necessidade de especificar o projeto em cada comando, defina o projeto padrão. Substitua PROJECT_ID pelo ID do seu projeto na GCP:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">gcloud config <span class="nb">set</span> project PROJECT_ID</span></span></code></pre></div></div>
+<p>Pronto, agora podemos configurar nossos arquivos para provisionar a VM na GCP.</p>
+<h2 id="configure-o-provedor-gcp-no-providertf">Configure o Provedor GCP no provider.tf</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">terraform</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">required_providers</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">google</span> <span class="err">=</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="err">source</span>  <span class="err">=</span> <span class="nt">&#34;hashicorp/google&#34;</span>
+</span></span><span class="line"><span class="cl">      <span class="err">version</span> <span class="err">=</span> <span class="s2">&#34;~&gt; 4.0&#34;</span> <span class="err">#</span> <span class="err">Ou</span> <span class="err">a</span> <span class="err">versão</span> <span class="err">mais</span> <span class="err">recente</span> <span class="err">suportada</span> <span class="err">pelo</span> <span class="err">OpenTofu</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">provider</span> <span class="s2">&#34;google&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">project</span> <span class="err">=</span> <span class="err">var.project_id</span>
+</span></span><span class="line"><span class="cl">  <span class="err">region</span>  <span class="err">=</span> <span class="err">var.region</span>
+</span></span><span class="line"><span class="cl">  <span class="err">zone</span>    <span class="err">=</span> <span class="err">var.zone</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Nesse arquivo vamos configurar o provider da Google.</p>
+<h2 id="defina-variáveis-básicas-no-variablestf">Defina Variáveis Básicas no variables.tf</h2>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">variable</span> <span class="s2">&#34;project_id&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">description</span> <span class="err">=</span> <span class="nt">&#34;ID do projeto GCP&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="err">type</span>        <span class="err">=</span> <span class="err">string</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">variable</span> <span class="s2">&#34;region&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">default</span> <span class="err">=</span> <span class="nt">&#34;us-central1&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">variable</span> <span class="s2">&#34;zone&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">default</span> <span class="err">=</span> <span class="nt">&#34;us-central1-a&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">variable</span> <span class="s2">&#34;instance_name&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">default</span> <span class="err">=</span> <span class="nt">&#34;opentofu-vm-instance&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">variable</span> <span class="s2">&#34;machine_type&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">default</span> <span class="err">=</span> <span class="nt">&#34;e2-micro&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<p>Nesse arquivo pessoal, estamos configurando as váriaveis que serão defindas nos arquivos <code>provider.tf</code>, <code>vm.tf</code> e <code>fw.tf</code>.</p>
+<h2 id="crie-o-recurso-do-firewall">Crie o Recurso do Firewall</h2>
+<p>No <code>fw.tf</code>, defina a instância da VM e um firewall básico para permitir o acesso SSH.</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">resource</span> <span class="s2">&#34;google_compute_network&#34;</span> <span class="s2">&#34;vpc_network&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">name</span> <span class="err">=</span> <span class="nt">&#34;opentofu-network&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">resource</span> <span class="s2">&#34;google_compute_firewall&#34;</span> <span class="s2">&#34;allow_ssh&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">name</span>    <span class="err">=</span> <span class="nt">&#34;allow-ssh&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="err">network</span> <span class="err">=</span> <span class="err">google_compute_network.vpc_network.name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">allow</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">protocol</span> <span class="err">=</span> <span class="nt">&#34;tcp&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="err">ports</span>    <span class="err">=</span> <span class="p">[</span><span class="s2">&#34;22&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">source_ranges</span> <span class="err">=</span> <span class="p">[</span><span class="s2">&#34;0.0.0.0/0&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="crie-o-recurso-da-instância">Crie o Recurso da Instância</h2>
+<p>Agora galera, crie um arquivo chamado <code>vm.tf</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">resource</span> <span class="s2">&#34;google_compute_instance&#34;</span> <span class="s2">&#34;vm_instance&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">name</span>         <span class="err">=</span> <span class="err">var.instance_name</span>
+</span></span><span class="line"><span class="cl">  <span class="err">machine_type</span> <span class="err">=</span> <span class="err">var.machine_type</span>
+</span></span><span class="line"><span class="cl">  <span class="err">zone</span>         <span class="err">=</span> <span class="err">var.zone</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">boot_disk</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">initialize_params</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="err">image</span> <span class="err">=</span> <span class="nt">&#34;debian-cloud/debian-11&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">network_interface</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">network</span> <span class="err">=</span> <span class="err">google_compute_network.vpc_network.name</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">access_config</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">      <span class="err">#</span> <span class="err">Para</span> <span class="err">criar</span> <span class="err">um</span> <span class="err">IP</span> <span class="err">público</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="err">metadata</span> <span class="err">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">ssh-keys</span> <span class="err">=</span> <span class="nt">&#34;usuario_gcp:${file(&#34;</span><span class="err">~/.ssh/id_rsa.pub</span><span class="s2">&#34;)}&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span></span></span></code></pre></div></div>
+<h2 id="adicione-um-arquivo-de-saída">Adicione um Arquivo de Saída</h2>
+<p>Para facilitar a visualização do IP público da instância, você pode criar um arquivo <code>outputs.tf</code>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-json">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">output</span> <span class="s2">&#34;instance_ip&#34;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">value</span>       <span class="err">=</span> <span class="err">google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip</span>
+</span></span><span class="line"><span class="cl">  <span class="err">description</span> <span class="err">=</span> <span class="nt">&#34;Endereço IP público da instância GCP&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span></span></span></code></pre></div></div>
+<h2 id="construindo-o-ambiente">Construindo o ambiente</h2>
+<p>Como vocês observaram, a forma de desenvolver a infra segue usando a linguagem HCL o que mude para o deploy é o binário de execução, ao invés de <code>terraform</code> vamos usar <code>tofu</code></p>
+<p>Então execute em seu terminal os comandos abaixo.</p>
+<p>Para inicializar o diretório e baixar os plugins necessários:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu init</span></span></code></pre></div></div>
+<p><strong>Mensagem</strong>:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Initializing the backend...
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Initializing provider plugins...
+</span></span><span class="line"><span class="cl">- Finding hashicorp/google versions matching <span class="s2">&#34;~&gt; 4.0&#34;</span>...
+</span></span><span class="line"><span class="cl">- Installing hashicorp/google v4.85.0...
+</span></span><span class="line"><span class="cl">- Installed hashicorp/google v4.85.0 <span class="o">(</span>signed, key ID 0C0AF313E5FD9F80<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Providers are signed by their developers.
+</span></span><span class="line"><span class="cl">If you<span class="err">&#39;</span>d like to know more about provider signing, you can <span class="nb">read</span> about it here:
+</span></span><span class="line"><span class="cl">https://opentofu.org/docs/cli/plugins/signing/
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">OpenTofu has created a lock file .terraform.lock.hcl to record the provider
+</span></span><span class="line"><span class="cl">selections it made above. Include this file in your version control repository
+</span></span><span class="line"><span class="cl">so that OpenTofu can guarantee to make the same selections by default when
+</span></span><span class="line"><span class="cl">you run <span class="s2">&#34;tofu init&#34;</span> in the future.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">OpenTofu has been successfully initialized!
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">You may now begin working with OpenTofu. Try running <span class="s2">&#34;tofu plan&#34;</span> to see
+</span></span><span class="line"><span class="cl">any changes that are required <span class="k">for</span> your infrastructure. All OpenTofu commands
+</span></span><span class="line"><span class="cl">should now work.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">If you ever <span class="nb">set</span> or change modules or backend configuration <span class="k">for</span> OpenTofu,
+</span></span><span class="line"><span class="cl">rerun this <span class="nb">command</span> to reinitialize your working directory. If you forget, other
+</span></span><span class="line"><span class="cl">commands will detect it and remind you to <span class="k">do</span> so <span class="k">if</span> necessary.</span></span></code></pre></div></div>
+<p>Observe as referências do OpenTofu. Siga com os demais comandos.</p>
+<p>Planejando a criação da infra:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu plan</span></span></code></pre></div></div>
+<p>Criando a Infraestrutura:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-bash">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copiar para a área de transferência"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">tofu apply</span></span></code></pre></div></div>
+<p>Pronto pessoal, feito o deploy de uma VM na GCP usando o OpenTofu!!!</p>
+<p>Caso queria deletar a infra execute <code>tofu destroy</code></p>
+<p>Por hoje é só pessoal, em breve voltamos com mais.
+Não esqueçam de compartilhar esse post em suas redes sociais</p>
+<p>Abraço</p>
+<h1 id="repositório-do-exemplo">Repositório do exemplo</h1>
+<p><a href="https://github.com/silvemerson/gcp-vm-infra-opentofu-example" target="_blank" rel="noopener noreffer ">https://github.com/silvemerson/gcp-vm-infra-opentofu-example</a></p>
+<h1 id="referências">Referências</h1>
+<p><a href="https://opentofu.org/" target="_blank" rel="noopener noreffer ">https://opentofu.org/</a></p>
+<p><a href="https://opentofu.org/docs/intro/install/" target="_blank" rel="noopener noreffer ">https://opentofu.org/docs/intro/install/</a></p>
+<p><a href="https://opentofu.org/docs/intro/" target="_blank" rel="noopener noreffer ">https://opentofu.org/docs/intro/</a></p>
+<p><a href="https://www.linuxfoundation.org/press/announcing-opentofu" target="_blank" rel="noopener noreffer ">https://www.linuxfoundation.org/press/announcing-opentofu</a></p>
+<p><a href="https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/" target="_blank" rel="noopener noreffer ">https://emerson-silva.blog.br/posts/desbravando-o-opentofu-primeira-parte1/</a></p>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2024-11-19</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP" data-hashtags="devops,iac"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-hashtag="devops"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/desbravando-o-opentofu-parte2/index.en/" data-title="Desbravando o OpenTofu: Parte 02 – Provisionando uma VM na GCP" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fdesbravando-o-opentofu-parte2%2findex.en%2f&amp;text=Desbravando%20o%20OpenTofu%3a%20Parte%2002%20%e2%80%93%20Provisionando%20uma%20VM%20na%20GCP" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/devops/">Devops</a>,&nbsp;<a href="/tags/iac/">Iac</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/curso-terraform-aws/index.en/" class="prev" rel="prev" title="Lançamento do curso Terraform na prática com AWS"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Lançamento do curso Terraform na prática com AWS</a>
+            <a href="/posts/trilha-cicd-gitlab-kaniko/index.en/" class="next" rel="next" title="Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko">Trilha CI/CD - Gitlab-CI - Build de imagens de contêineres com Kaniko<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

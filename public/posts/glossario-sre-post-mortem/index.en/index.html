@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>005 - Glossário Tech - Post Mortem no SRE - Emerson Silva</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/">
+  <meta property="og:site_name" content="Emerson Silva">
+  <meta property="og:title" content="005 - Glossário Tech - Post Mortem no SRE">
+  <meta property="og:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+No universo do Site Reliability Engineering (SRE), um post mortem é um processo estruturado para analisar incidentes ou interrupções nos sistemas com o objetivo de aprender com os erros, identificar melhorias e evitar que problemas semelhantes aconteçam no futuro. Essa prática é essencial para organizações que buscam operar sistemas confiáveis em escala.">
+  <meta property="og:locale" content="pt_br">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-27T13:30:26-03:00">
+    <meta property="article:modified_time" content="2024-11-27T13:30:26-03:00">
+    <meta property="article:tag" content="Sre">
+    <meta property="article:tag" content="Post Mortem">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="005 - Glossário Tech - Post Mortem no SRE">
+  <meta name="twitter:description" content="Salve salve pessoal!!!
+Tudo bem com vocês? Espero que sim!
+E bora pra mais um post do Glossario Tech onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?
+No universo do Site Reliability Engineering (SRE), um post mortem é um processo estruturado para analisar incidentes ou interrupções nos sistemas com o objetivo de aprender com os erros, identificar melhorias e evitar que problemas semelhantes aconteçam no futuro. Essa prática é essencial para organizações que buscam operar sistemas confiáveis em escala.">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site">
+<meta name="referrer" content="no-referrer" /><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" /><link rel="prev" href="http://localhost:1313/posts/desbravando-o-opentofu-parte3/index.en/" /><link rel="next" href="http://localhost:1313/posts/trilha-cicd-gitlab-terraform-aws/index.en/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/css/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "005 - Glossário Tech - Post Mortem no SRE",
+        "inLanguage": "pt-br",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/posts\/glossario-sre-post-mortem\/index.en\/"
+        },"genre": "posts","keywords": "sre, post mortem","wordcount":  1038 ,
+        "url": "http:\/\/localhost:1313\/posts\/glossario-sre-post-mortem\/index.en\/","datePublished": "2024-11-27T13:30:26-03:00","dateModified": "2024-11-27T13:30:26-03:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Emerson Silva"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Emerson Silva">Emerson Siva</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> Posts </a><a class="menu-item" href="/tags/"> Tags </a><a class="menu-item" href="/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Emerson Silva">Emerson Siva</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">Posts</a><a class="menu-item" href="/tags/" title="">Tags</a><a class="menu-item" href="/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Trocar tema">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Conteúdos</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">005 - Glossário Tech - Post Mortem no SRE</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://emerson-silva.blog.br" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>Emerson Silva</a></span>&nbsp;<span class="post-category">incluido em <a href="/categories/glossario-tech/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Glossario-Tech</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-27">2024-11-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;1038 palavras&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;5 minutos&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Conteúdos</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#o-propósito-de-um-post-mortem">O Propósito de um Post Mortem</a></li>
+    <li><a href="#estrutura-de-um-post-mortem">Estrutura de um Post Mortem</a></li>
+    <li><a href="#exemplo-prático-de-linha-do-tempo">Exemplo Prático de Linha do Tempo</a></li>
+    <li><a href="#cultura-de-post-mortems-sem-culpa">Cultura de Post Mortems Sem Culpa</a></li>
+    <li></li>
+    <li><a href="#benefícios-de-um-post-mortem-bem-executado">Benefícios de um Post Mortem Bem Executado</a></li>
+    <li><a href="#refrências">Refrências:</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>Salve salve pessoal!!!</p>
+<p>Tudo bem com vocês? Espero que sim!<br>
+E bora pra mais um post do <strong>Glossario Tech</strong> onde irei trazer algumas tecnologias e falar delas de forma teórica. Bora lá?</p>
+<p>No universo do Site Reliability Engineering (SRE), um post mortem é um processo estruturado para analisar incidentes ou interrupções nos sistemas com o objetivo de aprender com os erros, identificar melhorias e evitar que problemas semelhantes aconteçam no futuro. Essa prática é essencial para organizações que buscam operar sistemas confiáveis em escala.</p>
+<h2 id="o-propósito-de-um-post-mortem">O Propósito de um Post Mortem</h2>
+<p>O principal objetivo de um post mortem é documentar e analisar o que deu errado, como foi resolvido e o que pode ser feito para melhorar. A ideia não é procurar culpados, mas criar uma cultura de aprendizado contínuo, em que erros são vistos como oportunidades de evolução.</p>
+<p>Por que fazer um post mortem?
+Melhorar a confiabilidade do sistema.
+Documentar lições aprendidas para referência futura.
+Identificar problemas recorrentes e suas causas.
+Estabelecer um ciclo de feedback que promove inovação e resiliência.
+Construir confiança entre equipes e com stakeholders, mostrando transparência e compromisso com a qualidade.</p>
+<h2 id="estrutura-de-um-post-mortem">Estrutura de um Post Mortem</h2>
+<p>Embora o formato possa variar entre empresas, um post mortem geralmente segue uma estrutura como esta:</p>
+<p>Resumo do Incidente</p>
+<p>Breve descrição do problema, incluindo:
+O que aconteceu.
+Quanto tempo durou.
+Qual foi o impacto (usuários, sistemas, receita, etc.).
+Linha do Tempo</p>
+<p>Uma narrativa detalhada dos eventos em ordem cronológica:
+Quando o problema foi detectado.
+Quais ações foram tomadas para mitigar e resolver o problema.
+Como as decisões foram tomadas ao longo do processo.
+Causa Raiz</p>
+<p>Análise detalhada para identificar:
+O gatilho específico do incidente.
+Condições subjacentes que permitiram que o problema ocorresse.
+Problemas sistêmicos ou operacionais que possam ter contribuído.
+Impacto no Negócio</p>
+<p>Avaliação clara dos danos causados, como:
+Interrupção de serviços.
+Perda de receita.
+Insatisfação do cliente.
+Reputação afetada.
+Resolução</p>
+<p>Explicação das ações realizadas para resolver o problema:
+Correções temporárias (workarounds).
+Soluções definitivas implementadas.
+Lições Aprendidas</p>
+<p>Pontos principais que a equipe descobriu, como:
+Processos que funcionaram bem.
+Áreas que precisam de melhoria.
+Ferramentas ou automações necessárias.
+Ações Corretivas</p>
+<p>Um plano de melhorias baseado no aprendizado do incidente:
+Tarefas específicas para prevenir problemas futuros.
+Responsáveis e prazos claramente definidos.
+Acompanhamento para garantir a implementação.</p>
+<h2 id="exemplo-prático-de-linha-do-tempo">Exemplo Prático de Linha do Tempo</h2>
+<p>Imagine um incidente em um sistema de e-commerce:</p>
+<p>12:00 PM - Alerta disparado indicando lentidão no checkout.
+12:05 PM - Engenheiros confirmam alta latência no banco de dados.
+12:15 PM - Identificado que o aumento de tráfego ultrapassou os limites configurados.
+12:30 PM - Mitigação: escalar recursos manualmente.
+01:00 PM - Serviço estabilizado.
+02:00 PM - Iniciada a análise do incidente.</p>
+<h2 id="cultura-de-post-mortems-sem-culpa">Cultura de Post Mortems Sem Culpa</h2>
+<p>No SRE, uma prática comum é conduzir post mortems sem culpa (blameless post mortems). Isso significa que o foco está em processos e sistemas, e não em indivíduos. O raciocínio é que sistemas complexos inevitavelmente falharão, e a única maneira de melhorar é criar um ambiente onde todos se sintam seguros para reportar e discutir problemas abertamente.</p>
+<h2></h2>
+<p>O Que é um Post Mortem no SRE e Sua Importância
+No universo do Site Reliability Engineering (SRE), um post mortem é um processo estruturado para analisar incidentes ou interrupções nos sistemas com o objetivo de aprender com os erros, identificar melhorias e evitar que problemas semelhantes aconteçam no futuro. Essa prática é essencial para organizações que buscam operar sistemas confiáveis em escala.</p>
+<p>O Propósito de um Post Mortem
+O principal objetivo de um post mortem é documentar e analisar o que deu errado, como foi resolvido e o que pode ser feito para melhorar. A ideia não é procurar culpados, mas criar uma cultura de aprendizado contínuo, em que erros são vistos como oportunidades de evolução.</p>
+<p>Por que fazer um post mortem?
+Melhorar a confiabilidade do sistema.
+Documentar lições aprendidas para referência futura.
+Identificar problemas recorrentes e suas causas.
+Estabelecer um ciclo de feedback que promove inovação e resiliência.
+Construir confiança entre equipes e com stakeholders, mostrando transparência e compromisso com a qualidade.
+Estrutura de um Post Mortem
+Embora o formato possa variar entre empresas, um post mortem geralmente segue uma estrutura como esta:</p>
+<p>Resumo do Incidente</p>
+<p>Breve descrição do problema, incluindo:
+O que aconteceu.
+Quanto tempo durou.
+Qual foi o impacto (usuários, sistemas, receita, etc.).
+Linha do Tempo</p>
+<p>Uma narrativa detalhada dos eventos em ordem cronológica:
+Quando o problema foi detectado.
+Quais ações foram tomadas para mitigar e resolver o problema.
+Como as decisões foram tomadas ao longo do processo.
+Causa Raiz</p>
+<p>Análise detalhada para identificar:
+O gatilho específico do incidente.
+Condições subjacentes que permitiram que o problema ocorresse.
+Problemas sistêmicos ou operacionais que possam ter contribuído.
+Impacto no Negócio</p>
+<p>Avaliação clara dos danos causados, como:
+Interrupção de serviços.
+Perda de receita.
+Insatisfação do cliente.
+Reputação afetada.
+Resolução</p>
+<p>Explicação das ações realizadas para resolver o problema:
+Correções temporárias (workarounds).
+Soluções definitivas implementadas.
+Lições Aprendidas</p>
+<p>Pontos principais que a equipe descobriu, como:
+Processos que funcionaram bem.
+Áreas que precisam de melhoria.
+Ferramentas ou automações necessárias.
+Ações Corretivas</p>
+<p>Um plano de melhorias baseado no aprendizado do incidente:
+Tarefas específicas para prevenir problemas futuros.
+Responsáveis e prazos claramente definidos.
+Acompanhamento para garantir a implementação.
+Exemplo Prático de Linha do Tempo
+Imagine um incidente em um sistema de e-commerce:</p>
+<p>12:00 PM - Alerta disparado indicando lentidão no checkout.
+12:05 PM - Engenheiros confirmam alta latência no banco de dados.
+12:15 PM - Identificado que o aumento de tráfego ultrapassou os limites configurados.
+12:30 PM - Mitigação: escalar recursos manualmente.
+01:00 PM - Serviço estabilizado.
+02:00 PM - Iniciada a análise do incidente.
+Cultura de Post Mortems Sem Culpa
+No SRE, uma prática comum é conduzir post mortems sem culpa (blameless post mortems). Isso significa que o foco está em processos e sistemas, e não em indivíduos. O raciocínio é que sistemas complexos inevitavelmente falharão, e a única maneira de melhorar é criar um ambiente onde todos se sintam seguros para reportar e discutir problemas abertamente.</p>
+<h2 id="benefícios-de-um-post-mortem-bem-executado">Benefícios de um Post Mortem Bem Executado</h2>
+<p>Prevenção de Incidentes Futuros: Implementar correções e melhorias que evitam a recorrência do problema.
+Transparência Organizacional: Demonstrar compromisso com a melhoria contínua.
+Fortalecimento da Equipe: Criar confiança e promover colaboração.
+Melhoria da Resiliência: Tornar sistemas mais robustos e preparados para eventos inesperados.</p>
+<h2 id="refrências">Refrências:</h2>
+<p><a href="https://aws.amazon.com/pt/what-is/sre/" target="_blank" rel="noopener noreffer ">https://aws.amazon.com/pt/what-is/sre/</a></p>
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Atualizado em 2024-11-27</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Compartilhe em X" data-sharer="x" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE" data-hashtags="sre,post mortem"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Threads" data-sharer="threads" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Facebook" data-sharer="facebook" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-hashtag="sre"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Line" data-sharer="line" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE"><i data-svg-src="/lib/simple-icons/icons/line.min.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em 微博" data-sharer="weibo" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Compartilhe em Diaspora" data-sharer="diaspora" data-url="http://localhost:1313/posts/glossario-sre-post-mortem/index.en/" data-title="005 - Glossário Tech - Post Mortem no SRE" data-description=""><i class="fab fa-diaspora fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2fposts%2fglossario-sre-post-mortem%2findex.en%2f&amp;text=005%20-%20Gloss%c3%a1rio%20Tech%20-%20Post%20Mortem%20no%20SRE" target="_blank" title="Compartilhe em Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/sre/">Sre</a>,&nbsp;<a href="/tags/post-mortem/">Post Mortem</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Voltar</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/desbravando-o-opentofu-parte3/index.en/" class="prev" rel="prev" title="Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>Desbravando o OpenTofu: Parte 03 – Importando uma infraestrutura existente</a>
+            <a href="/posts/trilha-cicd-gitlab-terraform-aws/index.en/" class="next" rel="next" title="Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform">Trilha CI/CD - Gitlab-CI - Deploy de uma EC2 usando Terraform<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Possibilitado por <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.145.0">Hugo</a> | Tema - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.3.1-DEV"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="https://emerson-silva.blog.br" target="_blank">Emerson Silva</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Voltar ao topo">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="Ver comentários">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><script src="/lib/lazysizes/lazysizes.min.js"></script><script src="/lib/lightgallery/lightgallery.min.js"></script><script src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script src="/lib/clipboard/clipboard.min.js"></script><script src="/lib/sharer/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true};</script><script src="/js/theme.min.js"></script></body>
+</html>

@@ -1,19 +1,20 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>4linux on Emerson Silva</title>
-    <link>https://emerson-silva.blog.br/tags/4linux/</link>
-    <description>Recent content in 4linux on Emerson Silva</description>
-    <generator>Hugo</generator>
-    <language>pt-br</language>
-    <lastBuildDate>Sun, 10 Nov 2024 12:18:30 -0300</lastBuildDate>
-    <atom:link href="https://emerson-silva.blog.br/tags/4linux/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Lançamento do curso Terraform na prática com AWS</title>
-      <link>https://emerson-silva.blog.br/posts/curso-terraform-aws/</link>
-      <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
-      <guid>https://emerson-silva.blog.br/posts/curso-terraform-aws/</guid>
-      <description>&lt;p&gt;Olá pessoal!&lt;/p&gt;&#xA;&lt;p&gt;Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da &lt;a href=&#34;https://4linux.com.br/&#34; target=&#34;_blank&#34; rel=&#34;noopener noreffer &#34;&gt;4LINUX&lt;/a&gt;&#xA;chamado &lt;strong&gt;Terraform na prática – especialista em provisionamento Cloud na AWS&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;o-que-o-curso-oferece&#34;&gt;O que o curso oferece?&lt;/h2&gt;&#xA;&lt;p&gt;Este curso prepara o aluno para criar infraestrutura em código (IaC) usando o Terraform, com foco na AWS como cloud provider. O Terraform é a principal ferramenta para provisionar infraestrutura nos maiores provedores de Clouds públicas e privadas, permitindo criar, alterar, configurar e versionar toda a infraestrutura de forma automatizada e usando a linguagem declarativa HCL. Aprender Terraform é uma habilidade valiosa para profissionais de infraestrutura, DevOps e desenvolvedores que buscam melhorar a eficiência e escalabilidade de suas aplicações em nuvem. Curso preparatório para a certificação:&#xA;Terraform Associate.&lt;/p&gt;</description>
-    </item>
-  </channel>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>4linux - Tag - Emerson Silva</title>
+        <link>https://emerson-silva.blog.br/tags/4linux/</link>
+        <description>4linux - Tag - Emerson Silva</description>
+        <generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Sun, 10 Nov 2024 12:18:30 -0300</lastBuildDate><atom:link href="https://emerson-silva.blog.br/tags/4linux/" rel="self" type="application/rss+xml" /><item>
+    <title>Lançamento do curso Terraform na prática com AWS</title>
+    <link>https://emerson-silva.blog.br/posts/curso-terraform-aws/</link>
+    <pubDate>Sun, 10 Nov 2024 12:18:30 -0300</pubDate>
+    <author>Emerson Silva</author>
+    <guid>https://emerson-silva.blog.br/posts/curso-terraform-aws/</guid>
+    <description><![CDATA[<p>Olá pessoal!</p>
+<p>Hoje venho trazer ao blog uma novidade sensacional e uma realização pessoal pra mim. O lançamento do meu primeiro curso gravado atráves da <a href="https://4linux.com.br/" target="_blank" rel="noopener noreffer ">4LINUX</a>
+chamado <strong>Terraform na prática – especialista em provisionamento Cloud na AWS</strong></p>
+<h2 id="o-que-o-curso-oferece">O que o curso oferece?</h2>
+<p>Este curso prepara o aluno para criar infraestrutura em código (IaC) usando o Terraform, com foco na AWS como cloud provider. O Terraform é a principal ferramenta para provisionar infraestrutura nos maiores provedores de Clouds públicas e privadas, permitindo criar, alterar, configurar e versionar toda a infraestrutura de forma automatizada e usando a linguagem declarativa HCL. Aprender Terraform é uma habilidade valiosa para profissionais de infraestrutura, DevOps e desenvolvedores que buscam melhorar a eficiência e escalabilidade de suas aplicações em nuvem. Curso preparatório para a certificação:
+Terraform Associate.</p>]]></description>
+</item>
+</channel>
 </rss>
