@@ -5,7 +5,7 @@ draft: false
 author: "Emerson Silva"
 comment: true 
 resources:
-- name: "featured-image.png"
+- name: "featured-image"
   src: "featured-image.png"
 
 tags: ["kuberntes","k8s","nginx","metallb","nfs"]
