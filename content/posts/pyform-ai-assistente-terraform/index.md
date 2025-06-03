@@ -45,7 +45,7 @@ Com o pyform-ai, você reduz erros manuais, acelera o desenvolvimento da infraes
 
 ## Onde encontrar?
 
-Acesse agora: github.com/silvemerson/pyform-ai
+Acesse agora: [github.com/silvemerson/pyform-ai](https://github.com/silvemerson/pyform-ai)
 Contribua, faça sugestões e reporte issues para melhorar essa ferramenta
 
 ## Status do projeto
