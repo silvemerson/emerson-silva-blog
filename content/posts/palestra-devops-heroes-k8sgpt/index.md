@@ -1,7 +1,7 @@
 ---
 title: "DevOps Inteligente: Automatizando Decisões com K8sGPT e kubectl-ai no Kubernetes"
 
-date: 2023-05-29T12:18:47-03:00
+date: 2025-05-29T12:18:47-03:00
 draft: false
 author: "Emerson Silva"
 resources:
