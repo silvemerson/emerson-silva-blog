@@ -1,6 +1,6 @@
 ---
 title: "A ILUSÃO DO CÓDIGO FÁCIL: SE VOCÊ NÃO SABE O BÁSICO, A IA VAI TE DEMITIR. - JedaiCast #011"
-date: 2025-12-09T19:10:03-03:00
+date: 2025-11-28T19:10:03-03:00
 draft: false
 author: "Emerson Silva"
 comment: true 
