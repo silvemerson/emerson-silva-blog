@@ -6,7 +6,7 @@ author: "Emerson Silva"
 comment: true 
 resources:
 - name: "featured-image"
-  src: "content/posts/sre-day-campinas-2025/img/featured-image.jpeg"
+  src: "featured-image.jpeg"
 
 tags: ["Comunidade","SRE","Observabilidade", "K8s"]
 categories: ["Palestras"]
@@ -47,7 +47,7 @@ Gratidão a todos os envolvidos, patrocinadores e principalmente à galera que c
 
 Bora que bora, pra cima!
 
-
+![SREDay](img/image.png)
 
 
 <div id="giscus-comments">

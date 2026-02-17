@@ -6,7 +6,7 @@ author: "Emerson Silva"
 comment: true 
 resources:
 - name: "featured-image"
-  src: "content/posts/devops-days-jf-2025/img/featured-image.jpeg"
+  src: "featured-image.jpeg"
 
 tags: ["Comunidade","AIOps","ollama", "K8s"]
 categories: ["Palestras"]
@@ -42,7 +42,7 @@ Simbora
 
 ![DevOpsDays Juiz de Fora 2025](img/1759158103096.jpeg)
 
-![DevOpsDays Juiz de Fora 2025](img/1759158103096.jpeg)
+![DevOpsDays Juiz de Fora 2025](img/1759158106175.jpeg)
 
 <div id="giscus-comments">
   <script src="https://giscus.app/client.js"
