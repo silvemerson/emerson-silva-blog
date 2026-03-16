@@ -3,6 +3,7 @@ publishDir           = "public"          # pode remover se deixar default
 defaultContentLanguage = "pt-br"
 languageCode         = "pt-br"
 title                = "Emerson Silva"
+description          = "Blog sobre DevOps, Kubernetes, IaC e SRE por Emerson Silva"
 theme                = "LoveIt"
 
 ###############################################################################
