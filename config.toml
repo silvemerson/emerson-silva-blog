@@ -107,6 +107,12 @@ theme                = "LoveIt"
     name       = "Categories"
     url        = "/categories/"
     weight     = 3
+    
+  [[menu.main]]
+    identifier = "about"
+    name       = "Sobre"
+    url        = "/about/"
+    weight     = 4
 
 ###############################################################################
 # Markup / Highlight
