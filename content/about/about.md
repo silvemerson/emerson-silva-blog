@@ -13,9 +13,9 @@ categories: []
 lightgallery: false
 ---
 
-Salve, Salve! Sou **Emerson Silva**
+Salve, Salve pessoal!
 
-Quem sou eu? Desenvolvedor de infraestrutura e monitoramento com mais de 9 anos de experiência em ambientes críticos e de alta disponibilidade. Apaixonado por Open Source, cultura DevOps e disseminação do conhecimento em comunidades de tecnologia. 
+Quem sou eu? Sou **Emerson Silva**, esenvolvedor de infraestrutura e monitoramento com mais de 9 anos de experiência em ambientes críticos e de alta disponibilidade. Apaixonado por Open Source, cultura DevOps e disseminação do conhecimento em comunidades de tecnologia. 
 
 ## O que você vai encontrar aqui
 
