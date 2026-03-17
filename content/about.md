@@ -5,7 +5,7 @@ draft: false
 author: "Emerson Silva"
 resources:
 - name: "featured-image"
-  src: "featured-image.png"
+  src: "content/featured-image.png"
 
 tags: []
 categories: []
