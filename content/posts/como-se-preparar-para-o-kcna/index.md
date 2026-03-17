@@ -42,7 +42,6 @@ A KCNA é ideal para:
 - Desenvolvedores que querem entender melhor o ecossistema Cloud Native
 - Quem quer dar o **primeiro passo** antes de partir para certificações mais avançadas como CKA, CKAD ou CKS
 
-Um ponto importante: trabalho com Kubernetes há 6 anos, então minha revisão foi mais rápida. Mas não deixe isso te desanimar, seguindo os recursos certos, **qualquer pessoa consegue passar nessa prova**, independente do tempo de estudo. Cada pessoa tem seu ritmo, e isso é completamente normal.
 
 ## Domínios cobrados na prova
 
@@ -149,6 +148,8 @@ Na minha experiência, a prova foi **na medida do esperado** — quem estudar be
 - [Projetos CNCF](https://www.cncf.io/projects/)
 
 ---
+
+Link do meu certificado do [KCNA](https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/7d574cfc-8b45-45df-b6a3-57fd3a98a9a1-emerson-silva-1791983a-ea6f-4f0a-bcda-f7baaebf2d28-certificate.pdf)
 
 É isso, pessoal! Espero que esse post ajude quem está pensando em tirar a KCNA. Qualquer dúvida, me chama nas redes sociais, vou ter um vídeo em breve cobrindo esse mesmo conteúdo com mais detalhes.
 
