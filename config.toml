@@ -95,23 +95,20 @@ theme                = "LoveIt"
     name       = "Posts"
     url        = "/posts/"
     weight     = 1
-
   [[menu.main]]
-    identifier = "tags"
-    name       = "Tags"
-    url        = "/tags/"
+    identifier = "about"
+    name       = "Sobre"
+    url        = "/about/"
     weight     = 2
-
   [[menu.main]]
     identifier = "categories"
     name       = "Categories"
     url        = "/categories/"
     weight     = 3
-    
   [[menu.main]]
-    identifier = "about"
-    name       = "Sobre"
-    url        = "/about/"
+    identifier = "tags"
+    name       = "Tags"
+    url        = "/tags/"
     weight     = 4
 
 ###############################################################################

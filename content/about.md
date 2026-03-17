@@ -13,9 +13,9 @@ categories: []
 lightgallery: false
 ---
 
-Salve, Salve! Sou **Emerson Silva**, Engenheiro DevOps/SRE.
+Salve, Salve! Sou **Emerson Silva**
 
-Apaixonado por automação, infraestrutura como código e cultura open source. Aqui no blog compartilho experiências práticas com Kubernetes, Terraform, CI/CD e muito mais.
+Quem sou eu? Desenvolvedor de infraestrutura e monitoramento com mais de 9 anos de experiência em ambientes críticos e de alta disponibilidade. Apaixonado por Open Source, cultura DevOps e disseminação do conhecimento em comunidades de tecnologia. 
 
 ## O que você vai encontrar aqui
 
@@ -26,9 +26,9 @@ Apaixonado por automação, infraestrutura como código e cultura open source. A
 
 ## Livros & Cursos
 
-- 📘 [Kubernetes para Iniciantes](https://a.co/d/dmxgdnz) — Amazon
-- 📗 Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps — LeanPub/Amazon
-- 🎓 Terraform na prática com AWS — 4Linux
+- [Kubernetes para Iniciantes](https://a.co/d/dmxgdnz) — Amazon
+- Mentes Automatizadas: IA em Ambientes Kubernetes e DevOps — LeanPub/Amazon
+- Terraform na prática com AWS — 4Linux
 
 ## Onde me encontrar
 
