@@ -87,7 +87,7 @@ Não precisa decorar comandos, mas entender os conceitos por trás de cada objet
 
 ### 2. Livros
 
-Livros são ótimos para construir uma base sólida. Se você está começando, recomendo uma leitura estruturada que vai do básico de containers até os conceitos mais avançados de orquestração. O meu próprio livro **[Kubernetes para Iniciantes: Fundamentos e Práticas](https://a.co/d/dmxgdnz)** pode ser um bom ponto de partida — escrevi ele justamente pensando em quem está dando os primeiros passos com K8s.
+Livros são ótimos para construir uma base sólida. Se você está começando do zero, escrevi o Kubernetes para Iniciantes: Fundamentos e Práticas pensando exatamente nesse perfil — ele vai do básico de containers até os conceitos mais avançados de orquestração e pode ser um bom ponto de partida antes de mergulhar na documentação oficial.
 
 ### 3. Simulado do Tutorials Dojo (gratuito!)
 
