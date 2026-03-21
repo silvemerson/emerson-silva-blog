@@ -1,0 +1,37 @@
+{{- $params := .Scratch.Get "params" -}}
+
+<meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
+
+{{- template "_internal/opengraph.html" . -}}
+{{- template "_internal/twitter_cards.html" . -}}
+
+{{- /* og:image com width/height explícitos para WhatsApp */ -}}
+{{- $image := "" -}}
+{{- if .IsPage -}}
+    {{- $images := $params.seo.images | default slice -}}
+    {{- if not $images -}}
+        {{- with .Resources.GetMatch "featured-image-preview" -}}
+            {{- $image = . -}}
+        {{- end -}}
+        {{- with .Resources.GetMatch "featured-image" -}}
+            {{- $image = . -}}
+        {{- end -}}
+    {{- end -}}
+    {{- with $image -}}
+        <meta property="og:image" content="{{ .Permalink }}" />
+        <meta property="og:image:width" content="{{ .Width }}" />
+        <meta property="og:image:height" content="{{ .Height }}" />
+        <meta property="og:image:type" content="image/{{ .MediaType.SubType }}" />
+    {{- end -}}
+{{- end -}}
+
+<meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
+<meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">
+<meta name="referrer" content="no-referrer" />
+{{- with .Site.Params.app.themeColor -}}
+    <meta name="theme-color" content="{{ . }}">
+{{- end -}}
+
+{{- with .Site.Params.app.tileColor -}}
+    <meta name="msapplication-TileColor" content="{{ . }}">
+{{- end -}}
