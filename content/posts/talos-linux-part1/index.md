@@ -1,13 +1,13 @@
 ---
-title: "KCNA - Como se preparar e passar na certificação"
-date: 2026-03-16T00:00:00-03:00
+title: "Talos Linux: o sistema operacional feito para o Kubernetes - part1"
+date: 2026-03-20T00:00:00-03:00
 draft: false
 author: "Emerson Silva"
 resources:
 - name: "featured-image"
   src: "featured-image.png"
 
-tags: ["kubernetes", "kcna", "certificação", "devops", "cloud-native"]
+tags: ["kubernetes", "talos", "linux", "devops", "segurança", "imutabilidade"]
 categories: ["Kubernetes"]
 
 lightgallery: true
@@ -17,140 +17,123 @@ Salve salve pessoal!!!
 
 Tudo bem com vocês? Espero que sim!
 
-Recentemente fui aprovado na **KCNA (Kubernetes and Cloud Native Associate)** e hoje quero compartilhar como foi essa jornada e, principalmente, como você pode se preparar para passar nessa prova também. Bora lá?
+Hoje vamos falar de um projeto que me chamou muito a atenção: o **Talos Linux**. Se você opera Kubernetes no dia a dia, esse post vai fazer você repensar como você enxerga o sistema operacional dos seus nodes. Bora lá?
 
-## O que é a KCNA?
+## O que é o Talos Linux?
 
-A KCNA é uma certificação da **Linux Foundation** em parceria com a **CNCF (Cloud Native Computing Foundation)**. Ela é voltada para quem está começando no mundo Kubernetes e Cloud Native, validando conhecimentos fundamentais sobre:
+O Talos Linux é uma distribuição Linux projetada **exclusivamente para rodar Kubernetes**. Isso mesmo — ele não é um Linux de propósito geral com Kubernetes instalado em cima. Ele é um OS construído do zero com um único objetivo: ser o melhor host possível para um cluster Kubernetes.
 
-- Fundamentos do Kubernetes
-- Orquestração de containers
-- Arquitetura Cloud Native
-- Ecossistema CNCF
-- Observabilidade
-- Segurança básica em Kubernetes
+Desenvolvido pela [Sidero Labs](https://www.siderolabs.com/), o Talos pode ser instalado em bare metal, VMs ou clouds e tem um conjunto de características que o tornam bastante único no ecossistema:
 
-É uma prova **teórica**, no formato de múltipla escolha, com **90 minutos** de duração e **60 questões**. A nota mínima para aprovação é **75%**.
+- **Gerenciado por API**
+- **Sistema de arquivos imutável**
+- **Pacotes mínimos**
+- **Seguro por padrão**
 
-Diferente da CKA e CKS, não é uma prova prática — mas isso não significa que é fácil. Ela exige que você entenda bem os conceitos e o ecossistema Cloud Native como um todo.
+Mas o que isso significa na prática? Vamos destrinchar cada um desses pontos.
 
-## Para quem é essa certificação?
+## A filosofia por trás do Talos
 
-A KCNA é ideal para:
+Para entender o Talos, é preciso entender a filosofia que guia seu desenvolvimento. Ela se resume em alguns pilares fundamentais.
 
-- Profissionais que estão **começando com Kubernetes** e querem validar seus conhecimentos
-- Desenvolvedores que querem entender melhor o ecossistema Cloud Native
-- Quem quer dar o **primeiro passo** antes de partir para certificações mais avançadas como CKA, CKAD ou CKS
+### Distribuído
 
+O Talos foi pensado para operar de forma distribuída desde o início. Ele é construído para um dataplane de alta disponibilidade em primeiro lugar. O cluster `etcd` é formado de maneira ad-hoc, com cada node ingressando por conta própria (com as devidas validações de segurança). Não há pontos únicos de falha — a ideia é que o nível de coordenação necessária seja o menor possível.
 
-## Domínios cobrados na prova
+### Imutável
 
-Antes de estudar, entenda o que cai na prova. Os principais domínios são:
+Esse é um dos pilares mais importantes do Talos. Mesmo quando instalado em disco, o Talos **sempre roda a partir de uma imagem SquashFS**. Isso significa que, mesmo que um diretório seja montado como gravável, a imagem em si nunca é modificada.
 
-**Fundamentos do Kubernetes (46%)**
-- Arquitetura do cluster (control plane, worker nodes)
-- Workloads: Pods, Deployments, ReplicaSets, StatefulSets, DaemonSets
-- Scheduling e recursos
-- Services e networking
-- Storage: PV, PVC, StorageClass
-- ConfigMaps e Secrets
+Todas as imagens são assinadas e entregues como arquivos únicos e versionados. Isso garante que você sempre consiga verificar a integridade do sistema. A partição gravável é chamada de "ephemeral" (efêmera) justamente para reforçar a ideia: nenhum dado único, não replicado e não recriável deve estar ali. Se tudo falhar, é só limpar o disco e subir novamente.
 
-**Orquestração de Containers (22%)**
-- Fundamentos de containers
-- Container runtime (containerd, CRI-O)
-- Imagens e registries
+### Minimal
 
-**Arquitetura Cloud Native (16%)**
-- Padrões Cloud Native
-- Microservices
-- Service Mesh
+O Talos leva minimalismo a sério. Como praticamente todo o OS é construído do zero em Go, o resultado é impressionante:
 
-**Ecossistema CNCF (8%)**
-- Projetos CNCF (Prometheus, Fluentd, Jaeger, Argo, etc)
-- Graduated vs Incubating projects
+- **Sem shell**
+- **Sem SSH**
+- **Sem utilitários GNU**
+- **Sem busybox**
+- **Sem pacotes desnecessários**
 
-**Observabilidade (8%)**
-- Logs, métricas e tracing
-- Ferramentas de monitoramento
+Tudo que existe no Talos está lá porque é necessário. O resultado? A imagem SquashFS tem menos de **80 MB**.
 
-## Recursos que usei na preparação
+### Efêmero
 
-### 1. Documentação oficial do Kubernetes
+Tudo que o Talos escreve em disco é ou replicado ou reconstruível. Como o control plane é altamente disponível, a perda de qualquer node não causa interrupção de serviço nem perda de dados. A vasta maioria do sistema de arquivos não aceita escrita alguma.
 
-A [documentação oficial do Kubernetes](https://kubernetes.io/docs/home/) é sua melhor amiga. Ela é gratuita, completa e é exatamente a base que a prova cobra. Foque especialmente nas seções:
+### Seguro por padrão
 
-- **Concepts** — entenda a arquitetura, os objetos e como tudo se conecta
-- **Tasks** — veja exemplos práticos dos principais recursos
-- **Reference** — API e componentes do cluster
+Segurança não é um add-on no Talos — é um requisito de design. Alguns pontos que vale destacar:
 
-Não precisa decorar comandos, mas entender os conceitos por trás de cada objeto é fundamental.
+- **Não existem senhas** no Talos
+- Toda comunicação em rede é **criptografada e autenticada por chave**
+- Os certificados Talos têm **vida curta e rotação automática**
+- O Kubernetes sempre é construído com sua própria estrutura PKI separada
+- O projeto segue as recomendações do **Kernel Self Protection Project (KSPP)**
+- Módulos dinâmicos do kernel são completamente desabilitados
 
-### 2. Livros
+### Declarativo
 
-Livros são ótimos para construir uma base sólida. Se você está começando, recomendo uma leitura estruturada que vai do básico de containers até os conceitos mais avançados de orquestração. O meu próprio livro **[Kubernetes para Iniciantes: Fundamentos e Práticas](https://a.co/d/dmxgdnz)** pode ser um bom ponto de partida — escrevi ele justamente pensando em quem está dando os primeiros passos com K8s.
+Toda a configuração do Talos é feita através de **um único arquivo YAML**. Sem scripts, sem passos procedurais. Tudo — tanto a configuração do próprio Talos quanto do Kubernetes que ele forma — está definido nesse arquivo declarativo. Isso é possível justamente porque o Talos tem foco total em fazer uma única coisa: rodar Kubernetes da forma mais fácil, segura e confiável possível.
 
-### 3. Simulado do Tutorials Dojo (gratuito!)
+## Gerenciado por API
 
-Esse foi um dos recursos mais valiosos da minha preparação. O **Tutorials Dojo** disponibiliza um [simulado gratuito de KCNA](https://portal.tutorialsdojo.com/courses/free-kubernetes-and-cloud-native-associate-kcna-practice-exams-sampler/) com 20 questões em dois modos:
+Esse é o diferencial mais marcante do Talos e o que mais impressiona quem começa a usá-lo. O Talos é gerenciado por uma **única API gRPC declarativa**.
 
-- **Timed Mode** — simula a pressão do tempo real da prova
-- **Review Mode** — você vê a explicação de cada resposta, certa ou errada
+Imagine uma distribuição Linux que já tem o gerenciamento de configuração embutido. Sem scripts frágeis de cloud-init que envolvem scripts `bash` em YAML. O Talos oferece uma API de rede para todas as necessidades de configuração e troubleshooting.
 
-Meu conselho: faça primeiro no modo timed para sentir o ritmo, depois refaça no modo review para entender cada conceito que errou. As explicações são muito boas e ajudam a fixar o conteúdo.
+O cliente dessa API é o `talosctl`, a ferramenta de linha de comando que substitui o SSH para qualquer interação com os nodes.
 
-Eles também têm uma versão paga com mais de 100 questões caso queira se aprofundar ainda mais.
+## Não é baseado em nenhuma outra distro
 
-## Como estruturar seus estudos
+Esse ponto merece destaque: o Talos Linux **não é baseado em nenhuma outra distribuição**. Ele é considerado uma segunda geração de sistemas operacionais otimizados para containers — onde CoreOS, Flatcar e Rancher representam a primeira geração — mas a tecnologia não deriva de nenhum deles.
 
-Independente do seu nível atual, aqui vai uma sugestão de abordagem:
+O Talos Linux é uma reescrita completa do userspace, a partir do PID 1. O Linux kernel roda normalmente, mas tudo a partir daí é código customizado, escrito em Go, rigorosamente testado e publicado como uma imagem imutável e integrada.
 
-**Semana 1-2 — Base conceitual**
-Leia a documentação oficial, focando nos conceitos fundamentais. Entenda a arquitetura do cluster, os principais objetos e como o Kubernetes resolve problemas de orquestração.
+O kernel Linux inicializa o `machined`, não o `systemd`. Não existe `systemd` no Talos. Não há utilitários GNU, sem shell, sem SSH, sem pacotes — nada que você associaria a qualquer outra distribuição.
 
-**Semana 3 — Ecossistema CNCF**
-Pesquise os principais projetos CNCF. Não precisa ser expert em todos, mas entender o propósito de cada um (Prometheus para métricas, Jaeger para tracing, Argo para GitOps, etc) é importante.
+## Arquitetura do sistema de arquivos
 
-**Semana 4 — Simulados e revisão**
-Faça os simulados, anote os pontos fracos e revise especificamente esses tópicos. Repita até se sentir confortável com o tempo e com os temas cobrados.
+O Talos usa uma estrutura de partições bem definida:
 
-> **Dica importante:** Se você já tem experiência prática com Kubernetes, o tempo de estudo pode ser bem menor. Mas se está começando agora, não tente cortar caminho — a prova exige que você entenda os conceitos, não apenas memorize respostas.
+| Partição | Função |
+|----------|--------|
+| **EFI** | Armazena dados de boot EFI |
+| **BIOS** | Usado para o segundo estágio do GRUB |
+| **BOOT** | Bootloader, initramfs e dados do kernel |
+| **META** | Metadados do node (node IDs, etc) |
+| **STATE** | Configuração da máquina, identidade do node para discovery e KubeSpan |
+| **EPHEMERAL** | Estado efêmero, montado em `/var` |
 
-## Como é a prova na prática
+O sistema de arquivos raiz tem três camadas:
 
-A prova é realizada de forma **online, com supervisão remota (proctored)**. Algumas informações importantes:
+1. **SquashFS read-only** — montado como loop device em memória, fornece a base imutável
+2. **tmpfs** — para necessidades de runtime (como `/etc/hosts` e `/etc/resolv.conf`, que precisam ser graváveis)
+3. **overlayfs** — para arquivos que precisam persistir entre reboots (como `/etc/kubernetes`)
 
-- **Plataforma:** PSI
-- **Duração:** 90 minutos
-- **Questões:** 60 (múltipla escolha)
-- **Aprovação:** 75% (45 questões certas)
-- **Idioma:** Inglês
-- **Validade:** 3 anos
+## Por que isso importa para quem opera Kubernetes?
 
-O ambiente é tranquilo, mas requer atenção com as regras: ambiente silencioso, mesa limpa, documento de identidade em mãos. Chegue com antecedência para o check-in.
+Se você opera Kubernetes hoje em cima de Ubuntu, CentOS ou qualquer outra distro de propósito geral, pensa no overhead que você carrega:
 
-Na minha experiência, a prova foi **na medida do esperado** — quem estudar bem os conceitos e fizer os simulados não vai ter surpresas.
+- Gerenciamento de pacotes e atualizações do OS
+- Configuração de SSH e gestão de chaves
+- Scripts de bootstrap que podem ou não funcionar
+- Surface de ataque enorme por conta dos pacotes instalados
+- Configuração manual de hardening de segurança
 
-## Dicas finais
+O Talos elimina toda essa camada de complexidade. Você não gerencia mais nodes individualmente — você gerencia o cluster. Se um node tem problema, você o reconstrói. Sem attachment emocional com servidores. Sem "servidor da produção que ninguém sabe como foi configurado".
 
-**Não decore, entenda.** A prova tem questões que exigem raciocínio sobre os conceitos, não apenas memorização.
+Como a própria documentação coloca: assim como em um sistema biológico, se um componente se comporta mal, é só removê-lo e deixar um substituto crescer.
 
-**Foque no ecossistema CNCF.** Muita gente negligencia essa parte e se surpreende na hora da prova. Conheça os principais projetos e o que eles fazem.
+## Próximos passos
 
-**Use os simulados de forma ativa.** Não basta fazer e ver a nota — revise cada questão errada e entenda por que a resposta correta é aquela.
+Esse post é o primeiro de uma série sobre Talos Linux. Nos próximos, vou cobrir:
 
-**A documentação é sua maior aliada.** Tudo que cai na prova está documentado em kubernetes.io. Se tiver dúvida sobre um conceito, vai lá.
+- Como subir um cluster Talos local com Docker
+- Gerenciando o cluster com `talosctl`
+- Configuração declarativa na prática
 
-## Recursos
+Se você quiser explorar por conta própria, a documentação oficial está em [docs.siderolabs.com](https://docs.siderolabs.com/talos/v1.12/overview/what-is-talos).
 
-- [Documentação oficial do Kubernetes](https://kubernetes.io/docs/home/)
-- [Simulado gratuito KCNA - Tutorials Dojo](https://portal.tutorialsdojo.com/courses/free-kubernetes-and-cloud-native-associate-kcna-practice-exams-sampler/)
-- [Página oficial da certificação KCNA - Linux Foundation](https://training.linuxfoundation.org/certification/kubernetes-cloud-native-associate/)
-- [Projetos CNCF](https://www.cncf.io/projects/)
-
----
-
-Link do meu certificado do [KCNA](https://ti-user-certificates.s3.amazonaws.com/e0df7fbf-a057-42af-8a1f-590912be5460/7d574cfc-8b45-45df-b6a3-57fd3a98a9a1-emerson-silva-1791983a-ea6f-4f0a-bcda-f7baaebf2d28-certificate.pdf)
-
-É isso, pessoal! Espero que esse post ajude quem está pensando em tirar a KCNA. Qualquer dúvida, me chama nas redes sociais, vou ter um vídeo em breve cobrindo esse mesmo conteúdo com mais detalhes.
-
-Bora pra cima! 🚀
+Qualquer dúvida, me chama nas redes sociais. Bora pra cima! 🚀
