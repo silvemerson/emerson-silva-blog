@@ -2,10 +2,26 @@
 
 <meta name="Description" content="{{ $params.description | default .Site.Params.description }}">
 
-{{- template "_internal/opengraph.html" . -}}
-{{- template "_internal/twitter_cards.html" . -}}
+{{- /* OpenGraph manual — evita og:image duplicado gerado pelo _internal/opengraph.html no Hugo 0.125+ */ -}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ $params.description | default .Site.Params.description }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:site_name" content="{{ .Site.Title }}" />
+{{- if .IsPage }}
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="{{ .PublishDate.Format "2006-01-02T15:04:05-07:00" }}" />
+<meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05-07:00" }}" />
+{{- with .Params.author | default .Site.Params.Author.name -}}
+<meta property="article:author" content="{{ . }}" />
+{{- end -}}
+{{- range .Params.tags -}}
+<meta property="article:tag" content="{{ . }}" />
+{{- end -}}
+{{- else }}
+<meta property="og:type" content="website" />
+{{- end }}
 
-{{- /* og:image com width/height explícitos para WhatsApp */ -}}
+{{- /* og:image — único bloco, com width/height para WhatsApp */ -}}
 {{- $image := "" -}}
 {{- if .IsPage -}}
     {{- $images := $params.seo.images | default slice -}}
@@ -17,13 +33,15 @@
             {{- $image = . -}}
         {{- end -}}
     {{- end -}}
-    {{- with $image -}}
-        <meta property="og:image" content="{{ .Permalink }}" />
-        <meta property="og:image:width" content="{{ .Width }}" />
-        <meta property="og:image:height" content="{{ .Height }}" />
-        <meta property="og:image:type" content="image/{{ .MediaType.SubType }}" />
-    {{- end -}}
 {{- end -}}
+{{- with $image -}}
+    <meta property="og:image" content="{{ .Permalink }}" />
+    <meta property="og:image:width" content="{{ .Width }}" />
+    <meta property="og:image:height" content="{{ .Height }}" />
+    <meta property="og:image:type" content="image/{{ .MediaType.SubType }}" />
+{{- end -}}
+
+{{- template "_internal/twitter_cards.html" . -}}
 
 <meta name="application-name" content="{{ .Site.Params.app.title | default .Site.Title }}">
 <meta name="apple-mobile-web-app-title" content="{{ .Site.Params.app.title | default .Site.Title }}">
