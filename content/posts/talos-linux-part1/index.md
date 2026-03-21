@@ -130,7 +130,7 @@ Como a própria documentação coloca: assim como em um sistema biológico, se u
 
 Esse post é o primeiro de uma série sobre Talos Linux. Nos próximos, vou cobrir:
 
-- Como subir um cluster Talos local com Docker
+- Como sprovisionar o Talos
 - Gerenciando o cluster com `talosctl`
 - Configuração declarativa na prática
 
