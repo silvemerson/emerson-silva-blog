@@ -12,6 +12,7 @@ theme                = "LoveIt"
 [params]
   version = "0.3.0"     # permanece aqui
   defaultTheme = "dark"
+  description = "Blog sobre DevOps, Kubernetes, IaC e SRE por Emerson Silva"
 
   [params.author]
     name = "Emerson Silva"
@@ -37,7 +38,7 @@ theme                = "LoveIt"
     desktopMode = "fixed"
     mobileMode = "auto"
     [params.header.title]
-      name = "Emerson Siva"
+      name = "Emerson Silva"
       typeit = false
 
 
