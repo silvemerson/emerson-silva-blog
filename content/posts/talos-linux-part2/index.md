@@ -247,8 +247,8 @@ Esse comando remove todos os containers e limpa as configurações geradas.
 
 Nos próximos posts da série vamos evoluir o ambiente:
 
-- **EmersonLabs: Talos Linux com VirtualBox** — subindo o cluster em VMs locais, mais próximo de um ambiente real
-- **EmersonLabs: Talos Linux com Proxmox** — ambiente de homelab completo com HA real
+- **Talos Linux com VirtualBox** — subindo o cluster em VMs locais, mais próximo de um ambiente real
+- **Talos Linux com Proxmox** — ambiente de homelab completo com HA real
 
 Se quiser se aprofundar, a documentação oficial está em [docs.siderolabs.com](https://docs.siderolabs.com/talos/v1.12/overview/what-is-talos).
 
