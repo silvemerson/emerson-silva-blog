@@ -8,7 +8,7 @@ resources:
   src: "featured-image.png"
 
 tags: ["kubernetes", "talos", "linux", "devops", "segurança", "imutabilidade"]
-categories: ["Kubernetes"]
+categories: [" Containers"]
 
 lightgallery: true
 ---

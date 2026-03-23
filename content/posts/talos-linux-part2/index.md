@@ -8,7 +8,7 @@ resources:
   src: "featured-image.png"
 
 tags: ["kubernetes", "talos", "linux", "docker", "devops", "lab"]
-categories: ["Kubernetes"]
+categories: [" Containers"]
 
 lightgallery: true
 ---

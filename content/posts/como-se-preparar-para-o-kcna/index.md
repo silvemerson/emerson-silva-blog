@@ -8,7 +8,7 @@ resources:
   src: "featured-image.png"
 
 tags: ["kubernetes", "kcna", "certificação", "devops", "cloud-native"]
-categories: ["Kubernetes"]
+categories: ["Certificações"]
 
 lightgallery: true
 ---
