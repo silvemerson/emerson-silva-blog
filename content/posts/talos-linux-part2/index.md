@@ -1,5 +1,5 @@
 ---
-title: "Talos Linux com Docker - Subindo um cluster local - part2"
+title: "Talos Linux com Docker - Subindo um cluster local"
 date: 2026-03-20T00:00:00-03:00
 draft: false
 author: "Emerson Silva"

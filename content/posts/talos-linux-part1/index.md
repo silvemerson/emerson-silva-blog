@@ -1,5 +1,5 @@
 ---
-title: "Talos Linux: o sistema operacional feito para o Kubernetes - part1"
+title: "Talos Linux: o sistema operacional feito para o Kubernetes"
 date: 2026-03-20T00:00:00-03:00
 draft: false
 author: "Emerson Silva"
