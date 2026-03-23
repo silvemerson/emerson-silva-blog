@@ -17,7 +17,7 @@ Salve salve pessoal!!!
 
 Tudo bem com vocês? Espero que sim!
 
-Esse é o segundo post da série sobre Talos Linux. Se você ainda não leu o primeiro, recomendo dar uma olhada no post [Talos Linux: o OS minimalista e sem SSH para o Kubernetes](../talos-linux-o-que-e) antes de continuar — lá explico a filosofia e os conceitos por trás do projeto.
+Esse é o segundo post da série sobre Talos Linux. Se você ainda não leu o primeiro, recomendo dar uma olhada no post [Talos Linux: o OS minimalista e sem SSH para o Kubernetes](../talos-linux-part1/) antes de continuar — lá explico a filosofia e os conceitos por trás do projeto.
 
 Hoje vamos colocar a mão na massa! O objetivo é subir um cluster Talos Linux localmente usando Docker, do zero até o cluster funcionando. Bora lá?
 
