@@ -20,7 +20,7 @@ Tudo bem com vocês? Espero que sim!
 Esse é o terceiro post da série sobre Talos Linux. Se você ainda não leu os anteriores, recomendo começar pelo início:
 
 - [Part 1 - Talos Linux: o sistema operacional feito para o Kubernetes](../talos-linux-part1)
-- [Part 2 - Talos Linux com Docker - Subindo um cluster loca](../talos-linux-part2)
+- [Part 2 - Talos Linux com Docker - Subindo um cluster local](../talos-linux-part2)
 
 Hoje vamos evoluir o lab! Vamos criar um cluster Talos Linux usando **Vagrant + Libvirt (KVM)**, com alta disponibilidade de verdade: **3 control planes + 2 workers**. Bora lá?
 
@@ -321,7 +321,7 @@ sudo rm -f /tmp/metal-amd64.iso
 
 ## Próximos passos
 
-No próximo post da série vamos para o Proxmox — com Packer gerando o template e Terraform provisionando o cluster:
+No próximo post da série vamos para o Proxmox, com Packer gerando o template e Terraform provisionando o cluster. 
 
 
 Se quiser se aprofundar, a documentação oficial está em [docs.siderolabs.com](https://docs.siderolabs.com/talos/v1.12/platform-specific-installations/virtualized-platforms/vagrant-libvirt).
