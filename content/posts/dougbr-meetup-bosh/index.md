@@ -57,9 +57,16 @@ um de nós pode fazer parte disso.
 
 Evento presencial tem um clima completamente diferente. Trocar ideia com a galera,
 responder perguntas olho no olho, sentir o engajamento da audiência em tempo real — isso não
-tem preço. A comunidade DOUGBR é sempre muito receptiva e o espaço da Bosch foi incrível.
+tem preço. A comunidade DOUGBR é sempre muito receptiva e o espaço da Bosch foi incrível. Além dos brindes da 4Linux. 
 
 Muito obrigado a todos que foram, aos outros palestrantes e ao DOUGBR pela oportunidade!
+
+## Fotos do evento
+
+Confira as fotos e o registro completo do evento no meu LinkedIn:
+
+[Ver post no LinkedIn](https://www.linkedin.com/posts/silvemerson_dougbrazil-kubernetes-taloslinux-activity-7448384224317014017-8vgP)
+
 
 Qualquer dúvida, me chama!
 
