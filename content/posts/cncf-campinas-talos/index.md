@@ -1,5 +1,5 @@
 ---
-title: "Talos Linux + Proxmox + Terraform: Infraestrutura Declarativa On-Premises - CNCF Campinas"
+title: "CNCF Campinas - Talos Linux + Proxmox + Terraform: Infraestrutura Declarativa On-Premises"
 date: 2026-04-09
 draft: false
 author: "Emerson Silva"
