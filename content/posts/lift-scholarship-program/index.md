@@ -3,6 +3,9 @@ title: "Bolsas para certificações Linux Foundation em 2026 — LiFT Scholarshi
 date: 2026-04-14
 draft: false
 author: "Emerson Silva"
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags: ["linux-foundation", "bolsas", "certificacao", "opensource", "carreira"]
 categories: ["Comunidade"]
 ---

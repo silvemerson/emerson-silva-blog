@@ -3,6 +3,9 @@ title: "Talos Linux + Proxmox + Terraform: Infraestrutura Declarativa On-Premise
 date: 2026-04-09
 draft: false
 author: "Emerson Silva"
+resources:
+- name: "featured-image"
+  src: "featured-image.png"
 tags: ["talos", "proxmox", "terraform", "kubernetes", "cncf", "palestras", "comunidade"]
 categories: ["Palestras"]
 ---
