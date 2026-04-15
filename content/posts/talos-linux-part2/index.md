@@ -253,3 +253,23 @@ Nos próximos posts da série vamos evoluir o ambiente:
 Se quiser se aprofundar, a documentação oficial está em [docs.siderolabs.com](https://docs.siderolabs.com/talos/v1.12/overview/what-is-talos).
 
 Qualquer dúvida, me chama nas redes sociais. Bora pra cima! 🚀
+
+
+<div id="giscus-comments">
+  <script src="https://giscus.app/client.js"
+          data-repo="silvemerson/emerson-silva-blog"
+          data-repo-id="R_kgDONTalJA"
+          data-category="General"
+          data-category-id="DIC_kwDONTalJM4CkhmM"
+          data-mapping="pathname"
+          data-strict="0"
+          data-reactions-enabled="1"
+          data-emit-metadata="1"
+          data-input-position="top"
+          data-theme="dark"
+          data-lang="pt"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+</div>
